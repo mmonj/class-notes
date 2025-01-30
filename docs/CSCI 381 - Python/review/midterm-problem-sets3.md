@@ -1,4 +1,6 @@
-# Python Problem Sets 3: Basic Data Types, Operators, String Formatting, Short-Circuit Evaluation
+# Midterm Review: Python Problem Sets 3
+
+## Basic Data Types, Operators, String Formatting, Short-Circuit Evaluation
 
 1. What is the output of the following code? Explain why.
 
