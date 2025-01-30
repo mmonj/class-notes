@@ -1,4 +1,4 @@
-# Final Problem Sets 2
+# Final Review: Problem Sets 2
 
 For each of the following questions, you will define a lambda function that returns the stated desired result. You are not allowed to create and use helper functions.
 
