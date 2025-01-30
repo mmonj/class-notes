@@ -3,7 +3,7 @@
 1. Given the following Python code:
 
    ```python
-    from functools import wraps
+   from functools import wraps
 
    def function_logger(func):
        counter = 0
