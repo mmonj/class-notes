@@ -1,5 +1,5 @@
 
-## Python Review: Problem Sets
+## CSCI 381 Python Review: Problem Sets
 - [Midterm Problem Sets 1](CSCI%20381%20-%20Python/review/midterm-problem-sets1)
 - [Midterm Problem Sets 2](CSCI%20381%20-%20Python/review/midterm-problem-sets2)
 - [Midterm Problem Sets 3](CSCI%20381%20-%20Python/review/midterm-problem-sets3)
