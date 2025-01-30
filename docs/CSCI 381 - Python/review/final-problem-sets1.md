@@ -36,16 +36,18 @@
    gen = count_generator()
    for _ in range(5):
        print(next(gen))
+   
    # Checkpoint 1
 
     for _ in range(5):
         do_nothing()
+   
    # Checkpoint 2
    ```
 
    a. How many times will the output `The function count_generator has run n times` be printed by checkpoint 1?
 
-   b. How many times will the output `The function count_generator has run n times` be printed by checkpoint 2?
+   b. How many times will the output `The function do_nothing has run n times` be printed by checkpoint 2?
 
    &nbsp;
 
