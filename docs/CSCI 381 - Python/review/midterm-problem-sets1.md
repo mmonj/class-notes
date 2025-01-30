@@ -1,4 +1,4 @@
-# Python Problem Sets 1
+# Midterm Review: Python Problem Sets 1
 
 1. Write a function `generate_matrix(n: int, m: int) -> list[list[int]]` that generates an `n × m` matrix where each element is the sum of its row and column indices.
 
@@ -106,6 +106,8 @@
    #  [3, 6, 9]]
    ```
 
+   &nbsp;
+
 9. Write a function `min_coin_change(coins: list[int], amount: int) -> int` that returns the minimum number of coins needed to make up the given amount. If it's not possible, return `-1`.
 
    The argument `coins` is a list of integers, where each integer represents the denomination of coin you have available.
@@ -117,3 +119,5 @@
    print(min_coin_change([1, 5, 10, 25], 6))   # Output: 2
    print(min_coin_change([5, 10, 25], 6))   # Output: -1
    ```
+
+   &nbsp;
