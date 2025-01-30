@@ -3,11 +3,13 @@
 1. Given the following Python code:
 
    ```python
-   def function_logger(func: Callable) -> Callable:
+    from functools import wraps
+
+   def function_logger(func):
        counter = 0
 
        @wraps(func)
-       def wrapper(*args: Any, **kwargs: Any) -> Any:
+       def wrapper(*args, **kwargs):
            nonlocal counter
            counter += 1
 
@@ -21,7 +23,7 @@
 
 
    @function_logger
-   def count_generator() -> Generator:
+   def count_generator():
        i = 0
        while True:
            yield i
