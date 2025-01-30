@@ -1,4 +1,6 @@
-# Python Problem Sets 2: Arguments and Functions
+# Midterm Review: Python Problem Sets 2
+
+## Arguments and Functions
 
 1. Given the following code, what will be the output?
 
