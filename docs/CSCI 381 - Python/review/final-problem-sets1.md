@@ -3,31 +3,31 @@
 1. Given the following Python code:
 
    ```python
-   from functools import wraps
+    from functools import wraps
 
-   def function_logger(func):
-       counter = 0
+    def function_logger(func):
+        counter = 0
 
-       @wraps(func)
-       def wrapper(*args, **kwargs):
-           nonlocal counter
-           counter += 1
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            nonlocal counter
+            counter += 1
 
-           result = func(*args, **kwargs)
+            result = func(*args, **kwargs)
 
-           print(f"The function {func.__name__} has run {counter} times")
+            print(f"The function {func.__name__} has run {counter} times")
 
-           return result
+            return result
 
-       return wrapper
+        return wrapper
 
 
-   @function_logger
-   def count_generator():
-       i = 0
-       while True:
-           yield i
-           i += 1
+    @function_logger
+    def count_generator():
+        i = 0
+        while True:
+            yield i
+            i += 1
 
 
     @function_logger
@@ -35,9 +35,9 @@
         pass
 
 
-   gen = count_generator()
-   for _ in range(5):
-       print(next(gen))
+    gen = count_generator()
+    for _ in range(5):
+        print(next(gen))
 
     for _ in range(5):
         do_nothing()
@@ -52,22 +52,21 @@
 2. Write a coroutine function that yields Fibonacci numbers indefinitely, but allows resetting its state via `send()`. The coroutine will receive any integer value as a sentinel for resetting its state.
 
    ```python
-   fib_gen = fibonacci_generator()
+    fib_gen = fibonacci_generator()
 
-   # Generate some numbers
-   print(next(fib_gen))  # 0
-   print(next(fib_gen))  # 1
-   print(next(fib_gen))  # 1
-   print(next(fib_gen))  # 2
-   print(next(fib_gen))  # 3
+    # Generate some numbers
+    print(next(fib_gen))  # 0
+    print(next(fib_gen))  # 1
+    print(next(fib_gen))  # 1
+    print(next(fib_gen))  # 2
+    print(next(fib_gen))  # 3
 
-   # Reset the sequence
-   print(fib_gen.send(0))  # 0
+    # Reset the sequence
+    print(fib_gen.send(0))  # 0
 
-   # Start over
-   print(next(fib_gen))  # 1
-   print(next(fib_gen))  # 1
-
+    # Start over
+    print(next(fib_gen))  # 1
+    print(next(fib_gen))  # 1
    ```
 
    &nbsp;
