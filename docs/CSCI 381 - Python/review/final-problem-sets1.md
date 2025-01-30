@@ -1,6 +1,6 @@
 # Final Review: Problem Sets 1
 
-1. Given the following Python code, how many times will the output `The function count_generator has run n times` be printed?
+1. Given the following Python code:
 
    ```python
    def function_logger(func: Callable) -> Callable:
@@ -27,10 +27,25 @@
            yield i
            i += 1
 
+
+    @function_logger
+    def do_nothing() -> None:
+        pass
+
+
    gen = count_generator()
    for _ in range(5):
        print(next(gen))
+   # Checkpoint 1
+
+    for _ in range(5):
+        do_nothing()
+   # Checkpoint 2
    ```
+
+   a. How many times will the output `The function count_generator has run n times` be printed by checkpoint 1?
+
+   b. How many times will the output `The function count_generator has run n times` be printed by checkpoint 2?
 
    &nbsp;
 
