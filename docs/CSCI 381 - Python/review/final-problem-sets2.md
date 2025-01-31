@@ -21,7 +21,7 @@ For each of the following questions, you will define a lambda function that retu
    ```python
    transform_strings = # define your lambda here
    print(transform_strings(["hello", "world", "python", "is", "fun"]))
-   # Expected Output: ['HELLO', 'dlrow', 'PYTHON', 'SI', 'FUN']
+   # Expected Output: ['HELLO', 'WORLD', 'nohtyp', 'si', 'FUN']
    ```
 
    &nbsp;
