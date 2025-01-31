@@ -8,8 +8,8 @@ For each of the following questions, you will define a lambda function that retu
 
    ```python
    longest_word = # define your lambda here
-   print(longest_word("The quick brown fox jumps over the lazy dog"))
-   # Expected Output: "jumps"
+   print(longest_word("The pickle parade danced on a trampoline under a disco ball"))
+   # Expected Output: "trampoline"
    ```
 
    &nbsp;
