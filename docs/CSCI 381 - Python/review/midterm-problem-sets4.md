@@ -79,7 +79,7 @@
 
    ```python
    mylist =  [5, 4, 21, 20, 39]
-   mylist.sort(...)
+   # Your expression here
    print(mylist) # output: [20, 21, 4, 5, 39]
    ```
 
