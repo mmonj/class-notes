@@ -1,5 +1,5 @@
 
-## CSCI 381 Python Review: Problem Sets
+## CSCI 381 Python Exam Review: Problem Sets
 
   Note: If you're considering skipping many of the questions because you think I made them unnecessarily difficult, you're underestimating Waxman's exams.
 
