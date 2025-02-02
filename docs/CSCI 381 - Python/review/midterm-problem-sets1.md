@@ -55,7 +55,7 @@
 
    a. Determine if modifying `a` affects `b`. Why or why not?
 
-   b. What line 3 instead read `del a`. Would this have an effect on `b`? Why or why not?
+   b. What if line 3 instead read `del a`. Would this have an effect on `b`? Why or why not?
 
    &nbsp;
 
