@@ -15,17 +15,31 @@
 
    &nbsp;
 
-2. Create a closure `make_counter(start = 0)` that returns a tuple of two functions:
+2. Create a closure `make_counter` that accepts an integer keyword argument `start` (default: `0`). It should maintain an internal integer state `count`, initialized with the value of `start`.
 
-   - `increment()`: increases the count by 1 and returns the current value.
-   - `decrement()`: decreases the count by 1 and returns the current value.
+   `make_counter` should return a tuple of three functions:
+
+   - `increment`: Accepts an integer keyword argument `amount` (default: `1`). Increases `count` by `amount` and returns the updated value.
+
+   - `reset`: Resets `count` to its initial state and returns the updated value.
+
+   - `undo`: Reverts `count` to its previous value before the last operation and returns it. If `undo` is called multiple times beyond the stored history, `count` remains at `start`.
 
    **Example:**
 
    ```python
-   increment, decrement = make_counter(10)
-   print(increment())  # Output: 11
-   print(decrement())  # Output: 10
+   increment, reset, undo = make_counter(10)
+   print(increment(4))  # Output: 14
+   print(increment(-1))  # Output: 13
+   print(reset()) # Output: 10
+
+   print(undo()) # Output: 13
+   print(undo()) # Output: 14
+   print(undo()) # Output: 10 (No more `undo` history after this point. Any further calls to `undo` results in `count` simply remaining at its original value)
+
+   print(undo()) # Output: 10
+   print(undo()) # Output: 10
+
    ```
 
    &nbsp;
