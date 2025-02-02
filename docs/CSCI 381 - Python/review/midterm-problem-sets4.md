@@ -16,11 +16,11 @@
 
    &nbsp;
 
-2. Create a list comprehension to generate all numbers divisible by 3 in a given range eg. (1 to 100).
+2. Create a list comprehension to generate all numbers divisible by 3 in a given range eg. 1 to 100 inclusive.
 
    ```python
    def generate_divisible_by_3(lowerbound: int, upperbound: int) -> list[int]:
-       # Your code here
+       # Your return statement here
    ```
 
    Example usage:
