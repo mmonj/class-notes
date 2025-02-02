@@ -31,7 +31,7 @@
 
    &nbsp;
 
-3. Write a function that extracts and reverses a slice of a list (start to end indices inclusive).
+3. Write a function that extracts and reverses a slice of a list (start to end indices inclusive). It should handle out-of-bound cases gracefully. You are not allowed to use the built-in slice operations.
 
    ```python
    def reverse_slice(lst: list[int], start: int, end: int) -> list[int]:
@@ -43,6 +43,7 @@
    ```python
    lst = [10, 20, 30, 40, 50]
    print(reverse_slice(lst, 1, 3))  # Output: [40, 30, 20]
+   print(reverse_slice(lst, 2, 8))  # Output: [50, 40, 30]
    ```
 
    &nbsp;
