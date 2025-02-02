@@ -96,7 +96,7 @@
 
    &nbsp;
 
-5. What does this generator expression produce? Does the print statement output a list of integers?
+5. Is there a syntax error in this code? If not, determine the output:
 
    ```python
    gen = ((x * y,) for x in range(2) for y in range(2))
