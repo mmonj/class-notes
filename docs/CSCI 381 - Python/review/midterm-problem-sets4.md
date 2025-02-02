@@ -195,7 +195,7 @@
 
     ```python
     nums1 = list(range(5))
-    nums2 = sorted(nums1, reversed=True)[::-1]
+    nums2 = sorted(nums1, reverse=True)[::-1]
     print(nums1)
     print(nums2)
     ```
