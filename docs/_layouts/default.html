@@ -38,7 +38,15 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ content }}
+<!--       {{ content }} -->
+
+      <ul>
+        {% for page in site.pages %}
+            {% if page.url != "/" and page.url != page.url | replace:'/index.html', '/' %}
+                <li><a href="{{ page.url }}">{{ page.title | default: page.url }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
