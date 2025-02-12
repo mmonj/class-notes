@@ -38,7 +38,7 @@
     </header>
 
     <div style="max-width: 64rem; padding: 4px; margin-left: auto; margin-right: auto;">
-      <a href="/">Home</a>
+      <a href="/class-notes/">Home</a>
         {% for crumb in crumbs offset: 1 %}
           {% if forloop.last %}
             / {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
