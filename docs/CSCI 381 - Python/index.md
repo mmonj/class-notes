@@ -10,5 +10,3 @@ Note: If you're considering skipping many of the questions because you think I m
 - [Final Problem Sets 2](review/final-problem-sets2)
 
 &nbsp;
-
-[❮ Back Home](../)

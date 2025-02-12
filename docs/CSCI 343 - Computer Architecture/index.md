@@ -10,5 +10,3 @@
 - [Example Problem: Digital Clock & K-Map with Don't Cares](./guides/Guide%202%20-%20Digital%20Clock.pdf)
 
 &nbsp;
-
-[❮ Back Home](../)
