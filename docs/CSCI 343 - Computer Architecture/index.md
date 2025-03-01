@@ -11,6 +11,8 @@ Any guides posted below will use the methods that you are expected to use for th
 - [Binary Adder & Subtractor supplement](https://www.youtube.com/watch?v=o22PeIImcKc) - Relevant info from 00:00 - 06:15
 - [1-bit ALU \[Video\]](https://www.youtube.com/watch?v=y9EA-XBbRgg)
 - [32-bit ALU \[Video\]](https://www.youtube.com/watch?v=IzCIxPCfEP0)
+- [32-bit ALU - Comparison Operations (equality, less than)](https://www.youtube.com/watch?v=ajESmB0qJjc)
+- [32-bit ALU - Detecting overflow](https://www.youtube.com/watch?v=p4yVpZGZ9tA)
 - [Karnaugh Map with Don't Cares \[Video\]](https://www.youtube.com/watch?v=SaKVzgiekrA)
 - [Guide: Digital Clock & K-Map with Don't Cares](./guides/Guide%202%20-%20Digital%20Clock.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
 
