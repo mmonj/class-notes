@@ -15,7 +15,24 @@
 
    &nbsp;
 
-2. Create a closure `make_counter` that accepts an integer keyword argument `start` (default: `0`). It should maintain an internal integer state `count`, initialized with the value of `start`.
+2. Write a function `compose(*funcs)` that returns a closure. The closure should compose the functions (i.e., apply them in sequence from right to left).
+
+   Example usage:
+
+   ```python
+   def add_one(x):
+      return x + 1
+
+   def square(x):
+      return x * x
+
+   composed = compose(square, add_one)
+   print(composed(3))  # Output: 16
+   ```
+
+   &nbsp;
+
+3. Create a closure `make_counter` that accepts an integer keyword argument `start` (default: `0`). It should maintain an internal integer state `count`, initialized with the value of `start`.
 
    `make_counter` should return a tuple of three functions:
 
@@ -44,7 +61,7 @@
 
    &nbsp;
 
-3. Consider the following scenario:
+4. Consider the following scenario:
 
    ```python
    a = [1, 2, 3]
@@ -59,7 +76,7 @@
 
    &nbsp;
 
-4. Given a list of integers, write a function `remove_every_nth_element(lst: list[int], n: int)` that removes every n-th element from the list without creating a new list. Use the `del` keyword.
+5. Given a list of integers, write a function `remove_every_nth_element(lst: list[int], n: int)` that removes every n-th element from the list without creating a new list. Use the `del` keyword.
 
    **Example:**
 
@@ -72,7 +89,7 @@
 
    &nbsp;
 
-5. Write a recursive function `flatten(mylist: list) -> list` that takes a deeply nested list (e.g., `[[1, [2, 3]], 4, [5, [6, 7]]]`) and returns a flattened list.
+6. Write a recursive function `flatten(mylist: list) -> list` that takes a deeply nested list (e.g., `[[1, [2, 3]], 4, [5, [6, 7]]]`) and returns a flattened list.
 
    **Example:**
 
@@ -85,7 +102,7 @@
 
    &nbsp;
 
-6. Write a function `is_palindrome(s: str) -> bool` that checks whether a given string is a palindrome. The function should ignore case differences.
+7. Write a function `is_palindrome(s: str) -> bool` that checks whether a given string is a palindrome. The function should ignore case differences.
 
    **Example:**
 
@@ -96,7 +113,7 @@
 
    &nbsp;
 
-7. Write a function `prime_factors(n: int) -> list[int]` that returns all prime factors of a given integer `n`.
+8. Write a function `prime_factors(n: int) -> list[int]` that returns all prime factors of a given integer `n`.
 
    **Example:**
 
@@ -106,7 +123,7 @@
 
    &nbsp;
 
-8. Write a function `transpose(matrix: list[list[int]]) -> list[list[int]]` that takes a square and returns its transpose.
+9. Write a function `transpose(matrix: list[list[int]]) -> list[list[int]]` that takes a square and returns its transpose.
 
    **Example:**
 
@@ -122,16 +139,16 @@
 
    &nbsp;
 
-9. Write a function `min_coin_change(coins: list[int], amount: int) -> int` that returns the minimum number of coins needed to make up the given amount. If it's not possible, return `-1`.
+10. Write a function `min_coin_change(coins: list[int], amount: int) -> int` that returns the minimum number of coins needed to make up the given amount. If it's not possible, return `-1`.
 
-   The argument `coins` is a list of integers, where each integer represents the denomination of coin you have available.
+    The argument `coins` is a list of integers, where each integer represents the denomination of coin you have available.
 
-   **Example:**
+    **Example:**
 
-   ```python
-   print(min_coin_change([1, 5, 10, 25], 7))  # Output: 3
-   print(min_coin_change([1, 5, 10, 25], 6))   # Output: 2
-   print(min_coin_change([5, 10, 25], 6))   # Output: -1
-   ```
+    ```python
+    print(min_coin_change([1, 5, 10, 25], 7))  # Output: 3
+    print(min_coin_change([1, 5, 10, 25], 6))   # Output: 2
+    print(min_coin_change([5, 10, 25], 6))   # Output: -1
+    ```
 
-   &nbsp;
+    &nbsp;

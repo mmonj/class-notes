@@ -171,3 +171,20 @@
    ```
 
    &nbsp;
+
+10. Write a function `create_memoized_function(func)` that returns a closure. The closure should cache the results of func and return the cached result if the same input is provided again.
+
+    Example Usage:
+
+    ```python
+    def expensive_calculation(x):
+        print(f"Calculating for {x}...")
+        return x * x
+
+    calc = create_memoized_function(expensive_calculation)
+    print(calc(5))  # Output: Calculating for 5... 25
+    print(calc(5))  # Output: 25 (cached)
+    print(calc(5))  # Output: 25 (cached)
+    print(calc(7))  # Output: Calculating for 7... 49
+    print(calc(7))  # Output: 49 (cached)
+    ```
