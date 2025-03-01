@@ -5,13 +5,13 @@ Any guides posted below will use the methods that you are expected to use for th
 ### Week 1 & 2
 
 - [Guide: Create a MUX from a Boolean function](./guides/Guide%201%20%2D%20Create%20a%20MUX%20from%20a%20Boolean%20function.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=M_cnctZqk-s) that gives a general idea for how the guide's approach works, though it doesn't exactly follow the guide's method 1:1
-- [ROM Basics [Video]](https://www.youtube.com/watch?v=yX0F5Xz_f9o)
-- [Binary Adder & Subtractor [Video]](https://www.youtube.com/watch?v=o87GH5U1zUY)
-- [Binary Adder & Subtractor (alternate) [Video]](https://www.youtube.com/watch?v=J7gPUP0aRug) - Has accurate subtitles
+- [ROM Basics \[Video\]](https://www.youtube.com/watch?v=yX0F5Xz_f9o)
+- [Binary Adder & Subtractor \[Video\]](https://www.youtube.com/watch?v=o87GH5U1zUY)
+- [Binary Adder & Subtractor (alternate) \[Video\]](https://www.youtube.com/watch?v=J7gPUP0aRug) - Has accurate subtitles
 - [Binary Adder & Subtractor supplement](https://www.youtube.com/watch?v=o22PeIImcKc) - Relevant info from 00:00 - 06:15
-- [1-bit ALU [Video]](https://www.youtube.com/watch?v=y9EA-XBbRgg)
+- [1-bit ALU \[Video\]](https://www.youtube.com/watch?v=y9EA-XBbRgg)
 - [32-bit ALU \[Video\]](https://www.youtube.com/watch?v=IzCIxPCfEP0)
-- [Karnaugh Map with Don't Cares [Video]](https://www.youtube.com/watch?v=SaKVzgiekrA)
+- [Karnaugh Map with Don't Cares \[Video\]](https://www.youtube.com/watch?v=SaKVzgiekrA)
 - [Guide: Digital Clock & K-Map with Don't Cares](./guides/Guide%202%20-%20Digital%20Clock.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
 
 &nbsp;
