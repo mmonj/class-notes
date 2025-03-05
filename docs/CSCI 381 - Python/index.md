@@ -1,6 +1,6 @@
 ## CSCI 381 Python Exam Review: Problem Sets
 
-Note: If you're considering skipping many of the questions because you think I made them unnecessarily difficult, you're underestimating Waxman's exams.
+Note: These documents were created to match Waxman's style of exam questions as accurately as possible.
 
 - [Midterm Problem Sets 1](review/midterm-problem-sets1)
 - [Midterm Problem Sets 2](review/midterm-problem-sets2)
