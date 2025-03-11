@@ -146,9 +146,9 @@
     **Example:**
 
     ```python
-    print(min_coin_change([1, 5, 10, 25], 7))  # Output: 3
-    print(min_coin_change([1, 5, 10, 25], 6))   # Output: 2
     print(min_coin_change([5, 10, 25], 6))   # Output: -1
+    print(min_coin_change([1, 5, 10, 25], 7))  # Output: 3
+    print(min_coin_change([5, 1, 25, 10], 6))   # Output: 2
     ```
 
     &nbsp;
