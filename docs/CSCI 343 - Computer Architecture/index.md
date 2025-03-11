@@ -16,14 +16,15 @@ Any guides posted below will use the methods that you are expected to use for th
 - [Karnaugh Map with Don't Cares \[Video\]](https://www.youtube.com/watch?v=SaKVzgiekrA)
 - [Guide: Digital Clock & K-Map with Don't Cares](./guides/Guide%202%20-%20Digital%20Clock.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
 
-&nbsp;
-
 ### Lecture 8, 9, 10
 
 <small>Feb 25, Feb 27 & March 10</small>
 
 - [Notes Feb 25 - Sequential Circuits](./notes/Notes%20Feb%2025%20-%20Sequential%20Circuits.pdf)
 - [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter%20-%20Copy.pdf)
+- [Notes Mar 4 - Non-Binary Counter](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf)
 - [Video - Non-binary sequence counters (counters with unused states)](https://www.youtube.com/watch?v=8EVD-Mnywhk)
+
+&nbsp;
 
 [❮ Back Home](../)
