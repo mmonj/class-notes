@@ -18,7 +18,7 @@ Any guides posted below will use the methods that you are expected to use for th
 
 ### Lecture 8, 9, 10
 
-<small>Feb 25, Feb 27 & March 10</small>
+<small>Feb 25, Feb 27 & March 4</small>
 
 - [Notes Feb 25 - Sequential Circuits](./notes/Notes%20Feb%2025%20-%20Sequential%20Circuits.pdf)
 - [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter%20-%20Copy.pdf)
