@@ -22,7 +22,8 @@ Any guides posted below will use the methods that you are expected to use for th
 
 - [Notes Feb 25 - Sequential Circuits](./notes/Notes%20Feb%2025%20-%20Sequential%20Circuits.pdf)
 - [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter%20-%20Copy.pdf)
-- [Notes Mar 4 - Non-Binary Counter (counter with unused states)](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Supplementary video: [https://www.youtube.com/watch?v=8EVD-Mnywhk](https://www.youtube.com/watch?v=8EVD-Mnywhk)
+- [Notes Mar 4 - Non-Binary Counter (counter with unused states)](./notes/Notes%20Mar%204%20-%20Non-binary%20counter.pdf) - Supplemental video: [https://www.youtube.com/watch?v=8EVD-Mnywhk](https://www.youtube.com/watch?v=8EVD-Mnywhk)
+- [Example - Non-Binary Counter with D flip flops](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf)
 
 &nbsp;
 
