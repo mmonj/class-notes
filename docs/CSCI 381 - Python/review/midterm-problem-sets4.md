@@ -48,7 +48,7 @@
 
    &nbsp;
 
-4. Write a Python function `apply_transformation` that accepts a list of integers and a lambda function to transform each element in the list. The function should return a new list where each element is transformed according to the lambda function. The lambda function itself is one that accepts an integer value and returns the transformed value.
+4. Write a Python function `apply_transformation` that accepts a list of integers and a callback function. `apply_transformation` should return a new list where each element is transformed according to the callback function. The callback function itself should be one that accepts an integer value and returns the transformed value.
 
    Your function should have the following signature:
 
