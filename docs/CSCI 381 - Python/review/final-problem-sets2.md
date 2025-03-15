@@ -59,12 +59,12 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-6. Write a lambda function `filter_dict` that takes a dictionary and returns a new dictionary containing only key-value pairs where the key's length is greater than a given threshold.
+6. Write a lambda function `filter_dict` that takes a dictionary and returns a new dictionary containing only key-value pairs where the key's paired value is greater than a given threshold.
 
    **Example Usage:**
 
    ```python
-   print(filter_dict({'apple': 10, 'dog': 5, 'banana': 7}, 4))
+   print(filter_dict({'apple': 10, 'dog': 2, 'banana': 7}, 4))
    # Expected Output: {'apple': 10, 'banana': 7}
    ```
 
