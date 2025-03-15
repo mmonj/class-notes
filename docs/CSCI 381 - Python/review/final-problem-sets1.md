@@ -143,7 +143,7 @@
 
    &nbsp;
 
-8. What is the output of the following code? If we want the output to be `False`, do we have to change anything about our code? If so, what?
+8. What is the output of the following code? If we want the output to be the opposite, what do we have to change about the code?
 
    ```python
    data = {
