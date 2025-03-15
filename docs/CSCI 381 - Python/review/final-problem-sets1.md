@@ -184,7 +184,7 @@
     calc = create_memoized_function(expensive_calculation)
     print(calc(5))  # Output: Calculating for 5... 25
     print(calc(5))  # Output: 25 (cached)
-    print(calc(5))  # Output: 25 (cached)
     print(calc(7))  # Output: Calculating for 7... 49
+    print(calc(5))  # Output: 25 (cached)
     print(calc(7))  # Output: 49 (cached)
     ```
