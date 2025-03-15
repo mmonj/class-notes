@@ -15,7 +15,7 @@
 
    &nbsp;
 
-2. Write a function `compose(*funcs)` that returns a closure. The closure should compose the functions (i.e., apply them in sequence from right to left).
+2. Write a function `compose(*funcs)` that accepts a variable number of function references and returns a closure. The closure should compose the functions (i.e., apply them in sequence from right to left).
 
    Example usage:
 
