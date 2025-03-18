@@ -21,7 +21,7 @@ Any example documents posted below will use the methods that you are expected to
 <small>Feb 25, Feb 27 & March 4</small>
 
 - [Notes Feb 25 - Sequential Circuits & Master-Slave Flip Flop](./notes/Notes%20Feb%2025%20sequential%20circuits%20&%20master%20slave%20flip%20flop.pdf)
-- [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter%20-%20Copy.pdf)
+- [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter.pdf)
 - [Notes Mar 4 - Non-Binary Counter (counter with unused states)](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Supplemental video: [https://www.youtube.com/watch?v=8EVD-Mnywhk](https://www.youtube.com/watch?v=8EVD-Mnywhk)
 - [Example: Non-Binary Counter with D flip flops](./examples/Example%203%20-%20Non-Binary%20counter.pdf)
 
