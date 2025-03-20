@@ -2,7 +2,7 @@
 
 Any example documents posted below will use the methods that you are expected to use for this class. If any supplemental video uses different notation or methods, I will try to make a note of it, since not using the professor's method 1:1 will result in you not being granted any points for your answers on quizzes/exams.
 
-### Week 1 & 2
+### Pre-Quiz 1 Material
 
 - [Example: Create a MUX from a Boolean function](./examples/Example%201%20%2D%20Create%20a%20MUX%20from%20a%20Boolean%20function.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=M_cnctZqk-s) that gives a general idea for how the example's approach works, though it doesn't exactly follow the example's method 1:1
 - [ROM Basics \[Video\]](https://www.youtube.com/watch?v=yX0F5Xz_f9o)
@@ -16,7 +16,7 @@ Any example documents posted below will use the methods that you are expected to
 - [Karnaugh Map with Don't Cares \[Video\]](https://www.youtube.com/watch?v=SaKVzgiekrA)
 - [Example: Digital Clock & K-Map with Don't Cares](./examples/Example%202%20-%20Digital%20Clock.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
 
-### Lecture 8, 9, 10
+### Pre-Midterm 1 Material
 
 <small>Feb 25, Feb 27 & March 4</small>
 
