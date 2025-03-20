@@ -27,6 +27,11 @@ Any example documents posted below will use the methods that you are expected to
 
 - [Notes Mar 11 - Addressing Modes](./notes/Notes%20Mar%2011%20-%20Addressing%20Modes.pdf)
 
+### Pre-Midterm 2 Material
+
+- [343 Midterm 2 Review #2 - Everything but Pipeline \[Video\]](https://youtu.be/qKq5aAfFreE)
+- [343 Midterm 2 Review #3 - Pipeline etc \[Video\]](https://www.youtube.com/watch?v=TmOCzD6n6dU)
+
 &nbsp;
 
 [❮ Back Home](../)
