@@ -26,10 +26,10 @@ Any example documents posted below will use the methods that you are expected to
 ### Pre-Quiz 2 Material
 
 - [Notes Mar 11 & 13 - Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf)
-- [Notes Mar 20 - Datapath for R-Format](./notes/Notes%20Mar%2020%20-%20Datapath%20for%20R%20format.pdf)
 
 ### Pre-Midterm 2 Material
 
+- [Notes Mar 20 - Datapath for R-Format](./notes/Notes%20Mar%2020%20-%20Datapath%20for%20R%20format.pdf)
 - [343 Midterm 2 Review #2 - Everything but Pipeline \[Video\]](https://youtu.be/qKq5aAfFreE)
 - [343 Midterm 2 Review #3 - Pipeline etc \[Video\]](https://www.youtube.com/watch?v=TmOCzD6n6dU)
 
