@@ -25,7 +25,8 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Pre-Quiz 2 Material
 
-- [Notes Mar 11 - Addressing Modes](./notes/Notes%20Mar%2011%20-%20Addressing%20Modes.pdf)
+- [Notes Mar 11 & 13 - Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf)
+- [Notes Mar 20 - Datapath for R-Format](./notes/Notes%20Mar%2020%20-%20Datapath%20for%20R%20format.pdf)
 
 ### Pre-Midterm 2 Material
 
