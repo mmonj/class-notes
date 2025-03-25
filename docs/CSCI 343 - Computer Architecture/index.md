@@ -25,6 +25,7 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Pre-Quiz 2 Material
 
+- [CSCI 240 Intro to MIPS - Jackson Yeh](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18)
 - [Notes March 11 & 13 - Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf)
 
 ### Pre-Midterm 2 Material
