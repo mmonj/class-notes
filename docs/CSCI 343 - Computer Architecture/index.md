@@ -1,6 +1,6 @@
 ## CSCI 343 Computer Architecture (Fluture)
 
-Any example documents posted below will use the methods that you are expected to use for this class. If any supplemental video uses different notation or methods, I will try to make a note of it, since not using the professor's method 1:1 will result in you not being granted any points for your answers on quizzes/exams.
+Any example documents posted below will use the methods that you are expected to use for this class. If any supplemental video uses different notation or methods, I will try to make a note of it, since not using the professor's method 1:1 will result in you not being granted any points for your solutions on quizzes/exams.
 
 ### Pre-Quiz 1 Material
 
@@ -20,16 +20,16 @@ Any example documents posted below will use the methods that you are expected to
 
 - [Notes Feb 25 - Sequential Circuits & Master-Slave Flip Flop](./notes/Notes%20Feb%2025%20sequential%20circuits%20&%20master%20slave%20flip%20flop.pdf)
 - [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter.pdf)
-- [Notes Mar 4 - Non-Binary Counter (counter with unused states)](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Supplemental video: [https://www.youtube.com/watch?v=8EVD-Mnywhk](https://www.youtube.com/watch?v=8EVD-Mnywhk)
+- [Notes March 4 - Non-Binary Counter (counter with unused states)](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Supplemental video: [https://www.youtube.com/watch?v=8EVD-Mnywhk](https://www.youtube.com/watch?v=8EVD-Mnywhk)
 - [Example: Non-Binary Counter with T flip flops](./examples/Example%203%20-%20Non-Binary%20counter.pdf)
 
 ### Pre-Quiz 2 Material
 
-- [Notes Mar 11 & 13 - Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf)
+- [Notes March 11 & 13 - Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf)
 
 ### Pre-Midterm 2 Material
 
-- [Notes Mar 20 - Datapath for R-Format](./notes/Notes%20Mar%2020%20-%20Datapath%20for%20R%20format.pdf)
+- [Notes - Datapath (March 20, 25)](./notes/Notes%20-%20Datapath.pdf)
 - [343 Midterm 2 Review #2 - Everything but Pipeline \[Video\]](https://youtu.be/qKq5aAfFreE)
 - [343 Midterm 2 Review #3 - Pipeline etc \[Video\]](https://www.youtube.com/watch?v=TmOCzD6n6dU)
 
