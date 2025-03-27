@@ -496,16 +496,4 @@ Which of the following is true?
     background-color: #28a745;
   }
 
-@media (max-width: 600px) {
-  details {
-    font-size: 1.2rem !important;
-  }
-  details summary {
-    font-size: 1.2rem !important;
-  }
-  details p {
-    font-size: 1.2rem !important;
-  }
-}
-
 </style>
