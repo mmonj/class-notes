@@ -397,7 +397,7 @@ public class Accounting {
 - 2\) Usable – easy to use
 - 3\) Scalable – can grow with demand
 - 4\) Efficient – won’t waste computer resources
-- 5\) Maintainable – easy to fix (because with everyone coming and going knowledge about the code is easily lost)
+- 5\) Maintainable – easy to fix
 
 <details>
 <summary>Show Answer</summary>
