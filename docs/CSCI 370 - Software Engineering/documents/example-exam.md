@@ -38,6 +38,8 @@
 
 </style>
 
+# Practice Exam
+
 ### Q2) Functional vs Non-Functional refers to
 
 - a) Prototype

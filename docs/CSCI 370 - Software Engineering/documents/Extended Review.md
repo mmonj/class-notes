@@ -6,7 +6,7 @@
   }
 </style>
 
-# 📘 Software Engineering – Review Sheet
+# 📘 CSCI 370 – Extended Review Sheet
 
 ## Chapter 1: Introduction to Software Engineering
 

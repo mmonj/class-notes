@@ -1,4 +1,4 @@
-## CSCI 370 Greenberg
+# CSCI 370 Greenberg
 
 - [Practice Exam](./documents/example-exam)
 - [Extended Review](./documents/Extended%20Review)
