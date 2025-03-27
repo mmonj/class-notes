@@ -4,4 +4,4 @@
 
 ## [CSCI 343 Computer Architecture Notes](./CSCI%20343%20-%20Computer%20Architecture/index)
 
-## [CSCI 370 Software Engineering (Greenberg)](./CSCI%20370%20-%20Software%20Engineering/index.md)
+## [CSCI 370 Software Engineering (Greenberg)](./CSCI%20370%20-%20Software%20Engineering/index)
