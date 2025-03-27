@@ -2,6 +2,7 @@
 
 ## Lecture Summaries
 
+- [Lecture 11](./documents/lecture-11.md)
 - [Lecture 12](./documents/lecture-12.md)
 
 ## Midterm Review
