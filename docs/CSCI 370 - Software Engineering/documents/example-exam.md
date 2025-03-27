@@ -49,7 +49,7 @@
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** b) Requirements
+Correct Answer: b) Requirements
 
 </details>
 
@@ -66,7 +66,7 @@
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** e) All the above
+Correct Answer: e) All the above
 
 </details>
 
@@ -77,7 +77,7 @@
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** Composition
+Correct Answer: Composition
 
 </details>
 
@@ -109,7 +109,7 @@ The above code violates:
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** b) DRY
+Correct Answer: b) DRY
 
 </details>
 
@@ -153,7 +153,7 @@ public class MedicalRecord {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 4) Software Reuse
+Correct Answer: 4) Software Reuse
 
 </details>
 
@@ -169,7 +169,7 @@ public class MedicalRecord {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 3) All the above
+Correct Answer: 3) All the above
 
 </details>
 
@@ -186,7 +186,7 @@ public class MedicalRecord {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 5) All the above
+Correct Answer: 5) All the above
 
 </details>
 
@@ -232,7 +232,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 5) FinancialInstitutions should use the Observer pattern
+Correct Answer: 5) FinancialInstitutions should use the Observer pattern
 
 </details>
 
@@ -249,7 +249,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** e) All the above
+Correct Answer: e) All the above
 
 </details>
 
@@ -266,7 +266,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 3) Easy to make modifications (change requirements)
+Correct Answer: 3) Easy to make modifications (change requirements)
 
 </details>
 
@@ -277,7 +277,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** Testing
+Correct Answer: Testing
 
 </details>
 
@@ -294,7 +294,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 3) game software and medical software
+Correct Answer: 3) game software and medical software
 
 </details>
 
@@ -319,7 +319,7 @@ These steps should be performed in the following order:
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 1) A), B), C), D), E)
+Correct Answer: 1) A), B), C), D), E)
 
 </details>
 
@@ -336,7 +336,7 @@ These steps should be performed in the following order:
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 5) All the above
+Correct Answer: 5) All the above
 
 </details>
 
@@ -355,7 +355,7 @@ These steps should be performed in the following order:
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 3) Incremental Model
+Correct Answer: 3) Incremental Model
 
 </details>
 
@@ -368,7 +368,7 @@ These steps should be performed in the following order:
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** Inheritance
+Correct Answer: Inheritance
 
 </details>
 
@@ -387,7 +387,7 @@ These steps should be performed in the following order:
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 1) Association
+Correct Answer: 1) Association
 
 </details>
 
@@ -425,7 +425,7 @@ public class Accounting {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** Line 4 - The one that uses composition
+Correct Answer: Line 4 - The one that uses composition
 
 </details>
 
@@ -442,7 +442,7 @@ public class Accounting {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 5) Maintainable
+Correct Answer: 5) Maintainable
 
 </details>
 
@@ -459,7 +459,7 @@ public class Accounting {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 5) None of the above
+Correct Answer: 5) None of the above
 
 </details>
 
@@ -485,7 +485,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 1) Only (a)(b)(c)(d)(e) are part of a software project
+Correct Answer: 1) Only (a)(b)(c)(d)(e) are part of a software project
 
 </details>
 
@@ -502,7 +502,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answer:** 5) Re-use model
+Correct Answer: 5) Re-use model
 
 </details>
 
