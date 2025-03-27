@@ -74,7 +74,7 @@
 
 &nbsp;
 
-### Q8) The Strategy pattern replaces inheritance with \***\*\_\_\*\***.
+### Q8) The Strategy pattern replaces inheritance with \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 <details>
 <summary>Show Answer</summary>
