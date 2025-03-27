@@ -427,12 +427,12 @@ public class Accounting {
 
 ### Q77) Regarding the following:
 
-- Testing (a)
-- Operational manual (b)
-- Java Code (c)
-- Requirements Document (d)
-- Technical Documentation (e)
-- Financing (f)
+- a) Testing
+- b) Operational manual
+- c) Java Code
+- d) Requirements Document
+- e) Technical Documentation
+- f) Financing
 
 Which of the following is true?
 
