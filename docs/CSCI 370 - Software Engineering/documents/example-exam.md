@@ -357,8 +357,6 @@ These steps should be performed in the following order:
 
 ### Q68) Which class below is the optimal way to design code?
 
-The one that uses composition i.e. Line 4
-
 ```java
 public interface IDatabase {}
 
@@ -387,7 +385,7 @@ public class Accounting {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> Line 4 - The one that uses composition
+<b>Correct Answer:</b> Line 4: The one that uses composition
 
 </details>
 
