@@ -131,7 +131,7 @@ public class MedicalRecord {
 
 - a) **MedicalRecord** and **Database** have an IS-A relationship
 - b) **MedicalRecord** composes the **Database** object
-- c) **Database** is encapsulated (False because Database is public)
+- c) **Database** is encapsulated
 - d) **MedicalRecord** is dependent on **Database**
 - e) **MedicalRecord** and **Database** have a HAS-A relationship
 
