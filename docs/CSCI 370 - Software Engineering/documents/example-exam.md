@@ -234,7 +234,7 @@ Which of the following is true?
 
 &nbsp;
 
-### Q41) Software specification, software development, \***\*\_\_\*\***, software evolution. Which step is missing above?
+### Q41) Software specification, software development, \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, software evolution. Which step is missing above?
 
 <details>
 <summary>Show Answer</summary>
