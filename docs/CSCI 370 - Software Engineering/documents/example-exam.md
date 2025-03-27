@@ -49,7 +49,7 @@
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: b) Requirements
+<b>Correct Answer:</b> b) Requirements
 
 </details>
 
@@ -66,7 +66,7 @@ Correct Answer: b) Requirements
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: e) All the above
+<b>Correct Answer:</b> e) All the above
 
 </details>
 
@@ -77,7 +77,7 @@ Correct Answer: e) All the above
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: Composition
+<b>Correct Answer:</b> Composition
 
 </details>
 
@@ -109,7 +109,7 @@ The above code violates:
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: b) DRY
+<b>Correct Answer:</b> b) DRY
 
 </details>
 
@@ -153,7 +153,7 @@ public class MedicalRecord {
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 4) Software Reuse
+<b>Correct Answer:</b> 4) Software Reuse
 
 </details>
 
@@ -169,7 +169,7 @@ Correct Answer: 4) Software Reuse
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 3) All the above
+<b>Correct Answer:</b> 3) All the above
 
 </details>
 
@@ -186,7 +186,7 @@ Correct Answer: 3) All the above
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 5) All the above
+<b>Correct Answer:</b> 5) All the above
 
 </details>
 
@@ -232,7 +232,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 5) FinancialInstitutions should use the Observer pattern
+<b>Correct Answer:</b> 5) FinancialInstitutions should use the Observer pattern
 
 </details>
 
@@ -249,7 +249,7 @@ Correct Answer: 5) FinancialInstitutions should use the Observer pattern
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: e) All the above
+<b>Correct Answer:</b> e) All the above
 
 </details>
 
@@ -266,7 +266,7 @@ Correct Answer: e) All the above
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 3) Easy to make modifications (change requirements)
+<b>Correct Answer:</b> 3) Easy to make modifications (change requirements)
 
 </details>
 
@@ -277,7 +277,7 @@ Correct Answer: 3) Easy to make modifications (change requirements)
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: Testing
+<b>Correct Answer:</b> Testing
 
 </details>
 
@@ -294,7 +294,7 @@ Correct Answer: Testing
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 3) game software and medical software
+<b>Correct Answer:</b> 3) game software and medical software
 
 </details>
 
@@ -319,7 +319,7 @@ These steps should be performed in the following order:
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 1) A), B), C), D), E)
+<b>Correct Answer:</b> 1) A), B), C), D), E)
 
 </details>
 
@@ -336,7 +336,7 @@ Correct Answer: 1) A), B), C), D), E)
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 5) All the above
+<b>Correct Answer:</b> 5) All the above
 
 </details>
 
@@ -355,7 +355,7 @@ Correct Answer: 5) All the above
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 3) Incremental Model
+<b>Correct Answer:</b> 3) Incremental Model
 
 </details>
 
@@ -368,7 +368,7 @@ Correct Answer: 3) Incremental Model
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: Inheritance
+<b>Correct Answer:</b> Inheritance
 
 </details>
 
@@ -387,7 +387,7 @@ Correct Answer: Inheritance
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 1) Association
+<b>Correct Answer:</b> 1) Association
 
 </details>
 
@@ -425,7 +425,7 @@ public class Accounting {
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: Line 4 - The one that uses composition
+<b>Correct Answer:</b> Line 4 - The one that uses composition
 
 </details>
 
@@ -442,7 +442,7 @@ Correct Answer: Line 4 - The one that uses composition
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 5) Maintainable
+<b>Correct Answer:</b> 5) Maintainable
 
 </details>
 
@@ -459,7 +459,7 @@ Correct Answer: 5) Maintainable
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 5) None of the above
+<b>Correct Answer:</b> 5) None of the above
 
 </details>
 
@@ -485,7 +485,7 @@ Which of the following is true?
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 1) Only (a)(b)(c)(d)(e) are part of a software project
+<b>Correct Answer:</b> 1) Only (a)(b)(c)(d)(e) are part of a software project
 
 </details>
 
@@ -502,7 +502,7 @@ Correct Answer: 1) Only (a)(b)(c)(d)(e) are part of a software project
 <details>
 <summary>Show Answer</summary>
 
-Correct Answer: 5) Re-use model
+<b>Correct Answer:</b> 5) Re-use model
 
 </details>
 
