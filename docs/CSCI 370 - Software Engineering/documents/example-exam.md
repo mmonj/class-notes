@@ -146,11 +146,11 @@ public class MedicalRecord {
 
 ### Q17) Which of these do not involve incremental development.
 
-- 1. Xtreme Programming
-- 2. Agile
-- 3. Scrum
-- 4. Software Reuse
-- 5. Iterative development
+- 1\) Xtreme Programming
+- 2\) Agile
+- 3\) Scrum
+- 4\) Software Reuse
+- 5\) Iterative development
 
 <details>
 <summary>Show Answer</summary>
@@ -163,10 +163,10 @@ public class MedicalRecord {
 
 ### Q20) Which Design Pattern uses the principle, _Open for Extension Closed for Modification_?
 
-- 1. Observer
-- 2. Strategy
-- 3. All the above
-- 4. None of the above
+- 1\) Observer
+- 2\) Strategy
+- 3\) All the above
+- 4\) None of the above
 
 <details>
 <summary>Show Answer</summary>
@@ -179,11 +179,11 @@ public class MedicalRecord {
 
 ### Q23) Challenges facing software engineers.
 
-- 1. New technologies
-- 2. Reduced delivery times
-- 3. Developing trustworthy software
-- 4. Global Competition
-- 5. All the above
+- 1\) New technologies
+- 2\) Reduced delivery times
+- 3\) Developing trustworthy software
+- 4\) Global Competition
+- 5\) All the above
 
 <details>
 <summary>Show Answer</summary>
@@ -225,11 +225,11 @@ public class FinancialInstitutions {
 
 Which of the following is true?
 
-- 1. **FinancialInstitutions** class is using Inheritance
-- 2. **FinancialInstitutions** class should use composition
-- 3. **BankOfFrance** should use `extends` rather than `implements`
-- 4. **FinancialInstitutions** is closed for modification
-- 5. **FinancialInstitutions** should use the Observer pattern
+- 1\) **FinancialInstitutions** class is using Inheritance
+- 2\) **FinancialInstitutions** class should use composition
+- 3\) **BankOfFrance** should use `extends` rather than `implements`
+- 4\) **FinancialInstitutions** is closed for modification
+- 5\) **FinancialInstitutions** should use the Observer pattern
 
 <details>
 <summary>Show Answer</summary>
@@ -259,11 +259,11 @@ Which of the following is true?
 
 ### Q38) The following is true about incremental development…
 
-- 1. Customer involvement is not recommended
-- 2. All requirements are determined before coding
-- 3. Easy to make modifications (change requirements)
-- 4. Code does not need refactoring
-- 5. Only testing done is unit testing
+- 1\) Customer involvement is not recommended
+- 2\) All requirements are determined before coding
+- 3\) Easy to make modifications (change requirements)
+- 4\) Code does not need refactoring
+- 5\) Only testing done is unit testing
 
 <details>
 <summary>Show Answer</summary>
@@ -287,11 +287,11 @@ Which of the following is true?
 
 ### Q44) Software for the following are usually developed using different process models:
 
-- 1. refrigerator software and medical software
-- 2. airplane software and medical software
-- 3. game software and medical software
-- 4. Scalable software and software that can handle unlimited users
-- 5. your web site with Amazon checkout and using 3rd party graphics library for your game software
+- 1\) refrigerator software and medical software
+- 2\) airplane software and medical software
+- 3\) game software and medical software
+- 4\) Scalable software and software that can handle unlimited users
+- 5\) your web site with Amazon checkout and using 3rd party graphics library for your game software
 
 <details>
 <summary>Show Answer</summary>
@@ -312,11 +312,11 @@ Which of the following is true?
 
 These steps should be performed in the following order:
 
-- 1. A), B), C), D), E)
-- 2. D), B), C), A), E)
-- 3. A), C), D), B), E)
-- 4. Any order is OK
-- 5. B), C), D), E), A)
+- 1\) A), B), C), D), E)
+- 2\) D), B), C), A), E)
+- 3\) A), C), D), B), E)
+- 4\) Any order is OK
+- 5\) B), C), D), E), A)
 
 <details>
 <summary>Show Answer</summary>
@@ -329,11 +329,11 @@ These steps should be performed in the following order:
 
 ### Q50) The following type of software can possibly be reused for many different projects:
 
-- 1. System
-- 2. Object
-- 3. Component
-- 4. Web service
-- 5. All the above
+- 1\) System
+- 2\) Object
+- 3\) Component
+- 4\) Web service
+- 5\) All the above
 
 <details>
 <summary>Show Answer</summary>
@@ -346,11 +346,11 @@ These steps should be performed in the following order:
 
 ### Q56) Which process model is represented by the image below?
 
-- 1. WaterFall
-- 2. V Model
-- 3. Incremental model
-- 4. Re-Use Model
-- 5. Step model
+- 1\) WaterFall
+- 2\) V Model
+- 3\) Incremental model
+- 4\) Re-Use Model
+- 5\) Step model
 
 ![alt text](image.png)
 
@@ -378,11 +378,11 @@ These steps should be performed in the following order:
 
 ### Q65) Which process model is represented by the image below?
 
-- 1. Association
-- 2. Abstraction
-- 3. Encapsulation
-- 4. Polymorphism
-- 5. Inheritance
+- 1\) Association
+- 2\) Abstraction
+- 3\) Encapsulation
+- 4\) Polymorphism
+- 5\) Inheritance
 
 ![alt text](image-2.png)
 
@@ -435,11 +435,11 @@ public class Accounting {
 
 ### Q71) I am concerned over the large turnover of staff. I am concerned about my software being:
 
-- 1. Dependable – work w/out crashing
-- 2. Usable – easy to use
-- 3. Scalable – can grow with demand
-- 4. Efficient – won’t waste computer resources
-- 5. Maintainable – easy to fix (because with everyone coming and going knowledge about the code is easily lost)
+- 1\) Dependable – work w/out crashing
+- 2\) Usable – easy to use
+- 3\) Scalable – can grow with demand
+- 4\) Efficient – won’t waste computer resources
+- 5\) Maintainable – easy to fix (because with everyone coming and going knowledge about the code is easily lost)
 
 <details>
 <summary>Show Answer</summary>
@@ -452,11 +452,11 @@ public class Accounting {
 
 ### Q74) Degree necessary to be a software engineer:
 
-- 1. Computer Science
-- 2. Computer Science and Management
-- 3. Information Technology
-- 4. Computer Science and Hardware
-- 5. None of the above
+- 1\) Computer Science
+- 2\) Computer Science and Management
+- 3\) Information Technology
+- 4\) Computer Science and Hardware
+- 5\) None of the above
 
 <details>
 <summary>Show Answer</summary>
@@ -478,11 +478,11 @@ public class Accounting {
 
 Which of the following is true?
 
-- 1. Only (a)(b)(c)(d)(e) are part of a software project
-- 2. Only (a)(b)(c) are part of a software project
-- 3. Only (c) is part of a software project
-- 4. All must be written by software developers
-- 5. All must be written by technical writers
+- 1\) Only (a)(b)(c)(d)(e) are part of a software project
+- 2\) Only (a)(b)(c) are part of a software project
+- 3\) Only (c) is part of a software project
+- 4\) All must be written by software developers
+- 5\) All must be written by technical writers
 
 <details>
 <summary>Show Answer</summary>
@@ -495,11 +495,11 @@ Which of the following is true?
 
 ### Q80) Which process model requires Software Discovery?
 
-- 1. Discovery model
-- 2. Software model
-- 3. Iterative model
-- 4. V model
-- 5. Re-use model
+- 1\) Discovery model
+- 2\) Software model
+- 3\) Iterative model
+- 4\) V model
+- 5\) Re-use model
 
 <details>
 <summary>Show Answer</summary>
