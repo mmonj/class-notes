@@ -11,6 +11,7 @@
 - [Lecture 10: Principles of DRY, YAGNI, Delegation, and Intro to Agile](./documents/lecture-10)
 - [Lecture 11: Agile Practices, Testing Strategies, and Software Development Principles](./documents/lecture-11)
 - [Lecture 12: Software Requirements, Design Principles, Development Models, UML Diagrams, and Design Patterns](./documents/lecture-12)
+- [Lecture 13: Object-Oriented Design Patterns: Singleton, Factory, Observer, Strategy](./documents/lecture-13)
 
 ## Midterm Review
 
