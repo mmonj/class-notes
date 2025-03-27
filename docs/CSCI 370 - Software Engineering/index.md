@@ -1,7 +1,8 @@
 # CSCI 370 Greenberg
 
 - [Practice Exam](./documents/example-exam)
-- [Extended Review](./documents/Extended%20Review)
+- [Midterm Review](./documents/midterm-review)
+- [Midterm Extended Review](./documents/midterm-review-extended)
 
 &nbsp;
 

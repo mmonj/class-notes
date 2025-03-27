@@ -1,12 +1,6 @@
-<style>
-  @media print {
-    li {
-      page-break-inside: avoid !important;
-    }
-  }
-</style>
+# CSCI 370 – Midterm Extended Review Sheet
 
-# 📘 CSCI 370 – Extended Review Sheet
+<small>March 25 Lecture</small>
 
 ## Chapter 1: Introduction to Software Engineering
 
@@ -236,3 +230,11 @@
 - **Multiplicity**: 1, 0..1, 0.._, 1.._
 
 ---
+
+<style>
+  @media print {
+    li {
+      page-break-inside: avoid !important;
+    }
+  }
+</style>
