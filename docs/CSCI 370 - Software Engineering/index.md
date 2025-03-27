@@ -2,6 +2,7 @@
 
 ## Lecture Summaries
 
+- [Lecture 4: The Problem with Inheritance and the Case for Composition](./documents/lecture-4)
 - [Lecture 5: Optimization and Design Patterns in Software Engineering](./documents/lecture-5)
 - [Lecture 6: Approaches to Software Development: Waterfall, Incremental, and Reuse Models](./documents/lecture-6)
 - [Lecture 7: UML Class Diagrams and Object-Oriented Relationships](./documents/lecture-7)
