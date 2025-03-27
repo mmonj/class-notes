@@ -1,43 +1,3 @@
-<style>
-  details {
-    margin: 10px 0;
-  }
-
-  details {
-    background-color:rgb(81, 161, 247);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s;
-    display: inline-block;
-  }
-
-  details:hover {
-    background-color: #0056b3;
-  }
-
-  details[open] {
-    background-color: #28a745;
-  }
-
-@media (max-width: 600px) {
-  details {
-    font-size: 1.2rem !important;
-  }
-  details summary {
-    font-size: 1.2rem !important;
-  }
-  details p {
-    font-size: 1.2rem !important;
-  }
-}
-
-</style>
-
 # Practice Exam
 
 ### Q2) Functional vs Non-Functional refers to
@@ -509,3 +469,43 @@ Which of the following is true?
 </details>
 
 &nbsp;
+
+<style>
+  details {
+    margin: 10px 0;
+  }
+
+  details {
+    background-color:rgb(81, 161, 247);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+
+  details:hover {
+    background-color: #0056b3;
+  }
+
+  details[open] {
+    background-color: #28a745;
+  }
+
+@media (max-width: 600px) {
+  details {
+    font-size: 1.2rem !important;
+  }
+  details summary {
+    font-size: 1.2rem !important;
+  }
+  details p {
+    font-size: 1.2rem !important;
+  }
+}
+
+</style>
