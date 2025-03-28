@@ -23,11 +23,16 @@
    def add_one(x):
       return x + 1
 
+   def triple(x):
+      return 3 * x
+
    def square(x):
       return x * x
 
    composed = compose(square, add_one)
    print(composed(3))  # Output: 16
+
+   print(compose(square, add_one, triple)(3))  # Output: 100
    ```
 
    &nbsp;
