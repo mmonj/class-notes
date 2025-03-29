@@ -1,5 +1,7 @@
 ## CSCI 343 Computer Architecture (Fluture)
 
+Notes taken during lecture.
+
 Any example documents posted below will use the methods that you are expected to use for this class. If any supplemental video uses different notation or methods, I will try to make a note of it, since not using the professor's method 1:1 will result in you not being granted any points for your solutions on quizzes/exams.
 
 ### Pre-Quiz 1 Material
