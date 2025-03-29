@@ -11,14 +11,13 @@
         @wraps(func)
         def wrapper(*args, **kwargs):
             nonlocal counter
-            counter += 1
 
+            counter += 1
             result = func(*args, **kwargs)
 
             print(f"The function {func.__name__} has run {counter} times")
 
             return result
-
         return wrapper
 
 
@@ -172,16 +171,19 @@
 
    &nbsp;
 
-10. Write a function `create_memoized_function(func)` that returns a closure. The closure should cache the results of func and return the cached result if the same input is provided again.
+10. Write a function `create_memo` that accepts a function reference `func` as an argument. `create_memo` should:
 
-    Example Usage:
+    - Cache the result of `func` for each unique input.
+    - Return the cached result if the same input is provided again, without recalculating the result.
+
+    **Example Usage:**
 
     ```python
     def expensive_calculation(x):
         print(f"Calculating for {x}...")
         return x * x
 
-    calc = create_memoized_function(expensive_calculation)
+    calc = create_memo(expensive_calculation)
     print(calc(5))  # Output: Calculating for 5... 25
     print(calc(5))  # Output: 25 (cached)
     print(calc(7))  # Output: Calculating for 7... 49
