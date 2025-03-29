@@ -37,15 +37,15 @@
 
    &nbsp;
 
-3. Create a closure `make_counter` that accepts an integer keyword argument `start` (default: `0`). It should maintain an internal integer state `count`, initialized with the value of `start`.
+3. Create a closure `make_counter` that maintains an internal count state, initialized with the value of `start`. `make_counter` should accept an integer keyword argument `start` (default: `0`)
 
    `make_counter` should return a tuple of three functions:
 
-   - `adjust`: Accepts an integer keyword argument `amount` (default: `1`). It will adjust `count` by the given `amount` and return the updated value.
+   - `adjust`: Accepts an integer keyword argument `amount` (default: `1`). It will adjust the count state by the given `amount` and return the updated value.
 
-   - `reset`: Resets `count` to its initial state and returns the updated value.
+   - `reset`: Resets the count state to its initial state and returns the updated value.
 
-   - `undo`: Reverts `count` to its previous value before the last operation and returns it. If `undo` is called multiple times beyond the stored history, `count` remains at `start`.
+   - `undo`: Reverts the count state to its previous value before the last operation and returns it. If `undo` is called multiple times beyond the stored history, the count state remains at `start`.
 
    **Example:**
 
