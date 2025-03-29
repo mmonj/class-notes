@@ -41,7 +41,7 @@
 
    `make_counter` should return a tuple of three functions:
 
-   - `increment`: Accepts an integer keyword argument `amount` (default: `1`). Increases `count` by `amount` and returns the updated value.
+   - `adjust`: Accepts an integer keyword argument `amount` (default: `1`). It will adjust `count` by the given `amount` and return the updated value.
 
    - `reset`: Resets `count` to its initial state and returns the updated value.
 
@@ -50,14 +50,17 @@
    **Example:**
 
    ```python
-   increment, reset, undo = make_counter(10)
-   print(increment(4))  # Output: 14
-   print(increment(-1))  # Output: 13
+   adjust, reset, undo = make_counter(10)
+   print(adjust(4))  # Output: 14
+   print(adjust(-8))  # Output: 6
+   print(adjust())  # Output: 7
+   print(adjust())  # Output: 8
+   print(undo()) # Output: 7
+   print(undo()) # Output: 6
+
    print(reset()) # Output: 10
 
-   print(undo()) # Output: 13
-   print(undo()) # Output: 14
-   print(undo()) # Output: 10 (No more `undo` history after this point. Any further calls to `undo` results in `count` simply remaining at its original value)
+   # (No more `undo` history after this point. Any further calls to `undo` should result in `count` simply remaining at its original value)
 
    print(undo()) # Output: 10
    print(undo()) # Output: 10
