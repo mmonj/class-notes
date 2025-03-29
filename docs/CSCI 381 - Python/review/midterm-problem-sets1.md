@@ -130,7 +130,7 @@
 
    &nbsp;
 
-9. Write a function `transpose(matrix: list[list[int]]) -> list[list[int]]` that takes a square and returns its transpose.
+9. Write a function `transpose(matrix: list[list[int]]) -> list[list[int]]` that takes a square matrix and returns its transpose.
 
    **Example:**
 
