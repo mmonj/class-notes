@@ -1,6 +1,6 @@
 ## CSCI 381 Python Exam Review: Problem Sets
 
-These problem sets were created to prepare students for Waxman's exams since the in-class examples were [child's play in comparison](image.png).
+These problem sets were created to prepare students for Waxman's exams since the in-class examples are [child's play in comparison](image.png).
 
 - [Midterm Problem Sets 1](review/midterm-problem-sets1)
 - [Midterm Problem Sets 2](review/midterm-problem-sets2)
