@@ -75,10 +75,9 @@
    a = [1, 2, 3]
    b = a
    del a[1]
-   print(b)
    ```
 
-   a. Determine if modifying `a` affects `b`. Why or why not?
+   a. Determine if modifying `a` in the above manner affects `b`. Why or why not?
 
    b. What if line 3 instead read `del a`. Would this have an effect on `b`? Why or why not?
 
