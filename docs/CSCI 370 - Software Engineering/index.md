@@ -1,4 +1,4 @@
-# CSCI 370 Greenberg
+# CSCI 370 (Greenberg)
 
 ## Lecture Summaries
 
