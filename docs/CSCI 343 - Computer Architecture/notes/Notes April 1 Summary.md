@@ -13,11 +13,11 @@ Each instruction type (R-format, load, store, branch, jump) triggers specific se
 | RegDst   | 1        | 0    | X     | X      | X    |
 | MemtoReg | 0        | 1    | X     | X      | X    |
 | ALUSrc   | 0        | 1    | 1     | 0      | X    |
-| RegWrite | 1        | 1    | 0     | 0      | 0    |
-| MemRead  | 0        | 1    | 0     | 0      | 0    |
-| MemWrite | 0        | 0    | 1     | 0      | 0    |
 | Branch   | 0        | 0    | 0     | 1      | 0    |
 | Jump     | 0        | 0    | 0     | 0      | 1    |
+| RegWrite | 1        | 1    | 0     | 0      | 0    |
+| MemWrite | 0        | 0    | 1     | 0      | 0    |
+| MemRead  | 0        | 1    | 0     | 0      | 0    |
 
 Note:
 
