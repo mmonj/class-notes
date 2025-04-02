@@ -15,7 +15,7 @@
 
 ## Lecture Summaries (Post-Midterm)
 
-- [Lecture 13: Decorator Pattern, Builder Pattern](./documents/lecture-13.md)
+- [Lecture 13: Decorator Pattern, Builder Pattern](./documents/lecture-13)
 
 ## Midterm Review
 
