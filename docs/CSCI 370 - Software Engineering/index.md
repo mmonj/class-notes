@@ -13,6 +13,10 @@
 - [Lecture 11: Software Requirements, Design Principles, Development Models, UML Diagrams, and Design Patterns](./documents/lecture-11)
 - [Lecture 12: Object-Oriented Design Patterns: Singleton, Factory, Observer, Strategy](./documents/lecture-12)
 
+## Lecture Summaries (Post-Midterm)
+
+- [Lecture 13: Decorator Pattern, Builder Pattern](./documents/lecture-13.md)
+
 ## Midterm Review
 
 - [Practice Exam](./documents/example-exam)
