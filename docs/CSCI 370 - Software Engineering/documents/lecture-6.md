@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 7 Review: UML Class Diagrams and Object-Oriented Relationships
+# CSCI 370 - Lecture 6 Review: UML Class Diagrams and Object-Oriented Relationships
 
 ## Overview
 

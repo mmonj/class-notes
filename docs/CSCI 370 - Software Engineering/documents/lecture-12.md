@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 13: Object-Oriented Design Patterns: Singleton, Factory, Observer, Strategy
+# CSCI 370 - Lecture 12: Object-Oriented Design Patterns: Singleton, Factory, Observer, Strategy
 
 <small>March 25 (first 15 minutes of class)</small>
 

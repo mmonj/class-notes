@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 6 - Approaches to Software Development: Waterfall, Incremental, and Reuse Models
+# CSCI 370 - Lecture 5 - Approaches to Software Development: Waterfall, Incremental, and Reuse Models
 
 ---
 

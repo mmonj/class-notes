@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 10 Review: Principles of DRY, YAGNI, Delegation, and Intro to Agile
+# CSCI 370 - Lecture 9 Review: Principles of DRY, YAGNI, Delegation, and Intro to Agile
 
 ---
 

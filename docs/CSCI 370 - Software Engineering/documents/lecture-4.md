@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 5: Optimization and Design Patterns in Software Engineering
+# CSCI 370 - Lecture 4: Optimization and Design Patterns in Software Engineering
 
 ---
 
