@@ -1,116 +1,163 @@
-# CSCI 370 - Lecture 9 Review: SOLID Principles Continued, Low-Code/No-Code Platforms, and Dependency Inversion
+# CSCI 370 - Lecture 10 Review: Principles of DRY, YAGNI, Delegation, and Intro to Agile
 
 ---
 
-## Table of Contents
+## DRY Principle (Don't Repeat Yourself)
 
-1. [Low-Code and No-Code Development Tools](#1-low-code-and-no-code-development-tools)
-2. [SOLID Principles - Continued](#2-solid-principles---continued)
-   - Liskov Substitution Principle (Review)
-   - Interface Segregation Principle (ISP)
-   - Dependency Inversion Principle (DIP)
-3. [Precision in Financial Software](#3-precision-in-financial-software)
-4. [Using Interfaces for Flexibility](#4-using-interfaces-for-flexibility)
-5. [Designing for Generalization](#5-designing-for-generalization)
+### Definition
 
----
+The DRY principle emphasizes that **each piece of knowledge or logic should exist in only one place in a codebase**. Repeating logic across multiple places makes it harder to maintain and update code, as changes would need to be made in multiple locations.
 
-## 1. Low-Code and No-Code Development Tools
+### Example
 
-- **Low-Code** platforms allow app development using mostly visual tools, requiring minimal traditional programming.
-  - Example tools: Google AppSheet, Microsoft Power Apps, ServiceNow
-- **No-Code** platforms go further by enabling app development without any programming knowledge.
-  - Example tools: Wix, WordPress
-- **Benefits:**
-  - Faster development cycles
-  - Accessible to non-developers
-  - Easier prototyping and iteration
-  - Business users can create tools without needing a dev team
-- **Challenges:**
-  - Limited customization and scalability
-  - Risk of vendor lock-in
-  - Performance may degrade with complex or data-heavy apps
+```java
+class AreaCalculator {
+    public int area(int length, int width) {
+        return length * width;
+    }
 
----
+    public int volume(int length, int width, int height) {
+        int baseArea = area(length, width);
+        return baseArea * height;
+    }
+}
+```
 
-## 2. SOLID Principles - Continued
+Here, the `volume` method reuses the `area` method instead of duplicating the multiplication logic. This allows centralized control over how the area is calculated. If the calculation changes (e.g., for performance reasons), only the `area` method needs to be updated.
 
-### Liskov Substitution Principle (Review)
+### Benefits
 
-- A derived class should be substitutable for its base class without altering the correctness of the program.
-- **Example:**
-  - If `Rectangle` is a base class and `Square` inherits from it, then calling methods on `Square` should behave like `Rectangle`.
-  - If `Rectangle.getArea()` gives expected results, so should `Square.getArea()`.
+- **Maintainability**: Changes happen in one place.
+- **Consistency**: Avoids logic drift.
+- **Improved readability**.
+- **Better debugging**: Easier to track logic.
 
-### Interface Segregation Principle (ISP)
+### Real-World Analogy
 
-- Clients should not be forced to depend on methods they do not use.
-- **Explanation:**
-  - Rather than having one large interface with unrelated methods, split into smaller, more cohesive interfaces.
-  - **Example:**
-    - Interface `Math` has `add()` and `printResult()`.
-    - `Calculator` class shouldn’t be forced to implement `printResult()` if it just does math.
-    - Solution: Split into `Math` and `PrintMathResult` interfaces.
-
-### Dependency Inversion Principle (DIP)
-
-- High-level modules should not depend on low-level modules. Both should depend on abstractions.
-- **Explanation:**
-  - Rather than hardcoding a dependency (e.g., `BankAccount` uses `MySQL`), depend on an interface.
-  - **Example:**
-    - Create a `Database` interface with method `saveBalance()`.
-    - `MySQL` and `Oracle` both implement `Database`.
-    - `BankAccount` depends on `Database`, not specific implementations.
-- **Benefits:**
-  - Easier to switch implementations
-  - Promotes code reuse and testability
-  - Reduces tight coupling
+A method calculating string length might work in English, but break in Unicode or other languages. Keeping a single method ensures language compatibility issues are only dealt with once.
 
 ---
 
-## 3. Precision in Financial Software
+## YAGNI (You Aren't Gonna Need It)
 
-- **Avoid using `double`** for financial calculations due to floating-point inaccuracies.
-- **Preferred solutions:**
-  - Use integers representing the smallest unit (e.g., pennies)
-  - For $1.00, store 100 (pennies)
-- **Real-world practice:**
-  - Companies like Stripe store monetary values in integers (pennies or smaller)
-  - Ensures accuracy, especially when dividing amounts
+### Definition
 
----
+YAGNI promotes writing **only the code you currently need**, not what you think you might need later. Avoid including features or methods that are not immediately required by the system.
 
-## 4. Using Interfaces for Flexibility
+### Key Idea
 
-- **Scenario:** Switching from `MySQL` to `Oracle` requires refactoring if tightly coupled.
-- **Solution:**
-  - Define an interface `Database`
-  - `BankAccount` uses a `Database` reference instead of a concrete class
-  - Pass either `MySQL` or `Oracle` objects at runtime
-- **Key Design Idea:**
-  - Depend on the **most general type possible** (e.g., interfaces) to support flexibility and reduce change
+Unused code:
 
----
+- Adds clutter to the codebase.
+- Requires maintenance.
+- Can confuse other developers.
+- Leads to potential bugs or misinterpretation.
 
-## 5. Designing for Generalization
+### Practical Application
 
-- Prefer **general data structures** (e.g., `Iterable`) over specific ones (e.g., `List`) when possible
-- **Example:**
-  - A method takes `List<BankAccount>` but only iterates through it
-  - Better to use `Iterable<BankAccount>` to allow more data structures (e.g., sets, queues)
-- **Lesson:**
-  - The more general your method parameter types, the more reusable and flexible your code becomes
+- Delete unused or unnecessary code from your working environment.
+- Use version control systems to retrieve old code if needed.
+- Avoid the hoarder mentality (e.g., a person keeping newspapers "just in case").
+
+### Analogy
+
+Leaving old or unused code in your codebase is like hoarding—eventually it becomes a fire hazard (or in programming, a maintenance nightmare).
 
 ---
 
-## Summary of Key Takeaways
+## Delegation Principle
 
-- Use low-code/no-code tools for quick prototypes and simple apps
-- Interface Segregation Principle: Keep interfaces cohesive and purpose-specific
-- Dependency Inversion Principle: Depend on abstractions, not concrete implementations
-- Financial software should avoid floating-point errors by storing money in integer units
-- Generalize method inputs to reduce coupling and increase compatibility
+### Definition
+
+**Delegate behavior to the appropriate class**, especially in inheritance hierarchies. Avoid writing child-specific logic in a parent class.
+
+### Bad Example (Anti-Pattern)
+
+```java
+class Window {
+    String color;
+    public void draw() {
+        if (color.equals("red")) {
+            drawRedWindow();
+        } else if (color.equals("blue")) {
+            drawBlueWindow();
+        }
+    }
+}
+```
+
+### Good Example (Using Delegation)
+
+```java
+class Window {
+    public void draw() {
+        // to be overridden
+    }
+}
+
+class RedWindow extends Window {
+    public void draw() {
+        drawRedWindow();
+    }
+}
+
+class BlueWindow extends Window {
+    public void draw() {
+        drawBlueWindow();
+    }
+}
+```
+
+### Benefits
+
+- Cleaner, more maintainable code.
+- Each subclass handles its own logic.
+- Avoids fragile base classes (where changes to the base class can break subclasses).
 
 ---
 
-> **Next Class:** No Thursday class due to Wednesday schedule. Exam expected on **March 25th** (as per course schedule).
+## Introduction to Agile Methodology
+
+### What is Agile?
+
+"Agile" refers to a set of software development methodologies based on **iterative development**, where requirements and solutions evolve through collaboration.
+
+### Definition of Agile (Literal)
+
+Agile means **flexible, quick to adapt**—being able to shift direction with minimal overhead.
+
+### Agile Principles in Software Engineering
+
+- Focus on **working software** over comprehensive documentation.
+- **Individuals and interactions** over processes and tools.
+- **Customer collaboration** over contract negotiation.
+- **Responding to change** over following a rigid plan.
+
+### Historical Context
+
+- Emerged around the **year 2000**, in response to the rigidity of traditional methodologies.
+- Coincided with the rise of the internet and software gold rush.
+- Prompted by challenges like **Y2K**, which revealed the inflexibility and poor planning of older software systems.
+
+### Agile vs. Waterfall
+
+| Agile                  | Waterfall                    |
+| ---------------------- | ---------------------------- |
+| Iterative, incremental | Sequential, rigid            |
+| Adaptable to change    | Difficult to adapt mid-cycle |
+| Continuous delivery    | Single final delivery        |
+
+### Real-World Insight
+
+Due to intense demand for programmers during the early 2000s (e.g., Y2K fixes, internet boom), the industry needed faster, more adaptive development processes. Agile arose from this pressure.
+
+---
+
+## Summary
+
+- **DRY**: Don't duplicate logic—centralize it for easier maintenance.
+- **YAGNI**: Don’t write code you don’t immediately need.
+- **Delegation Principle**: Delegate tasks to the appropriate subclasses—avoid if-statements in parent classes.
+- **Agile**: A flexible, iterative approach to development emphasizing responsiveness to change and frequent delivery.
+
+These principles together help create **cleaner, more maintainable, and efficient software systems**.

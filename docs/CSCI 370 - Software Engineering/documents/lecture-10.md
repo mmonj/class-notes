@@ -1,163 +1,175 @@
-# CSCI 370 - Lecture 10 Review: Principles of DRY, YAGNI, Delegation, and Intro to Agile
+# CSCI 370 - Lecture 11 - Agile Practices, Testing Strategies, and Software Development Principles
+
+### **Agile Development Principles and Practices**
+
+#### **Collective Code Ownership**
+
+- **Definition**: No single developer "owns" a section of the code; everyone on the team is responsible for all parts of the codebase.
+- **Benefits**:
+  - Encourages collaboration and knowledge sharing.
+  - Prevents bottlenecks and reliance on specific developers.
+  - Reduces "code silos" where only certain people understand certain sections.
+
+#### **Code Silos**
+
+- **Definition**: Code that only specific people understand or can modify.
+- **Problem**: Creates a barrier to collaboration and increases risk.
+- **Solution**: Promote collective ownership to eliminate silos.
 
 ---
 
-## DRY Principle (Don't Repeat Yourself)
+### **DevOps and Pipelines**
 
-### Definition
+#### **DevOps**
 
-The DRY principle emphasizes that **each piece of knowledge or logic should exist in only one place in a codebase**. Repeating logic across multiple places makes it harder to maintain and update code, as changes would need to be made in multiple locations.
+- **Definition**: A combination of Development and Operations, focusing on automating and integrating the process of software development and deployment.
+- **Purpose**: Ensures rapid, consistent, and reliable deployment of code changes.
 
-### Example
+#### **Pipeline**
 
-```java
-class AreaCalculator {
-    public int area(int length, int width) {
-        return length * width;
-    }
+- **Definition**: An automated workflow where code changes are automatically built, tested, and deployed.
+- **Key Components**:
+  - **Code Compilation**
+  - **Unit Testing**
+  - **Deployment to test environments**
+  - **Schema updates** (database)
+  - **Automated testing suites**
 
-    public int volume(int length, int width, int height) {
-        int baseArea = area(length, width);
-        return baseArea * height;
-    }
-}
-```
+#### **Benefits**:
 
-Here, the `volume` method reuses the `area` method instead of duplicating the multiplication logic. This allows centralized control over how the area is calculated. If the calculation changes (e.g., for performance reasons), only the `area` method needs to be updated.
-
-### Benefits
-
-- **Maintainability**: Changes happen in one place.
-- **Consistency**: Avoids logic drift.
-- **Improved readability**.
-- **Better debugging**: Easier to track logic.
-
-### Real-World Analogy
-
-A method calculating string length might work in English, but break in Unicode or other languages. Keeping a single method ensures language compatibility issues are only dealt with once.
+- Reduces manual intervention.
+- Promotes continuous integration and delivery (CI/CD).
+- Enables faster feedback cycles.
 
 ---
 
-## YAGNI (You Aren't Gonna Need It)
+### **Testing in Software Development**
 
-### Definition
+#### **Unit Testing**
 
-YAGNI promotes writing **only the code you currently need**, not what you think you might need later. Avoid including features or methods that are not immediately required by the system.
+- **Definition**: Tests written by developers to test individual components or functions.
+- **Goal**: Ensure each part of the codebase behaves correctly in isolation.
+- **When**: Written before (preferably) or during development.
 
-### Key Idea
+#### **Automated Testing**
 
-Unused code:
+- **Definition**: Tests that are automatically run by software tools without manual intervention.
+- **Examples**:
+  - Load testing with tools that simulate many users.
+  - Functional testing using AI tools to explore edge cases.
+- **Benefits**:
+  - Reduces time spent on repetitive manual testing.
+  - Ensures consistent behavior across builds.
 
-- Adds clutter to the codebase.
-- Requires maintenance.
-- Can confuse other developers.
-- Leads to potential bugs or misinterpretation.
+#### **Test-Driven Development (TDD)**
 
-### Practical Application
+- **Definition**: Practice where tests are written _before_ writing the actual code.
+- **Purpose**:
+  - Forces developers to clarify the behavior of the code.
+  - Helps uncover edge cases early.
+  - Increases test coverage naturally.
 
-- Delete unused or unnecessary code from your working environment.
-- Use version control systems to retrieve old code if needed.
-- Avoid the hoarder mentality (e.g., a person keeping newspapers "just in case").
+#### **Regression Testing**
 
-### Analogy
+- **Definition**: Tests that ensure previously fixed bugs do not reappear.
+- **Triggered by**: Changes or new features being added.
 
-Leaving old or unused code in your codebase is like hoarding—eventually it becomes a fire hazard (or in programming, a maintenance nightmare).
+#### **Smoke Testing**
 
----
-
-## Delegation Principle
-
-### Definition
-
-**Delegate behavior to the appropriate class**, especially in inheritance hierarchies. Avoid writing child-specific logic in a parent class.
-
-### Bad Example (Anti-Pattern)
-
-```java
-class Window {
-    String color;
-    public void draw() {
-        if (color.equals("red")) {
-            drawRedWindow();
-        } else if (color.equals("blue")) {
-            drawBlueWindow();
-        }
-    }
-}
-```
-
-### Good Example (Using Delegation)
-
-```java
-class Window {
-    public void draw() {
-        // to be overridden
-    }
-}
-
-class RedWindow extends Window {
-    public void draw() {
-        drawRedWindow();
-    }
-}
-
-class BlueWindow extends Window {
-    public void draw() {
-        drawBlueWindow();
-    }
-}
-```
-
-### Benefits
-
-- Cleaner, more maintainable code.
-- Each subclass handles its own logic.
-- Avoids fragile base classes (where changes to the base class can break subclasses).
+- **Definition**: Basic test to check if the software starts and runs correctly.
+- **Analogy**: Like turning on a device to see if it powers on ("where there's smoke, there's fire").
 
 ---
 
-## Introduction to Agile Methodology
+### **Code Quality and Maintenance**
 
-### What is Agile?
+#### **Refactoring**
 
-"Agile" refers to a set of software development methodologies based on **iterative development**, where requirements and solutions evolve through collaboration.
+- **Definition**: Rewriting existing code to improve its structure without changing its behavior.
+- **Analogy**: Like cleaning and organizing a messy room without adding new furniture.
+- **Benefits**:
+  - Improves readability and maintainability.
+  - Reduces complexity (avoids "spaghetti code").
 
-### Definition of Agile (Literal)
+#### **Simplicity in Code**
 
-Agile means **flexible, quick to adapt**—being able to shift direction with minimal overhead.
+- **Principle**: Keep methods short, ideally fewer than 60 lines (preferably 5 or fewer).
+- **Reason**: Simpler code is easier to test, understand, and modify.
 
-### Agile Principles in Software Engineering
+#### **Avoid Premature Coding**
 
-- Focus on **working software** over comprehensive documentation.
-- **Individuals and interactions** over processes and tools.
-- **Customer collaboration** over contract negotiation.
-- **Responding to change** over following a rigid plan.
-
-### Historical Context
-
-- Emerged around the **year 2000**, in response to the rigidity of traditional methodologies.
-- Coincided with the rise of the internet and software gold rush.
-- Prompted by challenges like **Y2K**, which revealed the inflexibility and poor planning of older software systems.
-
-### Agile vs. Waterfall
-
-| Agile                  | Waterfall                    |
-| ---------------------- | ---------------------------- |
-| Iterative, incremental | Sequential, rigid            |
-| Adaptable to change    | Difficult to adapt mid-cycle |
-| Continuous delivery    | Single final delivery        |
-
-### Real-World Insight
-
-Due to intense demand for programmers during the early 2000s (e.g., Y2K fixes, internet boom), the industry needed faster, more adaptive development processes. Agile arose from this pressure.
+- **Guideline**: Do not write code for features that are not currently required.
+- **Rationale**: Avoids wasted effort and unnecessary complexity.
 
 ---
 
-## Summary
+### **Agile Methodology Terms**
 
-- **DRY**: Don't duplicate logic—centralize it for easier maintenance.
-- **YAGNI**: Don’t write code you don’t immediately need.
-- **Delegation Principle**: Delegate tasks to the appropriate subclasses—avoid if-statements in parent classes.
-- **Agile**: A flexible, iterative approach to development emphasizing responsiveness to change and frequent delivery.
+#### **Sprint**
 
-These principles together help create **cleaner, more maintainable, and efficient software systems**.
+- **Definition**: A time-boxed iteration, typically 2-4 weeks, during which a product increment is developed.
+
+#### **Scrum**
+
+- **Definition**: A framework for Agile project management involving daily stand-up meetings, sprint planning, reviews, and retrospectives.
+
+#### **Scrum Master**
+
+- **Role**: Facilitator for the Scrum team, ensuring adherence to Agile practices.
+
+#### **Velocity**
+
+- **Definition**: The amount of work a team can complete during a sprint.
+
+#### **Product Owner**
+
+- **Definition**: Represents the customer or stakeholders; manages the product backlog and prioritizes features.
+
+#### **Product Backlog**
+
+- **Definition**: An evolving list of work items and features for the product.
+
+#### **Potentially Shippable Product Increment**
+
+- **Definition**: At the end of each sprint, the team should have a version of the software that is complete and could be shipped.
+
+---
+
+### **User Stories**
+
+#### **User Story Components**
+
+1. **Who**: The user or role requesting the feature.
+2. **What**: The specific feature or functionality.
+3. **Why**: The reason or goal behind the request.
+4. **Acceptance Criteria**: Conditions that must be met for the story to be considered complete.
+
+#### **Purpose of Asking "Why"**
+
+- Understand the underlying need.
+- May lead to better or more efficient solutions.
+- Avoid building unnecessary or redundant features.
+
+---
+
+### **Other Concepts**
+
+#### **Pair Programming**
+
+- **Definition**: Two developers work together at one workstation, one types while both discuss the code.
+- **Benefit**: Reduces bugs and improves design through constant feedback.
+
+#### **Sustainable Pace**
+
+- **Definition**: Avoid developer burnout by keeping work hours reasonable and consistent.
+
+---
+
+Next class will cover:
+
+- **Singleton Design Pattern**
+- **Factory Design Pattern**
+
+Midterm rescheduled for **March 27**. Sample midterm will be provided in the next lecture.
+
+---

@@ -1,180 +1,197 @@
-# CSCI 370 - Lecture 5: Optimization and Design Patterns in Software Engineering
+# CSCI 370 - Lecture 6 - Approaches to Software Development: Waterfall, Incremental, and Reuse Models
 
 ---
 
-## Topics Covered
+## **Overview**
 
-- Optimization Algorithms (Christofides' Algorithm & TSP)
-- AI in Drug Discovery and Development
-- Strategy Pattern (Design Pattern)
-- Observer Pattern (Design Pattern)
+This lecture explored three major approaches to software development:
 
----
+1. **Waterfall Model**
+2. **Incremental (Iterative) Model**
+3. **Reuse (Integration and Configuration) Model**
 
-## Traveling Salesman Problem (TSP) & Christofides' Algorithm
-
-### The Problem
-
-- The Traveling Salesman Problem (TSP) asks: What is the shortest route to visit a set of cities and return to the starting point?
-- It is NP-hard; the number of possible routes grows factorially (e.g., 10 cities = ~3.6 million routes).
-
-### Real-World Relevance
-
-- Logistics (e.g., UPS delivery optimization)
-- Fiber optic cable layout
-- Genome sequencing
-
-### Christofides' Algorithm Overview
-
-Christofides' algorithm offers an approximate solution with a guaranteed upper bound of 1.5 times the optimal route length.
-
-#### Steps:
-
-1. **Minimum Spanning Tree (MST):**
-
-   - Connect all nodes (cities) without creating loops.
-   - Use shortest possible total edge weight.
-
-2. **Find Odd-Degree Vertices:**
-
-   - Identify vertices in the MST with an odd number of connections.
-
-3. **Minimum Weight Perfect Matching:**
-
-   - Pair all odd-degree vertices with minimum-weight connections.
-
-4. **Combine to Form Eulerian Circuit:**
-
-   - Result is a multigraph with all even-degree vertices, allowing an Eulerian circuit (visits every edge once).
-
-5. **Convert to Hamiltonian Circuit:**
-   - Remove repeated cities to obtain a path visiting each city exactly once.
-
-#### Benefits:
-
-- Near-optimal solution
-- Efficient compared to brute-force
-
-#### Example Use Case:
-
-> A delivery company must visit 15 addresses. Christofides' algorithm reduces route length, saving fuel and time.
+It emphasized the evolution from traditional linear development to more adaptive, reusable methods, and discussed practical trade-offs of each.
 
 ---
 
-## AI in Drug Discovery & Healthcare
+## **1. Waterfall Model**
 
-### AI Applications in Healthcare
+### **Definition**
 
-- Speeds up drug development
-- Improves hospital efficiency
-- Enables personalized treatment based on patient data
+A linear and sequential software development process. Each phase must be completed before the next begins.
 
-### Machine Learning in COVID-19 Detection
+### **Steps Involved**
 
-- **Radiomics + Deep Learning:**
-  - Extract features from X-rays/CT scans to classify pneumonia
-- **CAD Systems:**
-  - Aid radiologists by highlighting affected areas
-- **Explainability Tools (e.g., SHAP):**
-  - Help understand AI decisions
+1. Requirements gathering
+2. System and software design
+3. Implementation (coding)
+4. Integration and testing
+5. Deployment
+6. Maintenance
 
-### Model Performance
+### **Characteristics**
 
-- Example model (Random Forest) achieved ~82% accuracy for detecting COVID-19 from imaging data
+- Strict order; no going back to previous steps
+- Similar to writing a user manual before writing a single line of code (e.g., IBM)
+- Popular before 2000
 
-### AI in Vaccine Development
+### **Analogy**
 
-- Predicts protein structures
-- Accelerates analysis of vaccine candidates (e.g., Pfizer during COVID)
-- Enables scaling up of vaccine production
+Like writing an entire book plot before writing any pages (e.g., author Jeffrey Deaver spends 8 months planning).
 
-### Limitations
+### **Pros**
 
-- AI models require large, high-quality datasets
-- Poor data = inaccurate predictions
+- Clear documentation and structured process
+- Predictability for fixed-scope projects
+- Easier to create contracts (everything is defined up front)
+- Useful when changes are very expensive (e.g., buildings, medical software)
 
-### Future Outlook
+### **Cons**
 
-- Projects like Oracle's "Stargate" invest in predictive healthcare using AI (e.g., early cancer detection)
-
----
-
-## Strategy Pattern (Design Pattern)
-
-### Problem with Inheritance:
-
-- Inheritance makes code tightly coupled.
-- Adding new behaviors requires modifying many classes.
-
-### Strategy Pattern Solution:
-
-> Encapsulate interchangeable behaviors and pass them to objects.
-
-#### Structure:
-
-- **Context:** Class using a behavior (e.g., `Duck`)
-- **Strategy Interface:** Common interface for all behaviors (e.g., `FlyBehavior`)
-- **Concrete Strategies:** Implement different behaviors (e.g., `FlyHigh`, `NoFly`)
-
-#### Benefits:
-
-- Favor **composition over inheritance**
-- Avoid code duplication
-- Open for extension, closed for modification (OCP)
-- Add new behaviors without changing existing code
-
-#### Real-World Analogy:
-
-- Payment system: define `Payment` interface and implement strategies like `Cash`, `CreditCard`, `PayPal`, etc.
+- Inflexible to changes mid-process
+- Poor at handling uncertain or changing requirements
+- Scheduling inefficiencies: developers/testers often wait
+- High failure rate due to misestimation (real-world example: project failed after 5 years)
 
 ---
 
-## Observer Pattern (Design Pattern)
+## **2. Incremental Model**
 
-### Use Case:
+### **Definition**
 
-> Notifying interested parties (observers) when an object (subject) changes.
+An iterative model that develops software in small, manageable chunks, revisiting earlier phases as needed.
 
-### Example:
+### **Process**
 
-- **Subject:** Stock Market
-- **Observers:** Wall Street, SEC
-- Observers want to be notified when a stock is bought or sold.
+Each increment involves:
 
-### Initial Problem:
+1. Partial requirements gathering
+2. Partial design
+3. Partial implementation
+4. Partial testing
+5. Repeat until complete
+6. Final delivery and maintenance
 
-- Code modification was needed every time a new observer was added.
+### **Characteristics**
 
-### Observer Pattern Structure:
+- You plan, implement, and test smaller pieces over time
+- Can release working versions early
+- Uses real-time feedback for improvement
 
-- **Subject Interface:** Manages observers (add/remove/notify)
-- **Observer Interface:** Contains `notify()` method
-- **Concrete Observers:** Implement specific behavior on notification
+### **Analogy**
 
-### Benefits:
+Writing a book one chapter at a time, refining earlier chapters as new ideas evolve.
 
-- Decouples subject from observers
-- Open for extension, closed for modification
-- Easily add/remove observers without touching core logic
+### **Pros**
 
-### Real-World Example:
+- Supports changing requirements
+- Better scheduling; everyone stays busy
+- Allows early feedback and deployment
+- Better testing (repeated after each increment)
+- Easier time estimation through real experience
 
-- GUI Button in C#: adding/removing click event listeners behaves like the observer pattern
+### **Cons**
+
+- May lose the big picture focus
+- Code quality may degrade ("spaghetti code")
+- Requires refactoring to keep code maintainable
+
+### **Refactoring**
+
+The process of rewriting code to improve clarity and structure without changing functionality. Essential to prevent software rot over multiple iterations.
 
 ---
 
-## Key Software Engineering Principle:
+## **3. Reuse Model (Integration and Configuration)**
 
-### Open-Closed Principle (OCP)
+### **Definition**
 
-> Software entities should be open for extension but closed for modification.
+Build software systems by integrating existing components or systems rather than developing from scratch.
 
-- Add functionality via new code
-- Avoid changing existing, working code
-- Helps prevent bugs and ensures stability
+### **Process**
+
+1. Determine requirements and feasibility
+2. Discover existing software (e.g., libraries, APIs, commercial systems)
+3. Integrate or configure it into your solution
+
+### **Examples**
+
+- Game engines (e.g., Unity, Unreal)
+- Accounting software (e.g., QuickBooks)
+- Vehicle platforms (e.g., Honda Prologue built by GM)
+
+### **Pros**
+
+- Fastest and cheapest method
+- Uses tested and proven software
+- Reduces development and maintenance costs
+
+### **Cons**
+
+- Less flexibility; you're limited by external software capabilities
+- Risk if the provider discontinues support or goes out of business
+- Licensing and legal restrictions may apply
+
+### **Mitigation Strategies**
+
+- Contracts for source code access if vendor shuts down
+- Use of open-source software maintained by communities
 
 ---
 
-## Summary
+## **V-Model (Validation and Verification)**
 
-Lecture 5 focused on optimization and design patterns that emphasize clean, maintainable code. Christofides' algorithm provides a real-world solution to TSP, while Strategy and Observer patterns illustrate how to write flexible, reusable object-oriented code. These patterns support the Open-Closed Principle, ensuring scalable and bug-resistant systems.
+### **Definition**
+
+An extension of the Waterfall Model that emphasizes corresponding testing for each development phase.
+
+### **Structure**
+
+Visualized as a "V":
+
+- Left side: Development phases (Requirements → Design → Code)
+- Right side: Testing phases (Test Plan → Integration Test → Unit Test)
+
+### **Benefits**
+
+- Encourages early development of tests
+- Ensures testing is aligned with requirements
+- Helps uncover issues early
+
+---
+
+## **Summary of Trade-Offs**
+
+| Model       | Pros                                          | Cons                                               |
+| ----------- | --------------------------------------------- | -------------------------------------------------- |
+| Waterfall   | Structured, clear scope, good for fixed plans | Inflexible, bad with change, difficult to schedule |
+| Incremental | Adaptive, better testing, early feedback      | Risk of messy code, may lose overall vision        |
+| Reuse       | Fastest, cheapest, reliable components        | Limited customization, dependency risks            |
+
+### **Best Practice**
+
+- **Reuse** is usually the best starting point for most modern projects.
+- Combine models if needed (e.g., reuse + incremental for custom components).
+
+---
+
+## **Real-World Notes**
+
+- **Waterfall used in**: Regulated industries (e.g., medical, aerospace)
+- **Incremental used in**: Most modern software teams (Agile, Scrum)
+- **Reuse examples**: Buying software, using open-source libraries
+
+---
+
+## **Key Vocabulary**
+
+- **Increment**: A small, manageable chunk of work
+- **Refactoring**: Rewriting code to improve quality without changing functionality
+- **Spaghetti Code**: Unstructured, messy code due to excessive changes
+- **V-Model**: Waterfall model with testing matched to each development phase
+
+---
+
+## **Final Thoughts**
+
+This lecture emphasized that while all development models have value, choosing the right one depends on the project's complexity, timeline, regulatory constraints, and budget. Modern development often blends reuse and incremental methods for the best balance of flexibility, speed, and reliability.

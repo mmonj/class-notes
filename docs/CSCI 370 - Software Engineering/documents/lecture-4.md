@@ -1,215 +1,180 @@
-# CSCI 370 - Lecture 4: The Problem with Inheritance and the Case for Composition
+# CSCI 370 - Lecture 5: Optimization and Design Patterns in Software Engineering
 
 ---
 
-### Overview
+## Topics Covered
 
-This lecture covered several key ideas in Software Engineering, particularly focusing on:
-
-- The pros and cons of adding more team members in software development.
-- Differentiating between **requirements** and **specifications**.
-- The problems associated with **inheritance** in object-oriented programming (OOP).
-- The introduction of **composition** as a preferred alternative to inheritance.
-- The **Strategy Design Pattern** as an application of composition.
+- Optimization Algorithms (Christofides' Algorithm & TSP)
+- AI in Drug Discovery and Development
+- Strategy Pattern (Design Pattern)
+- Observer Pattern (Design Pattern)
 
 ---
 
-### 1. **Does Adding More Team Members Speed Up Software Development?**
+## Traveling Salesman Problem (TSP) & Christofides' Algorithm
 
-#### Pros:
+### The Problem
 
-- **Workload Distribution**: More people can share the workload, reducing stress and potential burnout.
-- **Specialization**: Team members can specialize in particular tasks, improving efficiency.
-- **Focus**: Reduced workload allows team members to concentrate on specific tasks.
+- The Traveling Salesman Problem (TSP) asks: What is the shortest route to visit a set of cities and return to the starting point?
+- It is NP-hard; the number of possible routes grows factorially (e.g., 10 cities = ~3.6 million routes).
 
-#### Cons:
+### Real-World Relevance
 
-- **Communication Overhead**: More team members increase the need for clear instructions; miscommunication can lead to duplicate or conflicting work.
-- **Skill Alignment**: Adding members with the same specialization leads to inefficiencies.
-- **Experience Level**: Adding beginners may slow the team down, especially if their work interferes with advanced developers.
+- Logistics (e.g., UPS delivery optimization)
+- Fiber optic cable layout
+- Genome sequencing
 
-**Conclusion**: Adding team members **does not always** speed up development; it depends on team composition, communication, and skills.
+### Christofides' Algorithm Overview
 
----
+Christofides' algorithm offers an approximate solution with a guaranteed upper bound of 1.5 times the optimal route length.
 
-### 2. **Requirements vs Specifications**
+#### Steps:
 
-#### Requirements:
+1. **Minimum Spanning Tree (MST):**
 
-- Describe **what** the system should do.
-- Aimed at stakeholders, executives, and customers.
-- Example questions:
-  - What can the application do?
-  - What constraints does it have?
-  - What are the selling points?
-- Analogy: Like pitching the app to a customer or executive.
-- Examples:
-  - Uber Eats: allows food ordering, location tracking.
-  - Games: describes available gameplay modes.
+   - Connect all nodes (cities) without creating loops.
+   - Use shortest possible total edge weight.
 
-#### Specifications:
+2. **Find Odd-Degree Vertices:**
 
-- Describe **how** the system will fulfill requirements.
-- Highly technical and meant for the development team.
-- Include decisions about:
-  - Programming languages
-  - Data structures (linked lists, hash tables, etc.)
-  - Interfaces and encryption
-- Example:
-  - User data will be hashed for security.
-  - Users will interact through drag-and-drop interfaces.
+   - Identify vertices in the MST with an odd number of connections.
 
-**Summary**:
+3. **Minimum Weight Perfect Matching:**
 
-- Requirements are promises to stakeholders.
-- Specifications are instructions to the development team.
+   - Pair all odd-degree vertices with minimum-weight connections.
 
----
+4. **Combine to Form Eulerian Circuit:**
 
-### 3. **Problems with Inheritance in OOP**
+   - Result is a multigraph with all even-degree vertices, allowing an Eulerian circuit (visits every edge once).
 
-#### Inheritance:
-
-- Mechanism to **reuse code** from other classes.
-- Example: Class `D` inherits from class `C` to reuse `method1`.
-
-#### Major Issues:
-
-1. **Single Inheritance in Java**:
-
-   - Java allows only **single inheritance**.
-   - You can't inherit from multiple classes (e.g., can’t get both `A.method1` and `C.method1`).
-
-2. **Inheriting Unwanted Methods**:
-
-   - Subclasses inherit all methods and must **override** or **remove** unwanted ones.
-   - Leads to code like empty method implementations (to disable behavior).
-
-3. **Inheritance Chain Complexity**:
-
-   - Long chains (e.g., `C` -> `D` -> `E`) make it hard to understand what functionality is inherited.
-   - Changing a parent class can **break child classes**, causing fragility.
-
-4. **Tight Coupling**:
-   - Inheritance leads to **strong coupling** between parent and child.
-   - A change in one class affects all descendants.
-
-#### Real-World Consequences:
-
-- Developers are hesitant to change parent classes for fear of breaking code.
-- Often leads to workarounds and redundant classes.
-
-#### This is known as the **Fragile Base Class Problem**.
-
----
-
-### 4. **Composition Over Inheritance**
-
-#### Composition:
-
-- A class **contains** instances of other classes instead of inheriting from them.
-- Offers more **flexibility** and **decouples** components.
-- Example:
-
-  ```java
-  class DD {
-      A a = new A();
-      B b = new B();
-      C c = new C();
-
-      void method() {
-          a.method1();
-          b.method2();
-          c.method1();
-      }
-  }
-  ```
+5. **Convert to Hamiltonian Circuit:**
+   - Remove repeated cities to obtain a path visiting each city exactly once.
 
 #### Benefits:
 
-- Choose exactly which methods to reuse.
-- Avoids problems of inheritance chains.
-- Easier to understand, maintain, and modify.
+- Near-optimal solution
+- Efficient compared to brute-force
 
-#### Principle:
+#### Example Use Case:
 
-> **Prefer Composition Over Inheritance**
-
-This is the **5th Object-Oriented Principle** covered in the course.
+> A delivery company must visit 15 addresses. Christofides' algorithm reduces route length, saving fuel and time.
 
 ---
 
-### 5. **Strategy Design Pattern**
+## AI in Drug Discovery & Healthcare
 
-#### Purpose:
+### AI Applications in Healthcare
 
-- Demonstrates how to use **composition** to vary behavior at runtime.
+- Speeds up drug development
+- Improves hospital efficiency
+- Enables personalized treatment based on patient data
 
-#### Problem Example:
+### Machine Learning in COVID-19 Detection
 
-- Different duck types: `QuackingDuck`, `FlyingDuck`, etc.
-- Instead of creating a massive inheritance structure...
+- **Radiomics + Deep Learning:**
+  - Extract features from X-rays/CT scans to classify pneumonia
+- **CAD Systems:**
+  - Aid radiologists by highlighting affected areas
+- **Explainability Tools (e.g., SHAP):**
+  - Help understand AI decisions
 
-#### Solution:
+### Model Performance
 
-- Define **interfaces** for behaviors:
+- Example model (Random Forest) achieved ~82% accuracy for detecting COVID-19 from imaging data
 
-  ```java
-  interface FlyBehavior {
-      void fly();
-  }
+### AI in Vaccine Development
 
-  interface QuackBehavior {
-      void quack();
-  }
-  ```
+- Predicts protein structures
+- Accelerates analysis of vaccine candidates (e.g., Pfizer during COVID)
+- Enables scaling up of vaccine production
 
-- Implement these behaviors in **concrete classes**:
+### Limitations
 
-  ```java
-  class FlyHigh implements FlyBehavior {
-      public void fly() { System.out.println("Flying high!"); }
-  }
+- AI models require large, high-quality datasets
+- Poor data = inaccurate predictions
 
-  class RegularQuack implements QuackBehavior {
-      public void quack() { System.out.println("Regular quack"); }
-  }
-  ```
+### Future Outlook
 
-- Compose them in a `Duck` class:
-
-  ```java
-  class Duck {
-      FlyBehavior flyBehavior;
-      QuackBehavior quackBehavior;
-
-      Duck(FlyBehavior f, QuackBehavior q) {
-          this.flyBehavior = f;
-          this.quackBehavior = q;
-      }
-
-      void performFly() { flyBehavior.fly(); }
-      void performQuack() { quackBehavior.quack(); }
-  }
-  ```
-
-- In `main()`:
-  ```java
-  Duck d = new Duck(new FlyHigh(), new RegularQuack());
-  d.performFly();    // Output: Flying high!
-  d.performQuack();  // Output: Regular quack
-  ```
-
-#### Key Idea:
-
-- You can switch behavior at runtime by changing the composed objects.
-- Promotes **flexibility** and **reuse** without inheritance.
+- Projects like Oracle's "Stargate" invest in predictive healthcare using AI (e.g., early cancer detection)
 
 ---
 
-### Summary
+## Strategy Pattern (Design Pattern)
 
-- Inheritance can lead to **rigid**, **fragile**, and **hard-to-maintain** code.
-- **Composition** offers a better way to reuse code with less coupling.
-- The **Strategy Design Pattern** illustrates how to apply composition to vary behavior dynamically.
-- This lecture introduced the **5th OOP Principle**: **Prefer composition over inheritance**.
+### Problem with Inheritance:
+
+- Inheritance makes code tightly coupled.
+- Adding new behaviors requires modifying many classes.
+
+### Strategy Pattern Solution:
+
+> Encapsulate interchangeable behaviors and pass them to objects.
+
+#### Structure:
+
+- **Context:** Class using a behavior (e.g., `Duck`)
+- **Strategy Interface:** Common interface for all behaviors (e.g., `FlyBehavior`)
+- **Concrete Strategies:** Implement different behaviors (e.g., `FlyHigh`, `NoFly`)
+
+#### Benefits:
+
+- Favor **composition over inheritance**
+- Avoid code duplication
+- Open for extension, closed for modification (OCP)
+- Add new behaviors without changing existing code
+
+#### Real-World Analogy:
+
+- Payment system: define `Payment` interface and implement strategies like `Cash`, `CreditCard`, `PayPal`, etc.
+
+---
+
+## Observer Pattern (Design Pattern)
+
+### Use Case:
+
+> Notifying interested parties (observers) when an object (subject) changes.
+
+### Example:
+
+- **Subject:** Stock Market
+- **Observers:** Wall Street, SEC
+- Observers want to be notified when a stock is bought or sold.
+
+### Initial Problem:
+
+- Code modification was needed every time a new observer was added.
+
+### Observer Pattern Structure:
+
+- **Subject Interface:** Manages observers (add/remove/notify)
+- **Observer Interface:** Contains `notify()` method
+- **Concrete Observers:** Implement specific behavior on notification
+
+### Benefits:
+
+- Decouples subject from observers
+- Open for extension, closed for modification
+- Easily add/remove observers without touching core logic
+
+### Real-World Example:
+
+- GUI Button in C#: adding/removing click event listeners behaves like the observer pattern
+
+---
+
+## Key Software Engineering Principle:
+
+### Open-Closed Principle (OCP)
+
+> Software entities should be open for extension but closed for modification.
+
+- Add functionality via new code
+- Avoid changing existing, working code
+- Helps prevent bugs and ensures stability
+
+---
+
+## Summary
+
+Lecture 5 focused on optimization and design patterns that emphasize clean, maintainable code. Christofides' algorithm provides a real-world solution to TSP, while Strategy and Observer patterns illustrate how to write flexible, reusable object-oriented code. These patterns support the Open-Closed Principle, ensuring scalable and bug-resistant systems.

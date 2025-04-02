@@ -1,175 +1,209 @@
-# CSCI 370 - Lecture 11 - Agile Practices, Testing Strategies, and Software Development Principles
+# CSCI 370 - Lecture 12 Review Sheet - Software Requirements, Design Principles, Development Models, UML Diagrams, and Design Patterns
 
-### **Agile Development Principles and Practices**
-
-#### **Collective Code Ownership**
-
-- **Definition**: No single developer "owns" a section of the code; everyone on the team is responsible for all parts of the codebase.
-- **Benefits**:
-  - Encourages collaboration and knowledge sharing.
-  - Prevents bottlenecks and reliance on specific developers.
-  - Reduces "code silos" where only certain people understand certain sections.
-
-#### **Code Silos**
-
-- **Definition**: Code that only specific people understand or can modify.
-- **Problem**: Creates a barrier to collaboration and increases risk.
-- **Solution**: Promote collective ownership to eliminate silos.
+This lecture primarily focused on reviewing a midterm exam and elaborating on important concepts in software engineering. Below is a detailed breakdown of the key points discussed, with elaborations where necessary.
 
 ---
 
-### **DevOps and Pipelines**
+## 🔍 Functional vs. Non-Functional Requirements
 
-#### **DevOps**
-
-- **Definition**: A combination of Development and Operations, focusing on automating and integrating the process of software development and deployment.
-- **Purpose**: Ensures rapid, consistent, and reliable deployment of code changes.
-
-#### **Pipeline**
-
-- **Definition**: An automated workflow where code changes are automatically built, tested, and deployed.
-- **Key Components**:
-  - **Code Compilation**
-  - **Unit Testing**
-  - **Deployment to test environments**
-  - **Schema updates** (database)
-  - **Automated testing suites**
-
-#### **Benefits**:
-
-- Reduces manual intervention.
-- Promotes continuous integration and delivery (CI/CD).
-- Enables faster feedback cycles.
+- **Functional Requirements**: Specific behaviors or functions a system must perform, based on client requests (e.g., "The system shall allow users to log in").
+- **Non-Functional Requirements**: Constraints or qualities the system must have, not tied to specific functions (e.g., performance, scalability, usability). Often span multiple features.
 
 ---
 
-### **Testing in Software Development**
+## ☁️ Benefits of Using Cloud Software
 
-#### **Unit Testing**
-
-- **Definition**: Tests written by developers to test individual components or functions.
-- **Goal**: Ensure each part of the codebase behaves correctly in isolation.
-- **When**: Written before (preferably) or during development.
-
-#### **Automated Testing**
-
-- **Definition**: Tests that are automatically run by software tools without manual intervention.
-- **Examples**:
-  - Load testing with tools that simulate many users.
-  - Functional testing using AI tools to explore edge cases.
-- **Benefits**:
-  - Reduces time spent on repetitive manual testing.
-  - Ensures consistent behavior across builds.
-
-#### **Test-Driven Development (TDD)**
-
-- **Definition**: Practice where tests are written _before_ writing the actual code.
-- **Purpose**:
-  - Forces developers to clarify the behavior of the code.
-  - Helps uncover edge cases early.
-  - Increases test coverage naturally.
-
-#### **Regression Testing**
-
-- **Definition**: Tests that ensure previously fixed bugs do not reappear.
-- **Triggered by**: Changes or new features being added.
-
-#### **Smoke Testing**
-
-- **Definition**: Basic test to check if the software starts and runs correctly.
-- **Analogy**: Like turning on a device to see if it powers on ("where there's smoke, there's fire").
+- No need for maintenance by the user
+- Available anywhere with internet
+- Scalable with demand
+- Often cost-effective
+- **Answer**: All of the above
 
 ---
 
-### **Code Quality and Maintenance**
+## 🧱 Strategy Pattern
 
-#### **Refactoring**
-
-- **Definition**: Rewriting existing code to improve its structure without changing its behavior.
-- **Analogy**: Like cleaning and organizing a messy room without adding new furniture.
-- **Benefits**:
-  - Improves readability and maintainability.
-  - Reduces complexity (avoids "spaghetti code").
-
-#### **Simplicity in Code**
-
-- **Principle**: Keep methods short, ideally fewer than 60 lines (preferably 5 or fewer).
-- **Reason**: Simpler code is easier to test, understand, and modify.
-
-#### **Avoid Premature Coding**
-
-- **Guideline**: Do not write code for features that are not currently required.
-- **Rationale**: Avoids wasted effort and unnecessary complexity.
+- Replaces **inheritance** with **composition**.
+- Promotes flexible and interchangeable behavior by encapsulating algorithms.
+- **Answer**: Composition
 
 ---
 
-### **Agile Methodology Terms**
+## 🧼 Code Quality - DRY Principle
 
-#### **Sprint**
-
-- **Definition**: A time-boxed iteration, typically 2-4 weeks, during which a product increment is developed.
-
-#### **Scrum**
-
-- **Definition**: A framework for Agile project management involving daily stand-up meetings, sprint planning, reviews, and retrospectives.
-
-#### **Scrum Master**
-
-- **Role**: Facilitator for the Scrum team, ensuring adherence to Agile practices.
-
-#### **Velocity**
-
-- **Definition**: The amount of work a team can complete during a sprint.
-
-#### **Product Owner**
-
-- **Definition**: Represents the customer or stakeholders; manages the product backlog and prioritizes features.
-
-#### **Product Backlog**
-
-- **Definition**: An evolving list of work items and features for the product.
-
-#### **Potentially Shippable Product Increment**
-
-- **Definition**: At the end of each sprint, the team should have a version of the software that is complete and could be shipped.
+- DRY: Don't Repeat Yourself
+- Violating DRY leads to code duplication and harder maintenance.
+- Identified example: Repeating the same logic in multiple places.
 
 ---
 
-### **User Stories**
+## 🧩 Relationships Between Classes
 
-#### **User Story Components**
+### Example: MedicalRecord and Database
 
-1. **Who**: The user or role requesting the feature.
-2. **What**: The specific feature or functionality.
-3. **Why**: The reason or goal behind the request.
-4. **Acceptance Criteria**: Conditions that must be met for the story to be considered complete.
-
-#### **Purpose of Asking "Why"**
-
-- Understand the underlying need.
-- May lead to better or more efficient solutions.
-- Avoid building unnecessary or redundant features.
+- **Composition**: MedicalRecord _has a_ Database
+- **Encapsulation**: Not achieved if Database is public
+- **Dependency**: MedicalRecord is dependent on Database if it won't compile without it
+- **Correct analysis**:
+  - Composition: ✅
+  - Encapsulation: ❌ (Database is public)
+  - Dependency: ✅
 
 ---
 
-### **Other Concepts**
+## 🔁 Incremental Development
 
-#### **Pair Programming**
-
-- **Definition**: Two developers work together at one workstation, one types while both discuss the code.
-- **Benefit**: Reduces bugs and improves design through constant feedback.
-
-#### **Sustainable Pace**
-
-- **Definition**: Avoid developer burnout by keeping work hours reasonable and consistent.
+- Involves building software in small, manageable increments
+- Examples: Agile, Scrum, Extreme Programming
+- **Not Incremental**: Reuse model (or Waterfall in certain contexts)
 
 ---
 
-Next class will cover:
+## 📐 Design Principle - Open/Closed Principle
 
-- **Singleton Design Pattern**
-- **Factory Design Pattern**
+- **Open for extension, closed for modification**: You should be able to add new functionality without changing existing code.
+- Used in several design patterns (e.g., Strategy, Observer)
 
-Midterm rescheduled for **March 27**. Sample midterm will be provided in the next lecture.
+---
+
+## ⚠️ Software Engineering Challenges
+
+- Managing complexity
+- Meeting customer requirements
+- Maintaining software
+- Coping with change
+- **Answer**: All of the above
+
+---
+
+## 🕵️ Observer Pattern
+
+- Allows objects to be notified when another object's state changes
+- Useful when adding new types (e.g., new banks in the example)
+- Avoids hardcoded logic for each dependent object
+
+---
+
+## ☝️ Singleton Pattern
+
+- Ensures a class has only one instance
+- Provides a global access point
+- Lazily initialized and thread-safe if done correctly
+- **Answer**: All of the above
+
+---
+
+## 🔄 Incremental Development: True/False
+
+- Customer involvement: ✅ True
+- All requirements fixed before coding: ❌ False
+- Easy to modify: ✅ True
+- No need for refactoring: ❌ False
+- Only unit testing: ❌ False (also includes integration/system testing)
+
+---
+
+## ⚙️ Missing Step in Process
+
+- Steps: Specification, Development, **Testing**
+- **Answer**: Testing
+
+---
+
+## 🚰 Waterfall Model Use Cases
+
+- Used when changes are expensive or high risk
+- Suitable for:
+  - Medical software (FDA approval required)
+  - Airplane software (FAA certification required)
+  - Refrigerator software (deployed with hardware)
+- Not suitable for: Game software (frequent updates, low risk)
+
+---
+
+## 📊 Process Order
+
+1. Feasibility (Can we do it?)
+2. Requirements
+3. Design
+4. Development
+5. Testing
+6. Deployment & Maintenance (follow afterward)
+
+---
+
+## 🔁 Reusable Software
+
+- Any software type can be reused in other projects
+- Encourages modular, component-based design
+
+---
+
+## 🖼 UML Diagrams
+
+- **Triangle arrow (inheritance)**: One class is a subtype of another
+- **Line (association)**: Indicates one class uses another
+
+---
+
+## 🧰 Best Design Practice
+
+- Prefer **composition** over **inheritance**
+- Avoid overly generic types (e.g., `Object`)
+- Design for maintainability and scalability
+
+---
+
+## 🧑‍💼 Maintainability in High Turnover Environments
+
+- Critical when team members frequently join/leave
+- Knowledge about the codebase is easily lost
+- Maintainable code is easier for new developers to understand
+
+---
+
+## 🎓 Degree Requirement
+
+- No formal degree is required to become a software engineer
+- Skill, experience, and projects often matter more than credentials
+
+---
+
+## 💼 Software Project Scope
+
+- Includes:
+  - Hardware considerations
+  - Finances
+  - Management
+  - Scheduling
+- Software projects are multifaceted
+
+---
+
+## 🔁 Process Not Required in Software Discovery
+
+- **Reuse model** is optional
+- Others (e.g., waterfall, agile, spiral) are standard models
+
+---
+
+## 🧪 Summary of Design Patterns Mentioned
+
+- **Observer**: Dynamic dependencies
+- **Singleton**: One instance only
+- **Strategy**: Replace inheritance with composition
+- **State**: Not yet covered in lecture
+
+---
+
+## ✅ Key Takeaways
+
+- Understand difference between functional and non-functional requirements
+- Know when to use Waterfall vs. Incremental
+- Learn design principles: DRY, Open/Closed, Encapsulation, Composition over Inheritance
+- Understand and recognize common design patterns
+- Maintainability and team dynamics influence architectural decisions
+- Be familiar with UML basics: association vs. inheritance
+- Process steps and development models guide lifecycle planning
 
 ---

@@ -1,209 +1,167 @@
-# CSCI 370 - Lecture 12 Review Sheet - Software Requirements, Design Principles, Development Models, UML Diagrams, and Design Patterns
+# CSCI 370 - Lecture 13: Object-Oriented Design Patterns: Singleton, Factory, Observer, Strategy
 
-This lecture primarily focused on reviewing a midterm exam and elaborating on important concepts in software engineering. Below is a detailed breakdown of the key points discussed, with elaborations where necessary.
+<small>March 25 (first 15 minutes of class)</small>
 
----
+## Singleton Pattern
 
-## 🔍 Functional vs. Non-Functional Requirements
+### Problem Being Solved
 
-- **Functional Requirements**: Specific behaviors or functions a system must perform, based on client requests (e.g., "The system shall allow users to log in").
-- **Non-Functional Requirements**: Constraints or qualities the system must have, not tied to specific functions (e.g., performance, scalability, usability). Often span multiple features.
+- Global variables are dangerous because they can be modified from anywhere, making the logic of the program hard to follow and debug.
+- Example issue: A variable like `id` being set to `-100` arbitrarily in some part of the code.
 
----
+### Solution: Singleton Pattern
 
-## ☁️ Benefits of Using Cloud Software
+- **Encapsulation**: Make the global variable private.
+- **Access Control**: Provide a public getter method (`getId()`) that returns the value without allowing direct modification.
 
-- No need for maintenance by the user
-- Available anywhere with internet
-- Scalable with demand
-- Often cost-effective
-- **Answer**: All of the above
+### Purpose
 
----
+- Restricts instantiation of a class to a single object.
+- Controls access to a shared resource (e.g., ID generator, database connection).
+- Protects global variables from unauthorized modification.
 
-## 🧱 Strategy Pattern
+### Two Forms of Singleton
 
-- Replaces **inheritance** with **composition**.
-- Promotes flexible and interchangeable behavior by encapsulating algorithms.
-- **Answer**: Composition
+#### 1. **Eager Initialization**
 
----
+- Instance is created at **load time**.
 
-## 🧼 Code Quality - DRY Principle
+```java
+private static NextId instance = new NextId();
+```
 
-- DRY: Don't Repeat Yourself
-- Violating DRY leads to code duplication and harder maintenance.
-- Identified example: Repeating the same logic in multiple places.
+- Good when you always need the instance and it doesn't require parameters.
 
----
+#### 2. **Lazy Initialization**
 
-## 🧩 Relationships Between Classes
+- Instance is created **on first use**.
 
-### Example: MedicalRecord and Database
+```java
+private static DatabaseConnection connection = null;
 
-- **Composition**: MedicalRecord _has a_ Database
-- **Encapsulation**: Not achieved if Database is public
-- **Dependency**: MedicalRecord is dependent on Database if it won't compile without it
-- **Correct analysis**:
-  - Composition: ✅
-  - Encapsulation: ❌ (Database is public)
-  - Dependency: ✅
+public static DatabaseConnection getConnection() {
+    if (connection == null) {
+        connection = new DatabaseConnection();
+    }
+    return connection;
+}
+```
 
----
+- Useful when object creation depends on runtime information.
 
-## 🔁 Incremental Development
+#### Common Issue: Not Thread Safe
 
-- Involves building software in small, manageable increments
-- Examples: Agile, Scrum, Extreme Programming
-- **Not Incremental**: Reuse model (or Waterfall in certain contexts)
+- Multiple threads may call `getConnection()` simultaneously and both create a new object.
+- Fix: Use synchronization or other thread-safety mechanisms.
 
 ---
 
-## 📐 Design Principle - Open/Closed Principle
+## Factory Pattern
 
-- **Open for extension, closed for modification**: You should be able to add new functionality without changing existing code.
-- Used in several design patterns (e.g., Strategy, Observer)
+### Purpose
 
----
+- **Encapsulates object creation** based on some logic (e.g., user age).
+- Prevents outside code from directly instantiating certain classes.
+- Provides a single access point for creating related objects.
 
-## ⚠️ Software Engineering Challenges
+### Example Use Case
 
-- Managing complexity
-- Meeting customer requirements
-- Maintaining software
-- Coping with change
-- **Answer**: All of the above
+```java
+public Bicycle getBicycle(int age) {
+    if (age < 10) return new KidsBike();
+    else return new MountainBike();
+}
+```
 
----
+- Makes it easier for developers (especially new ones) to use the correct class.
+- Ensures consistency and maintainability.
 
-## 🕵️ Observer Pattern
+### Key Benefits
 
-- Allows objects to be notified when another object's state changes
-- Useful when adding new types (e.g., new banks in the example)
-- Avoids hardcoded logic for each dependent object
-
----
-
-## ☝️ Singleton Pattern
-
-- Ensures a class has only one instance
-- Provides a global access point
-- Lazily initialized and thread-safe if done correctly
-- **Answer**: All of the above
+- Hides object creation logic.
+- Reduces dependency on concrete classes.
+- Easier to manage and change creation logic in one place.
 
 ---
 
-## 🔄 Incremental Development: True/False
+## Observer Pattern
 
-- Customer involvement: ✅ True
-- All requirements fixed before coding: ❌ False
-- Easy to modify: ✅ True
-- No need for refactoring: ❌ False
-- Only unit testing: ❌ False (also includes integration/system testing)
+### Purpose
 
----
+- **Implements a publish-subscribe model**: multiple observers watch a single subject.
+- All observers implement a common interface (e.g., `notify()` method).
 
-## ⚙️ Missing Step in Process
+### Benefit
 
-- Steps: Specification, Development, **Testing**
-- **Answer**: Testing
+- One subject can notify all registered observers of changes.
+- Observers are loosely coupled; they can be of different types but are treated the same if they implement the observer interface.
 
----
+### Example
 
-## 🚰 Waterfall Model Use Cases
+- `StockMarket` notifies `WallStreet` and `SEC` objects, both of which implement the `Observer` interface.
 
-- Used when changes are expensive or high risk
-- Suitable for:
-  - Medical software (FDA approval required)
-  - Airplane software (FAA certification required)
-  - Refrigerator software (deployed with hardware)
-- Not suitable for: Game software (frequent updates, low risk)
+```java
+interface Observer {
+    void notify();
+}
+```
 
 ---
 
-## 📊 Process Order
+## Strategy Pattern
 
-1. Feasibility (Can we do it?)
-2. Requirements
-3. Design
-4. Development
-5. Testing
-6. Deployment & Maintenance (follow afterward)
+### Purpose
 
----
+- Replaces inheritance with **composition** for behavior reuse.
+- Promotes **code flexibility** by injecting behavior rather than inheriting it.
 
-## 🔁 Reusable Software
+### Design Principle
 
-- Any software type can be reused in other projects
-- Encourages modular, component-based design
+- **Favor composition over inheritance**.
+- Inheritance leads to fragile base class problems:
+  - Modifying the parent class can unintentionally break child classes.
+- Composition allows passing only the required behavior.
 
----
+### Example: Duck Simulation
 
-## 🖼 UML Diagrams
+```java
+Duck d = new Duck(new RealFly(), new LoudQuack());
+```
 
-- **Triangle arrow (inheritance)**: One class is a subtype of another
-- **Line (association)**: Indicates one class uses another
+- `RealFly` and `LoudQuack` are strategy classes implementing `FlyBehavior` and `QuackBehavior` interfaces.
+- Different behaviors can be swapped easily.
 
----
+### Open/Closed Principle
 
-## 🧰 Best Design Practice
-
-- Prefer **composition** over **inheritance**
-- Avoid overly generic types (e.g., `Object`)
-- Design for maintainability and scalability
+- **Open for extension**, **closed for modification**.
+- Add new behaviors (e.g., `SilentQuack`) without modifying existing code.
+- Reduces risk of introducing bugs in stable code.
 
 ---
 
-## 🧑‍💼 Maintainability in High Turnover Environments
+## Summary of Design Patterns Covered
 
-- Critical when team members frequently join/leave
-- Knowledge about the codebase is easily lost
-- Maintainable code is easier for new developers to understand
-
----
-
-## 🎓 Degree Requirement
-
-- No formal degree is required to become a software engineer
-- Skill, experience, and projects often matter more than credentials
+| Pattern   | Purpose                                           | Benefit                                         |
+| --------- | ------------------------------------------------- | ----------------------------------------------- |
+| Singleton | One instance only; global control                 | Prevents uncontrolled access to shared resource |
+| Factory   | Encapsulate object creation                       | Easy, centralized, controlled instantiation     |
+| Observer  | Notify multiple dependent objects on state change | Loose coupling, unified notification interface  |
+| Strategy  | Behavior injection using composition              | Flexible, avoids inheritance problems           |
 
 ---
 
-## 💼 Software Project Scope
+## Interview Tips
 
-- Includes:
-  - Hardware considerations
-  - Finances
-  - Management
-  - Scheduling
-- Software projects are multifaceted
+- Singleton issues: Understand thread-safety.
+- Factory: Explain control of object creation.
+- Observer: Focus on decoupling and interfaces.
+- Strategy: Emphasize open/closed principle and composition.
 
 ---
 
-## 🔁 Process Not Required in Software Discovery
+## Instructor Notes
 
-- **Reuse model** is optional
-- Others (e.g., waterfall, agile, spiral) are standard models
-
----
-
-## 🧪 Summary of Design Patterns Mentioned
-
-- **Observer**: Dynamic dependencies
-- **Singleton**: One instance only
-- **Strategy**: Replace inheritance with composition
-- **State**: Not yet covered in lecture
-
----
-
-## ✅ Key Takeaways
-
-- Understand difference between functional and non-functional requirements
-- Know when to use Waterfall vs. Incremental
-- Learn design principles: DRY, Open/Closed, Encapsulation, Composition over Inheritance
-- Understand and recognize common design patterns
-- Maintainability and team dynamics influence architectural decisions
-- Be familiar with UML basics: association vs. inheritance
-- Process steps and development models guide lifecycle planning
-
----
+- Avoid global variables.
+- Avoid inheritance where possible.
+- Reuse via composition is safer and more flexible.
+- Real-world example: Different database APIs at work benefit from factory and strategy patterns.

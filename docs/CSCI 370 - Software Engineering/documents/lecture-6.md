@@ -1,197 +1,178 @@
-# CSCI 370 - Lecture 6 - Approaches to Software Development: Waterfall, Incremental, and Reuse Models
+# CSCI 370 - Lecture 7 Review: UML Class Diagrams and Object-Oriented Relationships
+
+## Overview
+
+This lecture focused heavily on UML (Unified Modeling Language) class diagrams and the key relationships between classes in object-oriented design. Concepts such as inheritance, association, aggregation, and composition were discussed in detail, including how these relationships translate into actual code. The lecture also highlighted the importance of testing in real-world environments and gave examples of software failures due to small code errors.
 
 ---
 
-## **Overview**
+## 🛰 Software Failure Case Study: Ariane 5
 
-This lecture explored three major approaches to software development:
+### Summary:
 
-1. **Waterfall Model**
-2. **Incremental (Iterative) Model**
-3. **Reuse (Integration and Configuration) Model**
-
-It emphasized the evolution from traditional linear development to more adaptive, reusable methods, and discussed practical trade-offs of each.
-
----
-
-## **1. Waterfall Model**
-
-### **Definition**
-
-A linear and sequential software development process. Each phase must be completed before the next begins.
-
-### **Steps Involved**
-
-1. Requirements gathering
-2. System and software design
-3. Implementation (coding)
-4. Integration and testing
-5. Deployment
-6. Maintenance
-
-### **Characteristics**
-
-- Strict order; no going back to previous steps
-- Similar to writing a user manual before writing a single line of code (e.g., IBM)
-- Popular before 2000
-
-### **Analogy**
-
-Like writing an entire book plot before writing any pages (e.g., author Jeffrey Deaver spends 8 months planning).
-
-### **Pros**
-
-- Clear documentation and structured process
-- Predictability for fixed-scope projects
-- Easier to create contracts (everything is defined up front)
-- Useful when changes are very expensive (e.g., buildings, medical software)
-
-### **Cons**
-
-- Inflexible to changes mid-process
-- Poor at handling uncertain or changing requirements
-- Scheduling inefficiencies: developers/testers often wait
-- High failure rate due to misestimation (real-world example: project failed after 5 years)
+- The Ariane 5 rocket failure (June 4, 1996) was due to a **software bug**.
+- A 64-bit floating-point number was incorrectly cast to a 16-bit signed integer, causing an **overflow**.
+- Both the **primary** and **backup systems** failed because they shared the same bug.
+- Takeaways:
+  - Even **minor coding errors** can lead to catastrophic results.
+  - Importance of **testing in real-world environments**.
+  - The need for **robust exception handling**.
+  - Backup systems must be **independently verified**.
 
 ---
 
-## **2. Incremental Model**
+## 📦 UML Class Diagrams
 
-### **Definition**
+### What is UML?
 
-An iterative model that develops software in small, manageable chunks, revisiting earlier phases as needed.
+- UML (Unified Modeling Language) is a standardized way to visualize the design of a system.
+- The **Class Diagram** is one of the most commonly used UML diagrams.
 
-### **Process**
+### Class Diagram Basics
 
-Each increment involves:
+A UML class diagram typically includes:
 
-1. Partial requirements gathering
-2. Partial design
-3. Partial implementation
-4. Partial testing
-5. Repeat until complete
-6. Final delivery and maintenance
+- **Class Name** (top section)
+- **Attributes** (middle section)
+- **Methods/Operations** (bottom section)
 
-### **Characteristics**
+### Example:
 
-- You plan, implement, and test smaller pieces over time
-- Can release working versions early
-- Uses real-time feedback for improvement
+For a class representing an animal:
 
-### **Analogy**
+```
++----------------+
+|    Animal      |
++----------------+
+| -name: String  |
+| -age: int      |
++----------------+
+| +getName(): String |
+| +setName(String): void |
++----------------+
+```
 
-Writing a book one chapter at a time, refining earlier chapters as new ideas evolve.
+Symbols:
 
-### **Pros**
-
-- Supports changing requirements
-- Better scheduling; everyone stays busy
-- Allows early feedback and deployment
-- Better testing (repeated after each increment)
-- Easier time estimation through real experience
-
-### **Cons**
-
-- May lose the big picture focus
-- Code quality may degrade ("spaghetti code")
-- Requires refactoring to keep code maintainable
-
-### **Refactoring**
-
-The process of rewriting code to improve clarity and structure without changing functionality. Essential to prevent software rot over multiple iterations.
+- `+` = public
+- `-` = private
 
 ---
 
-## **3. Reuse Model (Integration and Configuration)**
+## 📚 Object-Oriented Relationships in UML
 
-### **Definition**
+### 1. Inheritance (Generalization)
 
-Build software systems by integrating existing components or systems rather than developing from scratch.
+- Represented by a **hollow triangle** pointing to the parent class.
+- Example: `Horse`, `Otter`, and `Slow Loris` inherit from `Animal`.
+- Benefit: Enables **code reuse** and **polymorphism**.
 
-### **Process**
+### 2. Association
 
-1. Determine requirements and feasibility
-2. Discover existing software (e.g., libraries, APIs, commercial systems)
-3. Integrate or configure it into your solution
+- Represented by a **solid line** between classes.
+- Denotes a general relationship, e.g., `Person` owns `Dog`.
+- May include **multiplicity** (e.g., one-to-many, one-to-one).
 
-### **Examples**
+### 3. Aggregation ("Has-a" Relationship)
 
-- Game engines (e.g., Unity, Unreal)
-- Accounting software (e.g., QuickBooks)
-- Vehicle platforms (e.g., Honda Prologue built by GM)
+- Represented by a **hollow diamond**.
+- Whole-part relationship where the part **can exist independently**.
+- Example: `Class` aggregates `Student`; students can exist without the class.
 
-### **Pros**
+### 4. Composition
 
-- Fastest and cheapest method
-- Uses tested and proven software
-- Reduces development and maintenance costs
+- Represented by a **filled diamond**.
+- Strong whole-part relationship where the part **cannot exist without the whole**.
+- Example: `Order` has `OrderDetails`; if `Order` is deleted, so is `OrderDetails`.
 
-### **Cons**
+### 5. Dependency
 
-- Less flexibility; you're limited by external software capabilities
-- Risk if the provider discontinues support or goes out of business
-- Licensing and legal restrictions may apply
-
-### **Mitigation Strategies**
-
-- Contracts for source code access if vendor shuts down
-- Use of open-source software maintained by communities
+- Represented by a **dashed arrow**.
+- One class **uses** another, typically as a **method parameter**.
+- Example: `Dog` depends on `Food` in `eat(Food food)`.
 
 ---
 
-## **V-Model (Validation and Verification)**
+## 🔁 Multiplicity in Relationships
 
-### **Definition**
+Indicates how many instances of one class relate to instances of another.
+Examples:
 
-An extension of the Waterfall Model that emphasizes corresponding testing for each development phase.
+- `1` — exactly one
+- `0..1` — zero or one
+- `0..*` — zero or many
+- `1..*` — at least one
+- `0..5` — up to five
 
-### **Structure**
+Example:
 
-Visualized as a "V":
-
-- Left side: Development phases (Requirements → Design → Code)
-- Right side: Testing phases (Test Plan → Integration Test → Unit Test)
-
-### **Benefits**
-
-- Encourages early development of tests
-- Ensures testing is aligned with requirements
-- Helps uncover issues early
+- `Customer` has `0..*` `Orders`.
+- Each `Order` belongs to `1` `Customer`.
 
 ---
 
-## **Summary of Trade-Offs**
+## 🧱 Abstraction and Abstract Classes
 
-| Model       | Pros                                          | Cons                                               |
-| ----------- | --------------------------------------------- | -------------------------------------------------- |
-| Waterfall   | Structured, clear scope, good for fixed plans | Inflexible, bad with change, difficult to schedule |
-| Incremental | Adaptive, better testing, early feedback      | Risk of messy code, may lose overall vision        |
-| Reuse       | Fastest, cheapest, reliable components        | Limited customization, dependency risks            |
-
-### **Best Practice**
-
-- **Reuse** is usually the best starting point for most modern projects.
-- Combine models if needed (e.g., reuse + incremental for custom components).
+- Abstract classes **cannot be instantiated**.
+- Serve as **blueprints** for other classes.
+- UML typically uses _italicized class names_ to denote abstract classes.
 
 ---
 
-## **Real-World Notes**
+## 🧪 Practical Tools & Application
 
-- **Waterfall used in**: Regulated industries (e.g., medical, aerospace)
-- **Incremental used in**: Most modern software teams (Agile, Scrum)
-- **Reuse examples**: Buying software, using open-source libraries
+- Tools like **Visual Paradigm** allow users to create UML diagrams easily.
+- You can add attributes, methods, and relationships using GUI tools.
+- Some software can generate **code from diagrams** or vice versa.
+
+### Code Examples:
+
+**Dependency Example:**
+
+```java
+class Food {}
+class Dog {
+    public void eat(Food food) {}
+}
+```
+
+**Inheritance Example:**
+
+```java
+class Animal {}
+class Dog extends Animal {}
+```
+
+**Composition Example:**
+
+```java
+class Tesla {
+    Engine[] engines = new Engine[3];
+    public Tesla() {
+        engines[0] = new Engine();
+    }
+    class Engine {}
+}
+```
+
+**Aggregation Example:**
+
+```java
+class Person {
+    Dog[] dogs = new Dog[5];
+}
+```
 
 ---
 
-## **Key Vocabulary**
+## ✅ Key Takeaways
 
-- **Increment**: A small, manageable chunk of work
-- **Refactoring**: Rewriting code to improve quality without changing functionality
-- **Spaghetti Code**: Unstructured, messy code due to excessive changes
-- **V-Model**: Waterfall model with testing matched to each development phase
+- Class diagrams model the **structure** of a system using classes and relationships.
+- **UML relationships** clarify how objects interact: Inheritance, Association, Aggregation, Composition, Dependency.
+- Proper diagramming helps with **code understanding**, **communication**, and **design planning**.
+- Code examples reinforce the UML concepts.
+- Knowing these concepts is **highly useful** in job interviews and real-world software engineering tasks.
 
 ---
 
-## **Final Thoughts**
-
-This lecture emphasized that while all development models have value, choosing the right one depends on the project's complexity, timeline, regulatory constraints, and budget. Modern development often blends reuse and incremental methods for the best balance of flexibility, speed, and reliability.
+> "UML diagrams aren't meant to be perfect; they're meant to communicate design ideas. Spend your time coding, not making perfect diagrams." – Professor

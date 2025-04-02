@@ -1,178 +1,133 @@
-# CSCI 370 - Lecture 7 Review: UML Class Diagrams and Object-Oriented Relationships
-
-## Overview
-
-This lecture focused heavily on UML (Unified Modeling Language) class diagrams and the key relationships between classes in object-oriented design. Concepts such as inheritance, association, aggregation, and composition were discussed in detail, including how these relationships translate into actual code. The lecture also highlighted the importance of testing in real-world environments and gave examples of software failures due to small code errors.
+# CSCI 370 - Lecture 8: UML Class Diagrams and SOLID Principles
 
 ---
 
-## 🛰 Software Failure Case Study: Ariane 5
+## UML Class Diagrams
 
-### Summary:
+### What is a UML Class Diagram?
 
-- The Ariane 5 rocket failure (June 4, 1996) was due to a **software bug**.
-- A 64-bit floating-point number was incorrectly cast to a 16-bit signed integer, causing an **overflow**.
-- Both the **primary** and **backup systems** failed because they shared the same bug.
-- Takeaways:
-  - Even **minor coding errors** can lead to catastrophic results.
-  - Importance of **testing in real-world environments**.
-  - The need for **robust exception handling**.
-  - Backup systems must be **independently verified**.
+A **UML (Unified Modeling Language) class diagram** provides a visual representation of the structure of a software system by showing its classes, attributes, methods, and relationships among objects. It is a low-level diagram compared to higher-level diagrams like context diagrams.
 
----
+### Key Components of Class Diagrams
 
-## 📦 UML Class Diagrams
+A UML Class Diagram typically shows five main types of information:
 
-### What is UML?
+1. **Classes (Objects)**: The diagram identifies the different object types or classes (e.g., Animal, Duck, Fish, Zebra).
 
-- UML (Unified Modeling Language) is a standardized way to visualize the design of a system.
-- The **Class Diagram** is one of the most commonly used UML diagrams.
+2. **Attributes and Methods**:
 
-### Class Diagram Basics
+   - **Attributes** (e.g., age) represent the properties of a class.
+   - **Methods** (e.g., quack()) represent the behaviors.
+   - **Visibility Modifiers**: '+' denotes **public**, '-' denotes **private**.
 
-A UML class diagram typically includes:
+3. **Relationships Between Classes**:
 
-- **Class Name** (top section)
-- **Attributes** (middle section)
-- **Methods/Operations** (bottom section)
+   - **Inheritance**: Represented with a triangle; shows one class inheriting from another.
+   - **Aggregation**: Represented with a hollow diamond; shows whole-part relationships where parts can exist independently.
+   - **Composition**: Represented with a filled diamond; shows whole-part relationships where parts cannot exist independently.
+   - **Dependency**: Dashed arrow line; shows one class uses another temporarily.
+   - **Association**: Simple lines; shows a general relationship without strong ownership.
 
-### Example:
+4. **Multiplicity**:
 
-For a class representing an animal:
+   - Describes the number of instances of one class related to another.
+   - Examples:
+     - `0..*` means zero or many.
+     - `1` means exactly one.
+     - `1..*` means one or more.
 
-```
-+----------------+
-|    Animal      |
-+----------------+
-| -name: String  |
-| -age: int      |
-+----------------+
-| +getName(): String |
-| +setName(String): void |
-+----------------+
-```
+5. **Generalization**:
+   - Another term for inheritance, indicating that one class (child) generalizes or extends another (parent).
 
-Symbols:
+### Class Diagram Example: Online Shopping System
 
-- `+` = public
-- `-` = private
+- **Customer to Order**: Association
 
----
+  - A Customer can have zero or many Orders (`0..*`).
+  - Each Order must be associated with one Customer (`1`).
 
-## 📚 Object-Oriented Relationships in UML
+- **Order to OrderDetail**: Aggregation (possibly should be Composition)
 
-### 1. Inheritance (Generalization)
+  - An Order has one or many OrderDetails (`1..*`).
+  - Each OrderDetail belongs to one Order only.
 
-- Represented by a **hollow triangle** pointing to the parent class.
-- Example: `Horse`, `Otter`, and `Slow Loris` inherit from `Animal`.
-- Benefit: Enables **code reuse** and **polymorphism**.
+- **OrderDetail to Item**:
 
-### 2. Association
+  - Each OrderDetail is associated with exactly one Item.
+  - An Item can belong to zero or many OrderDetails.
 
-- Represented by a **solid line** between classes.
-- Denotes a general relationship, e.g., `Person` owns `Dog`.
-- May include **multiplicity** (e.g., one-to-many, one-to-one).
-
-### 3. Aggregation ("Has-a" Relationship)
-
-- Represented by a **hollow diamond**.
-- Whole-part relationship where the part **can exist independently**.
-- Example: `Class` aggregates `Student`; students can exist without the class.
-
-### 4. Composition
-
-- Represented by a **filled diamond**.
-- Strong whole-part relationship where the part **cannot exist without the whole**.
-- Example: `Order` has `OrderDetails`; if `Order` is deleted, so is `OrderDetails`.
-
-### 5. Dependency
-
-- Represented by a **dashed arrow**.
-- One class **uses** another, typically as a **method parameter**.
-- Example: `Dog` depends on `Food` in `eat(Food food)`.
+- **Payment and Its Subtypes (Credit, Cash, Check)**:
+  - Payments are associated with Orders.
+  - An Order must have at least one Payment.
+  - A Payment can only pay for one Order.
+  - Payments can be polymorphic, using multiple types.
 
 ---
 
-## 🔁 Multiplicity in Relationships
+## Object-Oriented Principles
 
-Indicates how many instances of one class relate to instances of another.
-Examples:
+### Review of Core OO Principles
 
-- `1` — exactly one
-- `0..1` — zero or one
-- `0..*` — zero or many
-- `1..*` — at least one
-- `0..5` — up to five
+1. **Encapsulation**: Hides internal state and only exposes necessary components.
+2. **Abstraction**: Hides complexity and shows only essential features.
+3. **Inheritance**: One class inherits properties and methods from another.
+4. **Polymorphism**: A single function or method can work in different ways depending on input (e.g., `println()` in Java).
 
-Example:
+### Additional OO Principles
 
-- `Customer` has `0..*` `Orders`.
-- Each `Order` belongs to `1` `Customer`.
+- **Composition over Inheritance**:
 
----
+  - Prefer using objects via composition rather than inheriting from them.
+  - Composition allows for more flexible and maintainable code.
 
-## 🧱 Abstraction and Abstract Classes
-
-- Abstract classes **cannot be instantiated**.
-- Serve as **blueprints** for other classes.
-- UML typically uses _italicized class names_ to denote abstract classes.
+- **Open-Closed Principle**:
+  - Classes should be open for extension but closed for modification.
+  - Encourages adding new code instead of changing existing code.
 
 ---
 
-## 🧪 Practical Tools & Application
+## SOLID Principles
 
-- Tools like **Visual Paradigm** allow users to create UML diagrams easily.
-- You can add attributes, methods, and relationships using GUI tools.
-- Some software can generate **code from diagrams** or vice versa.
+### S - Single Responsibility Principle (SRP)
 
-### Code Examples:
+Each class should have only **one responsibility** or reason to change. Benefits:
 
-**Dependency Example:**
+- Easier to maintain and understand.
+- Fewer bugs since each class does less.
+- More reusable (e.g., separating logic of adding two numbers and printing the result).
 
-```java
-class Food {}
-class Dog {
-    public void eat(Food food) {}
-}
-```
+### O - Open-Closed Principle
 
-**Inheritance Example:**
+A class should be **open for extension but closed for modification**. This avoids breaking existing code and promotes extensibility.
 
-```java
-class Animal {}
-class Dog extends Animal {}
-```
+### L - Liskov Substitution Principle
 
-**Composition Example:**
+Subtypes must be substitutable for their base types **without altering the correctness** of the program.
 
-```java
-class Tesla {
-    Engine[] engines = new Engine[3];
-    public Tesla() {
-        engines[0] = new Engine();
-    }
-    class Engine {}
-}
-```
+#### Example:
 
-**Aggregation Example:**
+- **Bad Example**: Square extends Rectangle and overrides methods in a way that breaks expected behavior (e.g., setting width changes both width and length).
+- **Fix**: Use **composition** instead of inheritance (e.g., a Square class that has a Rectangle as a field and uses it internally).
 
-```java
-class Person {
-    Dog[] dogs = new Dog[5];
-}
-```
+### I - Interface Segregation Principle
+
+(Not covered in this lecture.)
+
+### D - Dependency Inversion Principle
+
+High-level modules should not depend on low-level modules. Instead, both should depend on abstractions (e.g., interfaces). Also attributed to **Robert C. Martin (Uncle Bob)**.
+
+- Uncle Bob coined many of these ideas and is known for clean code and architecture principles.
 
 ---
 
-## ✅ Key Takeaways
+## Final Notes
 
-- Class diagrams model the **structure** of a system using classes and relationships.
-- **UML relationships** clarify how objects interact: Inheritance, Association, Aggregation, Composition, Dependency.
-- Proper diagramming helps with **code understanding**, **communication**, and **design planning**.
-- Code examples reinforce the UML concepts.
-- Knowing these concepts is **highly useful** in job interviews and real-world software engineering tasks.
+- Class diagrams are essential for modeling the system architecture.
+- Understanding relationships (inheritance, composition, aggregation, etc.) and multiplicity helps in accurate system design.
+- The SOLID principles are foundational to writing maintainable and robust object-oriented software.
+- The lecture also emphasized the practical aspect of unit testing and how design choices like inheritance can affect testability and behavior.
 
 ---
 
-> "UML diagrams aren't meant to be perfect; they're meant to communicate design ideas. Spend your time coding, not making perfect diagrams." – Professor
+> Tip: Try reviewing different UML diagrams online and practice identifying the components discussed. Also, test your understanding by applying SOLID principles in your own code.
