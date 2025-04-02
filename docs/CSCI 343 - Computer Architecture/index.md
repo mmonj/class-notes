@@ -34,10 +34,9 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Datapath
 
-- [Notes - Datapath (March 20, 25)](./notes/Notes%20Mar%2020,%2025%20-%20Datapath.pdf)
-- [Notes - Full Datapath (March 27)](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf)
-- [Notes - April 1](./notes/Notes%20April%201.pdf)
-- [Lecture Summary - April 1](./notes/Notes%20April%201%20Summary)
+- [Notes Datapath (March 20, 25)](./notes/Notes%20Mar%2020,%2025%20-%20Datapath.pdf)
+- [Notes March 27](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf) - Full Datapath with control lines [(Summary)](./notes/Notes%20Feb%2027%20Summary.md)
+- [Notes April 1](./notes/Notes%20April%201.pdf) - Instruction Execution, and Clock Cycle Timing [(Summary)](./notes/Notes%20April%201%20Summary)
 - [Datapath Review (timestamp 52:44) - Gaurish Telang](https://www.youtube.com/watch?v=NPogexpvctM)
 - [343 Midterm 2 Review #2 - Everything but Pipeline \[Video\]](https://youtu.be/qKq5aAfFreE)
 - [343 Midterm 2 Review #3 - Pipeline etc \[Video\]](https://www.youtube.com/watch?v=TmOCzD6n6dU)
