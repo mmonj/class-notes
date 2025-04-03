@@ -106,7 +106,7 @@ This waste leads to performance limitations in single-cycle designs.
 
 ## Additional Notes
 
-- In exams, the datapath diagrams will be provided.
+- In exams, the full datapath diagram will be provided.
 - You must be able to determine control line values and draw individual instruction datapaths.
 - Understanding what each control signal and multiplexer does is key, more than memorization.
 
