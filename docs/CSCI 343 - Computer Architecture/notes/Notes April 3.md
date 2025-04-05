@@ -52,7 +52,7 @@ Pipelining increases throughput by overlapping stages of multiple instructions. 
 - No two instructions can use the same hardware unit in the same clock cycle
 - All instructions must progress through the pipeline stages in order
 
-### Pipelining Visualization
+## Advantages of Pipelining
 
 To illustrate how pipelining reduces total clock cycles, refer to the diagram linked below:
 
@@ -60,11 +60,8 @@ To illustrate how pipelining reduces total clock cycles, refer to the diagram li
 
 - In a **non-pipelined** (serial) approach, each instruction must complete before the next begins. With five instructions and five stages, this would take 25 cycles.
 - In a **pipelined** CPU, overlapping stages allows all five instructions to complete in just **9 clock cycles**.
-- This demonstrates a significant improvement in **instruction throughput**.
 
 ---
-
-## Advantages of Pipelining
 
 - **Throughput Improvement**: Completes more instructions per unit time (not faster individual instructions)
 - **Efficiency**: Better hardware utilization compared to single-cycle CPUs
@@ -79,8 +76,6 @@ To illustrate how pipelining reduces total clock cycles, refer to the diagram li
 - Pipeline clock cycle is set to the **slowest** stage (typically MEM or EX)
 - With each instruction taking 5 stages, a pipeline allows completion of one instruction per cycle **after the pipeline is full**
 
-![Pipelining Instructions](./image.png)
-
 ```
 Pipeline Time = (n + k - 1) × t
 where:
@@ -91,7 +86,7 @@ where:
 
 This formula calculates the total time required to execute `n` instructions through a pipeline with `k` stages and clock cycle time `t`. It reflects the idea that the first instruction takes `k` cycles to complete, and each additional instruction completes in one additional cycle.
 
-In the image:
+In the Pipeline visualization above:
 
 - We can see how the pipeline fills up over the first few cycles.
 - Once full, each new instruction completes every cycle.
@@ -131,8 +126,8 @@ Pipeline hazards are issues that prevent the next instruction from executing dur
   - **RAW (Read-After-Write)**: Most common (e.g., `add $t1, $t2, $t3` followed by `sub $t4, $t1, $t5`)
 
 ```asm
-add $s0, $s1, $s2
-sub $t0, $s0, $t1  # Depends on result of add
+add $t1, $s1, $s2
+sub $s0, $t1, $t2  # Depends on result of add
 ````
 
 #### Solutions:
