@@ -13,6 +13,7 @@ This lecture focused on **instruction-level parallelism** via **pipelining** in 
 - Why MIPS is ideal for pipelining
 - Pipeline timing and speedup
 - Hardware support for pipeline optimization
+- Real-world analogies and examples
 
 ---
 
@@ -29,6 +30,10 @@ Each MIPS instruction may go through the following five stages:
 > Not every instruction uses every stage actively, but all must pass through each stage in a pipelined design.
 
 Some instructions like R-format skip MEM, and store instructions skip WB. Branch instructions may skip both MEM and WB. However, all must move through all stages to maintain pipeline structure and timing.
+
+### Key Idea
+
+Each stage uses a different hardware component (e.g., instruction memory, register file, ALU, data memory), allowing multiple instructions to proceed in parallel without interference.
 
 ---
 
@@ -57,15 +62,44 @@ To illustrate how pipelining reduces total clock cycles, refer to the diagram li
 - In a **pipelined** CPU, overlapping stages allows all five instructions to complete in just **9 clock cycles**.
 - This demonstrates a significant improvement in **instruction throughput**.
 
-### Pipeline Timing & Speedup
+---
+
+## Advantages of Pipelining
+
+- **Throughput Improvement**: Completes more instructions per unit time (not faster individual instructions)
+- **Efficiency**: Better hardware utilization compared to single-cycle CPUs
+- **Example**:
+  - Single-cycle: 5 instructions × 800ps = 4000ps
+  - Pipelined: 9 cycles × 200ps = 1800ps (more than 2× improvement)
+
+---
+
+## Pipeline Timing & Speedup
 
 - Pipeline clock cycle is set to the **slowest** stage (typically MEM or EX)
 - With each instruction taking 5 stages, a pipeline allows completion of one instruction per cycle **after the pipeline is full**
-- Speedup is approximately:
+
+  ![Pipelining Instructions](./image.png)
+
   ```
-  Time_single_cycle / Time_pipelined ≈ 5 (ideal)
+  Pipeline Time = (n + k - 1) × t
+  where:
+      n = number of instructions
+      k = number of stages (5 for MIPS)
+      t = clock cycle time (determined by slowest stage)
   ```
-- Real gains are slightly less due to startup, wind-down, and hazards
+
+  This formula calculates the total time required to execute `n` instructions through a pipeline with `k` stages and clock cycle time `t`. It reflects the idea that the first instruction takes `k` cycles to complete, and each additional instruction completes in one additional cycle.
+
+  In the image:
+
+  - We can see how the pipeline fills up over the first few cycles.
+  - Once full, each new instruction completes every cycle.
+  - With 5 instructions and a 5-stage pipeline, the total time is 9 cycles, coinciding with the formula stated above: `(5 + 5 - 1) × t = 9 × t`.
+
+````
+
+- **Ideal Speedup** ≈ number of stages (5), but actual speedup is less due to hazards and pipeline filling/draining overhead
 
 ---
 
@@ -87,20 +121,19 @@ These choices allow each pipeline stage to be predictable and efficient, with le
 Pipeline hazards are issues that prevent the next instruction from executing during its designated clock cycle.
 
 ### 1. Structural Hazards
-
-- Occur when hardware resources are insufficient for overlapping instructions
-- Rare in MIPS due to separated instruction and data memory units
-- MIPS enforces a fixed execution order across all instructions to avoid these
+- **Cause**: Two instructions attempt to use the same hardware component simultaneously
+- **Solution**: MIPS avoids these by design (e.g., separate instruction/data memory)
 
 ### 2. Data Hazards
 
-- Occur due to **data dependencies** between instructions
-- Example:
-  ```
-  add $s0, $s1, $s2
-  sub $t0, $s0, $t1  # Depends on result of add
-  ```
-  - `sub` needs the value of `$s0` before `add` finishes WB stage
+- **Cause**: Dependency between instructions (e.g., one instruction needs a result from another still in progress)
+- **Types**:
+  - **RAW (Read-After-Write)**: Most common (e.g., `add $t1, $t2, $t3` followed by `sub $t4, $t1, $t5`)
+
+```asm
+add $s0, $s1, $s2
+sub $t0, $s0, $t1  # Depends on result of add
+````
 
 #### Solutions:
 
@@ -110,29 +143,23 @@ Pipeline hazards are issues that prevent the next instruction from executing dur
   - Implemented using a **hazard detection unit**, which sets control signals to zero to pause progress
 
 - **Forwarding (Bypassing)**
-
-  - ALU result from EX/MEM pipeline register is sent directly to the next EX stage
+  - Directly route results from EX/MEM or MEM/WB stages to dependent instructions
   - Done using a **forwarding unit** and multiplexers
 
-- **Load-Use Hazard**
-  - Occurs when an instruction uses a value loaded by the previous instruction
-  - Load completes in MEM, but next instruction needs it in EX
-  - **Solution**: must stall for 1 cycle even with forwarding
+### Load-Use Hazard
 
-Example of load-use hazard:
+- **Special Case**: Load data isn’t available until MEM stage, requiring a stall + forward combo.
 
 ```asm
 lw $s0, 0($t1)
-sub $t2, $s0, $t3
+sub $t2, $s0, $t3  // Requires stall before forwarding
 ```
 
 ![alt text](image-1.png)
 
 ### 3. Control Hazards (Branch Hazards)
 
-- Caused by **conditional branches** (e.g., beq, bne)
-- Next instruction is fetched before the branch decision is resolved
-- Leads to incorrect instruction being in the pipeline
+- **Cause**: Branches alter instruction flow, but the next instruction is fetched before branch resolution
 
 #### Solutions:
 
@@ -142,10 +169,11 @@ sub $t2, $s0, $t3
   - Always fetch the **next** instruction after the branch
   - The next instruction (delay slot) is always executed, regardless of branch result
   - Compiler reorders code to place useful instructions in the delay slot
+  - **Static prediction**: MIPS assumes branches are not taken
 
 ---
 
-## Pipeline Registers
+## Pipeline Registers & Forwarding Unit
 
 Pipeline registers isolate each stage and store information needed by subsequent stages. This supports overlapping execution and forwarding.
 
@@ -156,9 +184,10 @@ Pipeline registers isolate each stage and store information needed by subsequent
 - **EX/MEM**: Holds ALU result, control signals, and destination register
 - **MEM/WB**: Holds data from memory or ALU result to write back
 
-Each register must be wide enough to store all relevant data and control signals for its stage.
+### Forwarding Unit
 
-These registers are also used by **forwarding logic** to identify the data source and destination.
+- Contains multiplexers that bypass pipeline registers to feed results directly to dependent stages
+- Used to resolve most RAW data hazards without stalling
 
 ---
 
@@ -172,6 +201,24 @@ These registers are also used by **forwarding logic** to identify the data sourc
 - The pipeline requires extra cycles at the beginning and end (startup + wind-down)
 - With large programs (e.g., 10,000+ instructions), pipeline stays **fully utilized**, and overhead becomes negligible
 - Real performance boost comes from **throughput**, not faster individual instruction execution
+
+---
+
+## Example Problems
+
+### **Data Hazard with Forwarding**
+
+```asm
+add $s0, $s1, $s2
+sub $t0, $s0, $s3  // Forward $s0 from EX to EX
+```
+
+### **Load-Use Hazard**
+
+```asm
+lw $s0, 0($t0)
+add $t1, $s0, $t2  // Requires 1 stall cycle + forwarding
+```
 
 ---
 
