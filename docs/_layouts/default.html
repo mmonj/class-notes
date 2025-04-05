@@ -17,12 +17,40 @@
       li {
         page-break-inside: avoid;
       }
-    }
 
-    @media print {
       footer {
         display: none;
       }
+    }
+
+    .go-back-strip {
+      position: relative;
+      top: -2.5rem;
+      width: 100%;
+    }
+
+    .go-back-strip-inner {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 64rem;
+      padding: 0 1rem;
+    }
+
+    .go-back-strip a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+
+    .go-back-strip:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .go-back-strip a:hover {
+      color: rgba(255, 255, 255, 0.8);
     }
   </style>
 
@@ -32,14 +60,35 @@
 <body>
   <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-  <header class="page-header" role="banner">
-    <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
-      }}</h2>
-    {% if site.show_downloads %}
-    <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-    <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+  <header>
+    <div class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
+        }}</h2>
+      {% if site.show_downloads %}
+      <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+      <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+      {% endif %}
+    </div>
+
+    {% capture previous_dir_snippet %}
+    <div class="go-back-strip">
+      <div class="go-back-strip-inner">
+        <a href="../">❮ Go Back</a>
+      </div>
+    </div>
+    {% endcapture %}
+
+    {% assign path_parts = page.url | split: '/' %}
+    {% assign parts_size = path_parts | size %}
+    {% assign last_char = page.url | slice: -1 %}
+
+    {% if parts_size > 2 %}
+    {{ previous_dir_snippet }}
+    {% elsif parts_size == 2 and last_char == '/' %}
+    {{ previous_dir_snippet }}
     {% endif %}
+
   </header>
 
   <main id="content" class="main-content" role="main">

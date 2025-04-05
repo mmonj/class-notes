@@ -25,5 +25,3 @@
 - [CSCI 370 Lecture 14: Builder Pattern, State Pattern, Decorator Pattern](./documents/lecture-14)
 
 &nbsp;
-
-[❮ Back Home](../)

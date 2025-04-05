@@ -10,5 +10,3 @@ These problem sets were created to prepare students for Waxman's exams since the
 - [Final Problem Sets 2](review/final-problem-sets2)
 
 &nbsp;
-
-[❮ Back Home](../)

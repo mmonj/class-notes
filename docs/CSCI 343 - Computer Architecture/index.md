@@ -43,5 +43,3 @@ Any example documents posted below will use the methods that you are expected to
 - [343 Midterm 2 Review #3 - Pipeline etc \[Video\]](https://www.youtube.com/watch?v=TmOCzD6n6dU)
 
 &nbsp;
-
-[❮ Back Home](../)
