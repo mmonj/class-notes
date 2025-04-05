@@ -1,199 +1,204 @@
-# CSCI 343 Review Sheet: Pipelining, Hazards, and MIPS Architecture
+# CSCI 343 - April 3 Lecture Review Sheet: **MIPS Pipelining, Parallelism, and Hazards**
+
+---
 
 ## Overview
 
-This lecture focuses on instruction-level parallelism through pipelining, hazards that arise during pipelined execution, and why MIPS is designed to be pipeline-friendly. It also discusses how pipeline performance is evaluated and techniques to mitigate pipeline hazards.
+This lecture focused on **instruction-level parallelism** via **pipelining** in MIPS architecture, a technique designed to improve performance by increasing instruction throughput. Key topics included:
+
+- The five-stage instruction cycle
+- Parallelism through pipelining
+- Hazards in pipelining: structural, data, and control
+- Techniques to handle data hazards: stalling, forwarding, and delayed branching
+- Why MIPS is ideal for pipelining
+- Pipeline timing and speedup
+- Hardware support for pipeline optimization
 
 ---
 
-## Instruction Execution Cycle (Non-Pipelined)
+## Five-Stage Instruction Cycle in MIPS
 
-MIPS instructions generally proceed through these five stages:
+Each MIPS instruction may go through the following five stages:
 
-1. **Instruction Fetch (IF)** – Retrieve instruction from instruction memory.
-2. **Instruction Decode/Register Fetch (ID)** – Decode instruction and fetch operands from register file.
-3. **Execute (EX)** – Perform operation via the ALU.
-4. **Memory Access (MEM)** – Read/write data from/to memory (only for load/store).
-5. **Write Back (WB)** – Write result back to register file.
+1. **Instruction Fetch (IF)** - Access instruction memory
+2. **Instruction Decode (ID)** - Decode and read register operands
+3. **Execute (EX)** - Perform ALU operations
+4. **Memory Access (MEM)** - Read/write data memory (only for load/store)
+5. **Write Back (WB)** - Write result to register file
 
-Each of these phases uses a distinct component of the computer architecture, enabling the basis for parallelism.
+> Not every instruction uses every stage actively, but all must pass through each stage in a pipelined design.
+
+Some instructions like R-format skip MEM, and store instructions skip WB. Branch instructions may skip both MEM and WB. However, all must move through all stages to maintain pipeline structure and timing.
 
 ---
 
-## Pipelining Fundamentals
+## Pipelining Basics
 
-Pipelining allows overlapping the execution of multiple instructions by breaking down instruction processing into independent stages. Each stage works on a different instruction, enabling simultaneous processing.
-
-### Visual Example
-
-![Pipelining Instructions](image.png)
-
-This diagram illustrates five instructions moving through five pipeline stages (IF, ID, EX, MEM, WB) over nine clock cycles. Without pipelining, 5 instructions x 5 stages = **25 clock cycles**. With pipelining: **9 clock cycles**, demonstrating a major improvement in throughput.
+Pipelining increases throughput by overlapping stages of multiple instructions. Each pipeline stage operates on a different instruction during the same clock cycle.
 
 ### Analogy: Doing Laundry
 
-Imagine doing laundry for four loads:
+- Tasks: wash → dry → fold → store
+- Instead of waiting for one load to finish before starting another, each stage is continuously active on a different load
+- Pipeline performs like a laundry assembly line: once the line is full, each step outputs a finished product every cycle
 
-- **Serially**: Wash → Dry → Fold → Store each load sequentially = 4x total time.
-- **Pipelined**: Start folding the first load while drying the second and washing the third. All stages are utilized in parallel, just like pipelining.
+### Requirements for Pipelining:
 
-### Benefits
+- No two instructions can use the same hardware unit in the same clock cycle
+- All instructions must progress through the pipeline stages in order
 
-- **Increased Instruction Throughput**: More instructions completed per time unit.
-- **Efficient Hardware Utilization**: Each unit (e.g., ALU, register file) used every cycle.
-- **Latency per instruction remains the same**, but **total runtime improves significantly** for long programs.
+### Pipelining Visualization
 
----
+To illustrate how pipelining reduces total clock cycles, refer to the diagram linked below:
 
-## Performance Comparison: Single-Cycle vs. Pipelined
+![Click here to view the pipelining diagram](./image.png)
 
-| Metric                      | Single-Cycle                                          | Pipelined                                       |
-| --------------------------- | ----------------------------------------------------- | ----------------------------------------------- |
-| Clock Cycle Time            | Determined by slowest instruction (e.g., Load: 800ps) | Based on longest stage (e.g., EX or MEM: 200ps) |
-| Total Time (5 Instructions) | 5 x 800ps = 4000ps                                    | 9 x 200ps = 1800ps                              |
-| Throughput                  | 1 instr / 800ps                                       | 1 instr / 200ps (after fill)                    |
+- In a **non-pipelined** (serial) approach, each instruction must complete before the next begins. With five instructions and five stages, this would take 25 cycles.
+- In a **pipelined** CPU, overlapping stages allows all five instructions to complete in just **9 clock cycles**.
+- This demonstrates a significant improvement in **instruction throughput**.
 
-**Note**: Pipeline takes time to fill and drain. For small instruction sets, overhead is noticeable, but becomes negligible for large programs (e.g., 10,000 instructions).
+### Pipeline Timing & Speedup
 
----
-
-## Pipeline Registers and Stage Isolation
-
-To prevent data from being overwritten and to carry values between stages, **pipeline registers** are placed between stages:
-
-- `IF/ID`: Stores instruction + PC (64 bits)
-- `ID/EX`: Stores control signals, operands, etc.
-- `EX/MEM`: Carries ALU results and destination registers
-- `MEM/WB`: Stores memory output or ALU result to be written back
-
-These registers enable concurrent execution by isolating stages and allowing independent operation.
+- Pipeline clock cycle is set to the **slowest** stage (typically MEM or EX)
+- With each instruction taking 5 stages, a pipeline allows completion of one instruction per cycle **after the pipeline is full**
+- Speedup is approximately:
+  ```
+  Time_single_cycle / Time_pipelined ≈ 5 (ideal)
+  ```
+- Real gains are slightly less due to startup, wind-down, and hazards
 
 ---
 
-## Hazards in Pipelining
+## MIPS Design and Pipelining
 
-Hazards are conditions that disrupt the smooth execution of pipelined instructions.
+MIPS architecture is designed with pipelining in mind. Features include:
+
+- **Fixed-length instructions** (32 bits) simplify fetching and decoding
+- **Regular instruction formats** share field locations (opcode, rs, rt, etc.)
+- **Load/store architecture** restricts memory access to only two instructions, simplifying memory stage handling
+- **Aligned memory accesses** ensure word-based access boundaries
+
+These choices allow each pipeline stage to be predictable and efficient, with less complex control logic.
+
+---
+
+## Pipeline Hazards
+
+Pipeline hazards are issues that prevent the next instruction from executing during its designated clock cycle.
 
 ### 1. Structural Hazards
 
-- Occur when hardware components are insufficient for parallel execution.
-- **Avoided in MIPS** due to separate instruction/data memory and register file design.
+- Occur when hardware resources are insufficient for overlapping instructions
+- Rare in MIPS due to separated instruction and data memory units
+- MIPS enforces a fixed execution order across all instructions to avoid these
 
 ### 2. Data Hazards
 
-Caused by data dependencies between instructions.
-
-#### Example:
-
-```assembly
-add $s0, $s1, $s2
-sub $t0, $s0, $t1
-```
-
-- `$s0` is used by `sub` before `add` writes it back.
+- Occur due to **data dependencies** between instructions
+- Example:
+  ```
+  add $s0, $s1, $s2
+  sub $t0, $s0, $t1  # Depends on result of add
+  ```
+  - `sub` needs the value of `$s0` before `add` finishes WB stage
 
 #### Solutions:
 
-- **Stalling (Bubbles)**: Insert NOPs to delay execution.
-- **Forwarding (Bypassing)**: Use ALU output directly without waiting for WB.
-- **Load-Use Hazard**: When a `load` is immediately followed by a dependent instruction, forwarding alone is not enough—must **stall then forward**.
+- **Stalling (Bubbles)**
 
-### Forwarding Example:
+  - Pipeline inserts NOPs to delay dependent instruction
+  - Implemented using a **hazard detection unit**, which sets control signals to zero to pause progress
 
-```assembly
-add $s0, $s1, $s2
-sub $t0, $s0, $t3
+- **Forwarding (Bypassing)**
+
+  - ALU result from EX/MEM pipeline register is sent directly to the next EX stage
+  - Done using a **forwarding unit** and multiplexers
+
+- **Load-Use Hazard**
+  - Occurs when an instruction uses a value loaded by the previous instruction
+  - Load completes in MEM, but next instruction needs it in EX
+  - **Solution**: must stall for 1 cycle even with forwarding
+
+Example of load-use hazard:
+
+```asm
+lw $s0, 0($t1)
+sub $t2, $s0, $t3
 ```
-
-- ALU result from `add` can be forwarded to `sub`’s EX stage.
-
-### Load-Use Example:
-
-```assembly
-lw $s0, 0($t0)
-sub $t1, $s0, $t2
-```
-
-- `lw` result is only available after MEM stage, too late for `sub`’s EX stage.
-- Must stall `sub` for one cycle, then forward result.
 
 ### 3. Control Hazards (Branch Hazards)
 
-Occur due to uncertainty of branch outcome during instruction fetch.
+- Caused by **conditional branches** (e.g., beq, bne)
+- Next instruction is fetched before the branch decision is resolved
+- Leads to incorrect instruction being in the pipeline
 
-#### Example:
+#### Solutions:
 
-```assembly
-beq $s1, $s2, loop
-sub $t0, $t1, $t2
-```
-
-- While branch is being resolved, the pipeline has already fetched the next instruction (`sub`).
-
-#### Strategies:
-
-- **Delayed Branch**: MIPS executes the next instruction after the branch regardless.
-- **Branch Prediction**: Some CPUs predict and fetch accordingly, flushing if wrong.
-- MIPS keeps it simple: always executes next instruction and flushes if branch is taken.
+- **Flush**: Discard wrong instruction if prediction was incorrect
+- **Branch prediction**: Guess the likely path; dynamic algorithms can improve accuracy
+- **MIPS Approach - Delayed Branching**:
+  - Always fetch the **next** instruction after the branch
+  - The next instruction (delay slot) is always executed, regardless of branch result
+  - Compiler reorders code to place useful instructions in the delay slot
 
 ---
 
-## MIPS Design for Pipelining
+## Pipeline Registers
 
-### Pipelining-Friendly Features:
+Pipeline registers isolate each stage and store information needed by subsequent stages. This supports overlapping execution and forwarding.
 
-- **Fixed-length instructions** (4 bytes): Easier to decode, align, and move through stages.
-- **Few instruction formats**: Simplifies decoding and control logic.
-- **Memory access only in load/store**: ALU instructions do not access memory.
-- **Operands aligned to 4-byte boundaries**: Ensures efficient memory access.
-- **Sequential data access**: Maintains order of execution and supports pipeline assumptions.
+### Typical Inter-Stage Registers:
 
-### Implications:
+- **IF/ID**: Holds fetched instruction and PC+4
+- **ID/EX**: Holds control signals, register values, and sign-extended immediate
+- **EX/MEM**: Holds ALU result, control signals, and destination register
+- **MEM/WB**: Holds data from memory or ALU result to write back
 
-- Simpler pipeline control logic
-- Reduced risk of hazards
-- Easier hardware design and verification
+Each register must be wide enough to store all relevant data and control signals for its stage.
 
----
-
-## Hazard Detection and Forwarding Units
-
-### Forwarding Unit
-
-- Detects data hazards and routes data from later stages (EX/MEM or MEM/WB) back to EX inputs.
-- Reduces or eliminates stalls for most ALU-ALU dependencies.
-
-### Hazard Detection Unit
-
-- Monitors instruction sequence for load-use hazards.
-- When detected, inserts NOP by setting control signals to 0.
-
-### Bubble (NOP) Insertion:
-
-- Done by hazard detection unit.
-- **NOP = All control lines set to 0**
-- Pushes the dependent instruction one cycle forward to wait for data readiness.
+These registers are also used by **forwarding logic** to identify the data source and destination.
 
 ---
 
-## Summary Table of Hazard Types
+## Performance Comparison
 
-| Hazard Type      | Cause                        | Solution(s)                       |
-| ---------------- | ---------------------------- | --------------------------------- |
-| Structural       | Hardware resource conflict   | Avoided by MIPS design            |
-| Data             | Dependency on earlier result | Forwarding, Stalling, Both        |
-| Control (Branch) | Uncertain branch outcome     | Delayed Branch, Static Prediction |
+| Model            | Instructions | Clock Cycles | Clock Time | Total Time |
+| ---------------- | ------------ | ------------ | ---------- | ---------- |
+| Single-cycle CPU | 5            | 5 × 800 ps   | 800 ps     | 4000 ps    |
+| Pipelined CPU    | 5            | 9 cycles     | 200 ps     | 1800 ps    |
 
----
-
-## Key Exam Tips
-
-- Be able to **calculate total execution time** for both single-cycle and pipelined models.
-- Understand when and how to apply **stalling or forwarding**.
-- Draw **pipeline diagrams** showing stage progression per clock cycle.
-- Provide **examples of data hazards** and how they’re resolved.
-- Know how delayed branches work in MIPS and how they differ from prediction-based architectures.
+- The pipeline requires extra cycles at the beginning and end (startup + wind-down)
+- With large programs (e.g., 10,000+ instructions), pipeline stays **fully utilized**, and overhead becomes negligible
+- Real performance boost comes from **throughput**, not faster individual instruction execution
 
 ---
 
-This expanded review sheet now includes a visual diagram, detailed examples, and in-depth explanations of pipeline design and hazard handling in MIPS.
+## Summary of Hardware Support for Pipelining
+
+- **Forwarding Unit**: Enables bypassing of values to avoid unnecessary stalls
+- **Hazard Detection Unit**: Inserts NOPs (bubbles) when data hazards are unavoidable
+- **Control Unit**: Modified to manage stalls, flushing, and branch decisions
+- **Pipeline Registers**: Store and isolate stage-specific values to support concurrent processing
+
+---
+
+## Exam Notes
+
+- Understand the function of each pipeline stage and what hardware it uses
+- Be able to draw a pipeline execution chart for a sequence of instructions
+- Identify and explain the type of hazards between instructions
+- Demonstrate both stalling and forwarding solutions for data hazards
+- Know how MIPS design simplifies pipelining and supports delayed branching
+- Calculate clock cycles and performance gains for pipelined vs. single-cycle execution
+- Explain why load-use hazards require stalling even with forwarding
+
+---
+
+## Suggested Reading
+
+- **Hennessy & Patterson textbook** chapters on pipelining, data hazards, and control hazards
+- PowerPoint slides posted on Blackboard for pipeline and hazard diagrams
+- Study older student presentations (e.g., by Steven Trowbridge & Raymond Kendall)
+- Practice interpreting pipeline diagrams like the one above
+
+---
