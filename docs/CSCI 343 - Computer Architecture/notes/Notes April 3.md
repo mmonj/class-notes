@@ -1,4 +1,4 @@
-# CSCI 343 April 3: **MIPS Pipelining, Parallelism, and Hazards**
+# CSCI 343 April 3: MIPS Pipelining, Parallelism, and Hazards
 
 ---
 
