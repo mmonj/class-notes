@@ -1,4 +1,4 @@
-# CSCI 343 - April 3 Lecture Review Sheet: **MIPS Pipelining, Parallelism, and Hazards**
+# CSCI 343 April 3: **MIPS Pipelining, Parallelism, and Hazards**
 
 ---
 
@@ -202,3 +202,6 @@ These registers are also used by **forwarding logic** to identify the data sourc
 - Practice interpreting pipeline diagrams like the one above
 
 ---
+
+![alt text](image-1.png)
+![alt text](image-2.png)
