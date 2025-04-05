@@ -152,7 +152,7 @@ sub $t0, $s0, $t1  # Depends on result of add
 
 ```asm
 lw $s0, 0($t1)
-sub $t2, $s0, $t3  // Requires stall before forwarding
+sub $t2, $s0, $t3  # Requires stall before forwarding
 ```
 
 ![alt text](image-1.png)
@@ -210,14 +210,14 @@ Pipeline registers isolate each stage and store information needed by subsequent
 
 ```asm
 add $s0, $s1, $s2
-sub $t0, $s0, $s3  // Forward $s0 from EX to EX
+sub $t0, $s0, $s3  # Forward $s0 from EX to EX
 ```
 
 ### **Load-Use Hazard**
 
 ```asm
 lw $s0, 0($t0)
-add $t1, $s0, $t2  // Requires 1 stall cycle + forwarding
+add $t1, $s0, $t2  # Requires 1 stall cycle + forwarding
 ```
 
 ---
