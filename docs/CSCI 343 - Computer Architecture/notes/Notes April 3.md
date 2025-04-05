@@ -92,8 +92,6 @@ In the Pipeline visualization above:
 - Once full, each new instruction completes every cycle.
 - With 5 instructions and a 5-stage pipeline, the total time is 9 cycles, coinciding with the formula stated above: `(5 + 5 - 1) × t = 9 × t`.
 
-````
-
 - **Ideal Speedup** ≈ number of stages (5), but actual speedup is less due to hazards and pipeline filling/draining overhead
 
 ---
@@ -116,6 +114,7 @@ These choices allow each pipeline stage to be predictable and efficient, with le
 Pipeline hazards are issues that prevent the next instruction from executing during its designated clock cycle.
 
 ### 1. Structural Hazards
+
 - **Cause**: Two instructions attempt to use the same hardware component simultaneously
 - **Solution**: MIPS avoids these by design (e.g., separate instruction/data memory)
 
@@ -128,7 +127,7 @@ Pipeline hazards are issues that prevent the next instruction from executing dur
 ```asm
 add $t1, $s1, $s2
 sub $s0, $t1, $t2  # Depends on result of add
-````
+```
 
 #### Solutions:
 
