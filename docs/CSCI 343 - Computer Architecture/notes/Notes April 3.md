@@ -79,23 +79,23 @@ To illustrate how pipelining reduces total clock cycles, refer to the diagram li
 - Pipeline clock cycle is set to the **slowest** stage (typically MEM or EX)
 - With each instruction taking 5 stages, a pipeline allows completion of one instruction per cycle **after the pipeline is full**
 
-  ![Pipelining Instructions](./image.png)
+![Pipelining Instructions](./image.png)
 
-  ```
-  Pipeline Time = (n + k - 1) × t
-  where:
-      n = number of instructions
-      k = number of stages (5 for MIPS)
-      t = clock cycle time (determined by slowest stage)
-  ```
+```
+Pipeline Time = (n + k - 1) × t
+where:
+    n = number of instructions
+    k = number of stages (5 for MIPS)
+    t = clock cycle time (determined by slowest stage)
+```
 
-  This formula calculates the total time required to execute `n` instructions through a pipeline with `k` stages and clock cycle time `t`. It reflects the idea that the first instruction takes `k` cycles to complete, and each additional instruction completes in one additional cycle.
+This formula calculates the total time required to execute `n` instructions through a pipeline with `k` stages and clock cycle time `t`. It reflects the idea that the first instruction takes `k` cycles to complete, and each additional instruction completes in one additional cycle.
 
-  In the image:
+In the image:
 
-  - We can see how the pipeline fills up over the first few cycles.
-  - Once full, each new instruction completes every cycle.
-  - With 5 instructions and a 5-stage pipeline, the total time is 9 cycles, coinciding with the formula stated above: `(5 + 5 - 1) × t = 9 × t`.
+- We can see how the pipeline fills up over the first few cycles.
+- Once full, each new instruction completes every cycle.
+- With 5 instructions and a 5-stage pipeline, the total time is 9 cycles, coinciding with the formula stated above: `(5 + 5 - 1) × t = 9 × t`.
 
 ````
 
