@@ -126,6 +126,8 @@ lw $s0, 0($t1)
 sub $t2, $s0, $t3
 ```
 
+![alt text](image-1.png)
+
 ### 3. Control Hazards (Branch Hazards)
 
 - Caused by **conditional branches** (e.g., beq, bne)
@@ -197,11 +199,10 @@ These registers are also used by **forwarding logic** to identify the data sourc
 ## Suggested Reading
 
 - **Hennessy & Patterson textbook** chapters on pipelining, data hazards, and control hazards
-- PowerPoint slides posted on Blackboard for pipeline and hazard diagrams
+- PowerPoint slides posted on Brightspace for pipeline and hazard diagrams
 - Study older student presentations (e.g., by Steven Trowbridge & Raymond Kendall)
 - Practice interpreting pipeline diagrams like the one above
 
 ---
 
-![alt text](image-1.png)
 ![alt text](image-2.png)
