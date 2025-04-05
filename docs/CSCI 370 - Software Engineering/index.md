@@ -22,6 +22,7 @@
 ## Lecture Summaries (Post-Midterm)
 
 - [Lecture 13: Decorator Pattern, Builder Pattern](./documents/lecture-13)
+- [CSCI 370 Lecture 14: Builder Pattern, State Pattern, Decorator Pattern](./documents/lecture-14)
 
 &nbsp;
 
