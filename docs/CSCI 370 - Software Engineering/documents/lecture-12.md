@@ -1,13 +1,111 @@
-# CSCI 370 - Lecture 12: Object-Oriented Design Patterns: Singleton, Factory, Observer, Strategy
+# CSCI 370 Lecture 12 Review Sheet: Design Principles, Software Process Models, and the Singleton & Factory Patterns
 
-<small>March 25 (first 15 minutes of class)</small>
+---
 
-## Singleton Pattern
+## ✅ Key Topics Covered
+
+- Functional vs. Non-Functional Requirements
+- Software Process Models (Agile, Waterfall, Incremental)
+- Design Principles (Composition over Inheritance, Open/Closed Principle)
+- Design Patterns Overview (Singleton, Factory, Strategy, Observer)
+- UML Relationships (Inheritance, Composition, Association)
+- Software Maintainability & Reusability
+- Singleton & Factory Pattern Java Implementations
+- Design Pattern Benefits and Interview Tips
+
+---
+
+## 🔍 Functional vs. Non-Functional Requirements
+
+**Functional Requirements** describe what the system should do, i.e., the features and functionalities requested by the user or client.
+
+**Non-Functional Requirements** describe how the system performs a function, covering broader system attributes like performance, usability, reliability, etc. They often span multiple functional requirements.
+
+> Example: A system must process user logins (functional) and must do so within 2 seconds (non-functional).
+
+---
+
+## 🌩️ Cloud Software Benefits
+
+- No need for internal maintenance
+- Scalability and flexibility
+- Accessible from anywhere
+- Automatic updates
+
+Correct answer to the multiple-choice example: **All of the above**
+
+---
+
+## 🧠 Design Principles
+
+### Composition Over Inheritance
+
+- **Composition**: Using object references to other classes to build functionality. Preferred in many cases because it avoids the tight coupling of inheritance.
+- **Inheritance**: "Is-a" relationship, tightly couples subclasses with their superclasses. Can lead to fragile systems.
+
+> Example: A `MedicalRecord` class contains a `Database` object => Composition ("has-a")
+
+### Open/Closed Principle
+
+- Software entities (classes, modules, functions, etc.) should be **open for extension** but **closed for modification**.
+- Supported by patterns like Strategy, Observer, and State.
+
+---
+
+## 🧪 Incremental Development and Agile Models
+
+**Incremental** development includes:
+
+- Agile, Scrum, Extreme Programming (XP)
+- Encourages continuous integration and frequent feedback
+- Customer involvement is essential
+
+Models **not** using incremental development:
+
+- **Waterfall** – a linear, phased approach used when changes are costly or infeasible.
+
+---
+
+## ✈️ When to Use the Waterfall Model
+
+Used when changes are expensive or difficult after development begins. Examples:
+
+- Medical software (regulated by FDA)
+- Airplane systems (regulated by FAA)
+
+Reasons:
+
+- Requires certification
+- Changes trigger extensive revalidation
+
+Not suitable for:
+
+- Games
+- E-commerce platforms
+
+---
+
+## 🧬 UML and Object-Oriented Relationships
+
+### Types of Relationships:
+
+- **Inheritance**: A class "is a" type of another class (denoted by a solid line with a triangle arrowhead)
+- **Composition**: A class "has a" reference to another class; ownership implies lifecycle control
+- **Association**: General binary relationship; can be one-way or bidirectional
+
+Examples:
+
+- `MedicalRecord` **composes** `Database` => "has-a"
+- `Database` is public => **no encapsulation**, therefore **not protected**
+
+---
+
+## ⚙️ Singleton Pattern (Java Implementation)
 
 ### Problem Being Solved
 
 - Global variables are dangerous because they can be modified from anywhere, making the logic of the program hard to follow and debug.
-- Example issue: A variable like `id` being set to `-100` arbitrarily in some part of the code.
+- Example: A variable like `id` being set to `-100` arbitrarily in some part of the code.
 
 ### Solution: Singleton Pattern
 
@@ -24,17 +122,14 @@
 
 #### 1. **Eager Initialization**
 
-- Instance is created at **load time**.
-
 ```java
 private static NextId instance = new NextId();
 ```
 
-- Good when you always need the instance and it doesn't require parameters.
+- Instance is created at load time.
+- Suitable when the instance is always needed and simple to construct.
 
 #### 2. **Lazy Initialization**
-
-- Instance is created **on first use**.
 
 ```java
 private static DatabaseConnection connection = null;
@@ -47,58 +142,67 @@ public static DatabaseConnection getConnection() {
 }
 ```
 
-- Useful when object creation depends on runtime information.
+- Created only on first use.
+- More flexible but requires attention to thread-safety.
 
-#### Common Issue: Not Thread Safe
+### Common Issue: Thread Safety
 
-- Multiple threads may call `getConnection()` simultaneously and both create a new object.
-- Fix: Use synchronization or other thread-safety mechanisms.
+- Multiple threads may call the getter simultaneously and create multiple instances.
+- Fix: Use `synchronized` methods or other concurrency techniques.
 
 ---
 
-## Factory Pattern
+## 🏭 Factory Pattern (Java Implementation)
 
 ### Purpose
 
-- **Encapsulates object creation** based on some logic (e.g., user age).
-- Prevents outside code from directly instantiating certain classes.
-- Provides a single access point for creating related objects.
+- Encapsulates object creation based on logic (e.g., age, type).
+- Provides a single access point for instantiation.
+- Promotes code reuse and consistency.
 
-### Example Use Case
-
-```java
-public Bicycle getBicycle(int age) {
-    if (age < 10) return new KidsBike();
-    else return new MountainBike();
-}
-```
-
-- Makes it easier for developers (especially new ones) to use the correct class.
-- Ensures consistency and maintainability.
-
-### Key Benefits
+### Benefits
 
 - Hides object creation logic.
 - Reduces dependency on concrete classes.
-- Easier to manage and change creation logic in one place.
+- Easier to manage and update creation logic in one place.
+
+### Example from Class
+
+```java
+public Bicycle getNewBicycle(int age) {
+    if(age < 6)
+        return new KidsTriCycle();
+    if(age < 19)
+        return new TenSpeedBicycle();
+    return new MotorCycle();
+}
+```
+
+### Java Usage
+
+```java
+Bicycle bicycle = new BicycleFactory().getNewBicycle(6);
+bicycle.ride();
+```
+
+- Factory prevents misuse of `new` operator.
+- Ensures correct object type is instantiated depending on criteria.
 
 ---
 
-## Observer Pattern
+## 👁️ Observer Pattern
 
 ### Purpose
 
-- **Implements a publish-subscribe model**: multiple observers watch a single subject.
-- All observers implement a common interface (e.g., `notify()` method).
+- Implements a publish-subscribe model: one subject notifies multiple observers.
+- Observers implement a shared interface (e.g., `notify()`).
 
 ### Benefit
 
-- One subject can notify all registered observers of changes.
-- Observers are loosely coupled; they can be of different types but are treated the same if they implement the observer interface.
+- Loose coupling between subject and observers.
+- Flexible and modular; easy to add/remove observers.
 
 ### Example
-
-- `StockMarket` notifies `WallStreet` and `SEC` objects, both of which implement the `Observer` interface.
 
 ```java
 interface Observer {
@@ -106,40 +210,64 @@ interface Observer {
 }
 ```
 
+- `StockMarket` notifies `WallStreet` and `SEC` which both implement `Observer`.
+
 ---
 
-## Strategy Pattern
+## 🧩 Strategy Pattern
 
 ### Purpose
 
-- Replaces inheritance with **composition** for behavior reuse.
-- Promotes **code flexibility** by injecting behavior rather than inheriting it.
+- Replaces inheritance with composition to inject behavior at runtime.
 
-### Design Principle
+### Principle
 
-- **Favor composition over inheritance**.
-- Inheritance leads to fragile base class problems:
-  - Modifying the parent class can unintentionally break child classes.
-- Composition allows passing only the required behavior.
+- Favor **composition over inheritance**.
+- Supports Open/Closed Principle: open for extension, closed for modification.
 
-### Example: Duck Simulation
+### Example
 
 ```java
 Duck d = new Duck(new RealFly(), new LoudQuack());
 ```
 
-- `RealFly` and `LoudQuack` are strategy classes implementing `FlyBehavior` and `QuackBehavior` interfaces.
-- Different behaviors can be swapped easily.
-
-### Open/Closed Principle
-
-- **Open for extension**, **closed for modification**.
-- Add new behaviors (e.g., `SilentQuack`) without modifying existing code.
-- Reduces risk of introducing bugs in stable code.
+- `RealFly` and `LoudQuack` implement `FlyBehavior` and `QuackBehavior`
+- Can swap strategies without changing Duck class
 
 ---
 
-## Summary of Design Patterns Covered
+## 🧭 Software Project Lifecycle Phases (Correct Order)
+
+1. Feasibility Study – Can it be built within budget/tech constraints?
+2. Requirements – Define what the system should do
+3. Design – Architecting system components
+4. Development – Actual coding
+5. Testing – Verify correctness and reliability
+6. (Optional) Deployment, Maintenance
+
+---
+
+## 🔁 Reusability and Maintainability
+
+- **Reusability**: Design components/modules that can be reused across projects
+- **Maintainability**: Especially important in high employee turnover environments
+  - Ensures knowledge isn’t lost
+  - Simplifies onboarding
+
+---
+
+## 👨‍💻 Software Engineering Essentials
+
+- You **don’t need a degree** to be a software engineer
+- A software project involves more than code:
+  - People
+  - Hardware
+  - Budget
+  - Legal/regulatory constraints
+
+---
+
+## 📋 Summary of Design Patterns Covered
 
 | Pattern   | Purpose                                           | Benefit                                         |
 | --------- | ------------------------------------------------- | ----------------------------------------------- |
@@ -150,18 +278,15 @@ Duck d = new Duck(new RealFly(), new LoudQuack());
 
 ---
 
-## Interview Tips
+## 💬 Interview Tips
 
-- Singleton issues: Understand thread-safety.
-- Factory: Explain control of object creation.
-- Observer: Focus on decoupling and interfaces.
-- Strategy: Emphasize open/closed principle and composition.
+- **Singleton**: Be ready to discuss thread-safety and when to use lazy vs. eager loading.
+- **Factory**: Emphasize how it helps encapsulate and control object creation.
+- **Observer**: Focus on decoupling and flexibility.
+- **Strategy**: Highlight extensibility and code maintainability through composition.
 
 ---
 
-## Instructor Notes
+## 🔚 Summary
 
-- Avoid global variables.
-- Avoid inheritance where possible.
-- Reuse via composition is safer and more flexible.
-- Real-world example: Different database APIs at work benefit from factory and strategy patterns.
+This lecture focused on core design principles and the practical implications of software development models. Key design patterns like Singleton, Factory, Observer, and Strategy help implement robust, modular, and maintainable systems. Singleton prevents issues with shared state, Factory simplifies object creation, Observer supports publish-subscribe architecture, and Strategy encourages behavior flexibility. Understanding when and how to apply these patterns is essential for real-world software engineering.
