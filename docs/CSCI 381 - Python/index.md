@@ -11,6 +11,6 @@ These problem sets were created to prepare students for Waxman's exams since the
 
 #### Reviews:
 
-![alt text](IMG-13932.jpg)
+![alt text](image-1.png)
 
 &nbsp;
