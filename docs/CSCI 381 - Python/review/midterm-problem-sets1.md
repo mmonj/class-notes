@@ -60,7 +60,8 @@
 
    print(reset()) # Output: 10
 
-   # (No more `undo` history after this point. Any further calls to `undo` should result in the internal count state simply remaining at its original value)
+   # (No more `undo` history after this point. Any further calls to `undo`
+   # should result in the internal count state simply remaining at its original value)
 
    print(undo()) # Output: 10
    print(undo()) # Output: 10
