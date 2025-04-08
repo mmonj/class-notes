@@ -98,7 +98,7 @@ public class MedicalRecord {
 <details>
 <summary>Show Answer</summary>
 
-**Correct Answers:** b), d), e)
+<b>Correct Answers:</b> b), d), e)
 
 </details>
 
