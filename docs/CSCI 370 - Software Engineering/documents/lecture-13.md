@@ -1,5 +1,9 @@
 # CSCI 370 - Lecture 13: Decorator Pattern, Builder Pattern
 
+<small>Tuesday, April 1</small>
+
+---
+
 ## Overview
 
 Lecture 13 covered two major software design patterns: the **Decorator Pattern** and the **Builder Pattern**. Both are important for organizing code in ways that promote flexibility, reusability, and clarity. This lecture focused heavily on practical examples and live coding to reinforce the core ideas.

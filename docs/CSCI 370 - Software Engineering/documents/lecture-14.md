@@ -1,5 +1,7 @@
 # CSCI 370 Lecture 14: UML Diagrams, Builder Pattern, State Pattern, Decorator Pattern
 
+<small>Thursday, April 3</small>
+
 ---
 
 ## Unified Modeling Language (UML) Diagrams: Visualizing Software Architecture
