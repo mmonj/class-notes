@@ -35,7 +35,7 @@ Any example documents posted below will use the methods that you are expected to
 ### Datapath
 
 - [Notes Datapath (March 20, 25)](./notes/Notes%20Mar%2020,%2025%20-%20Datapath.pdf)
-- [Notes March 27](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf) - Full Datapath with control lines [(Summary)](./notes/Notes%20Feb%2027%20Summary.md)
+- [Notes March 27](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf) - Full Datapath with control lines [(Summary)](./notes/Notes%20Feb%2027%20Summary)
 - [Notes April 1](./notes/Notes%20April%201.pdf) - Instruction Execution, and Clock Cycle Timing [(Summary)](./notes/Notes%20April%201%20Summary)
 - [Notes April 3: MIPS Pipelining, Parallelism, and Hazards](./notes/Notes%20April%203)
 - [Datapath Review (timestamp 52:44) - Gaurish Telang](https://www.youtube.com/watch?v=NPogexpvctM)
