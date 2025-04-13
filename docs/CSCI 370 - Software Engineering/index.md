@@ -1,5 +1,7 @@
 # CSCI 370 (Greenberg)
 
+<small>Spring 2025 Notes</small>
+
 ## Lecture Summaries (Pre-Midterm)
 
 - [Lecture 3: The Problem with Inheritance and the Case for Composition](./documents/lecture-3)
