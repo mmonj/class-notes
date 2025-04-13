@@ -1,8 +1,8 @@
 # CSCI 370 (Greenberg)
 
-<small>Spring 2025 Notes</small>
+<small>Spring 2025 Lecture Notes</small>
 
-## Lecture Summaries (Pre-Midterm)
+## Lecture Notes (Pre-Midterm)
 
 - [Lecture 3: The Problem with Inheritance and the Case for Composition](./documents/lecture-3)
 - [Lecture 4: Optimization and Design Patterns in Software Engineering](./documents/lecture-4)
@@ -21,7 +21,7 @@
 - [Midterm Review](./documents/midterm-review)
 - [Midterm Extended Review](./documents/midterm-review-extended)
 
-## Lecture Summaries (Post-Midterm)
+## Lecture Notes (Post-Midterm)
 
 - [Lecture 13: Decorator Pattern, Builder Pattern](./documents/lecture-13)
 - [Lecture 14: Builder Pattern, State Pattern, Decorator Pattern](./documents/lecture-14)
