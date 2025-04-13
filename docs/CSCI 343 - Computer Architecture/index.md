@@ -22,26 +22,27 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Master-Slave Flip Flop & Counters
 
-- [Notes Feb 25 - Sequential Circuits & Master-Slave Flip Flop](./notes/Notes%20Feb%2025%20sequential%20circuits%20&%20master%20slave%20flip%20flop.pdf)
-- [Notes Feb 27 - Synchronous Counter](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter.pdf)
-- [Notes March 4 - Non-Binary Counter (counter with unused states)](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Supplemental video: [https://www.youtube.com/watch?v=8EVD-Mnywhk](https://www.youtube.com/watch?v=8EVD-Mnywhk)
+- [Notes Feb 25](./notes/Notes%20Feb%2025%20sequential%20circuits%20&%20master%20slave%20flip%20flop.pdf) - Sequential Circuits & Master-Slave Flip Flop
+- [Notes Feb 27](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter.pdf) - Synchronous Counter
+- [Notes March 4](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Non-Binary Counter (counter with unused states); [Supplemental video](https://www.youtube.com/watch?v=8EVD-Mnywhk)
 - [Example: Non-Binary Counter with T flip flops](./examples/Example%203%20-%20Non-Binary%20counter.pdf)
 
 ### Pre-req Review 2 (MIPS, as a precursor to Datapath)
 
-- [CSCI 240 Intro to MIPS - Jackson Yeh](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18)
-- [Notes March 11 & 13 - Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf)
+- [Intro to MIPS](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
+- [Notes March 11 & 13](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf) - Addressing Modes
 
 ### Datapath
 
 - [Notes Datapath (March 20, 25)](./notes/Notes%20Mar%2020,%2025%20-%20Datapath.pdf)
 - [Notes March 27](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf) - Full Datapath with control lines [(Summary)](./notes/Notes%20Feb%2027%20Summary)
 - [Notes April 1](./notes/Notes%20April%201.pdf) - Instruction Execution, and Clock Cycle Timing [(Summary)](./notes/Notes%20April%201%20Summary)
-- [Summary of April 3 Lecture: MIPS Pipelining, Parallelism, and Hazards](./notes/Notes%20April%203)
-- [Summary of April 8 Lecture: Midterm 2 Review](./notes/Notes%20April%208%20Summary)
+- [Summary of April 3 Lecture](./notes/Notes%20April%203) - MIPS Pipelining, Parallelism, and Hazards
+- [Summary of April 8 Lecture](./notes/Notes%20April%208%20Summary) - Midterm 2 Review
+- [Notes April 10](./notes/Notes%20April%2010.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion [Summary](./notes/Notes%20April%2010%20Summary)
 - **External Review Material**:
-  - [Gaurish Telang: Datapath & Pipelining Review (52:44)](https://www.youtube.com/watch?v=NPogexpvctM)
-  - [Fluture: 343 Midterm 2 Review #2 – Everything but Pipeline](https://youtu.be/qKq5aAfFreE)
-  - [Fluture: 343 Midterm 2 Review #3 – Pipeline etc.](https://www.youtube.com/watch?v=TmOCzD6n6dU)
+  - [Gaurish Telang: Midterm Review](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
+  - [Fluture: 343 Midterm 2 Review #2](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
+  - [Fluture: 343 Midterm 2 Review #3](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
 
 &nbsp;
