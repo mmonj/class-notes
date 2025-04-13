@@ -1,5 +1,7 @@
 # CSCI 370: Iterator and Command Design Patterns
 
+<small>Thursday, April 10</small>
+
 ---
 
 ## Memento Pattern (Recap)
