@@ -1,5 +1,7 @@
 # CSCI 343 March 27 - Instruction Field Usage, Register Selection, ALU Input Control, and PC Update Logic
 
+<small>Thursday March 27, 2025</small>
+
 ---
 
 ### Instruction Register Field Mapping

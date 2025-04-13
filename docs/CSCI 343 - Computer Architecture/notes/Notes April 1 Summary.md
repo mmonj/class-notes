@@ -1,5 +1,7 @@
 # CSCI 343 April 1: Control Unit, Instruction Execution, and Clock Cycle Timing
 
+<small>Tuesday April 1, 2025</small>
+
 ## Control Unit and Control Signals
 
 The **control unit** receives the **opcode** (bits 31 to 26 of the instruction) and sets all relevant control lines to drive the datapath to perform the desired operation. These lines influence components such as multiplexers, the ALU, register file, and memory units.

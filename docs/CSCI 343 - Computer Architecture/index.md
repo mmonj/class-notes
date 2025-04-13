@@ -37,7 +37,8 @@ Any example documents posted below will use the methods that you are expected to
 - [Notes Datapath (March 20, 25)](./notes/Notes%20Mar%2020,%2025%20-%20Datapath.pdf)
 - [Notes March 27](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf) - Full Datapath with control lines [(Summary)](./notes/Notes%20Feb%2027%20Summary)
 - [Notes April 1](./notes/Notes%20April%201.pdf) - Instruction Execution, and Clock Cycle Timing [(Summary)](./notes/Notes%20April%201%20Summary)
-- [Notes April 3: MIPS Pipelining, Parallelism, and Hazards](./notes/Notes%20April%203)
+- [Summary of April 3 Lecture: MIPS Pipelining, Parallelism, and Hazards](./notes/Notes%20April%203)
+- [Summary of April 8 Lecture: Midterm 2 Review](./notes/Notes%20April%208%20Summary)
 - **External Review Material**:
   - [Gaurish Telang: Datapath & Pipelining Review (52:44)](https://www.youtube.com/watch?v=NPogexpvctM)
   - [Fluture: 343 Midterm 2 Review #2 – Everything but Pipeline](https://youtu.be/qKq5aAfFreE)
