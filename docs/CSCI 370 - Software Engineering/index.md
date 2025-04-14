@@ -26,6 +26,6 @@
 - [Lecture 13: Decorator Pattern, Builder Pattern](./documents/lecture-13)
 - [Lecture 14: Builder Pattern, State Pattern, Decorator Pattern](./documents/lecture-14)
 - [Lecture 15: Object-Oriented Principles in ADTs, Project Guidelines, and the Memento Pattern](./documents/lecture-15)
-- [Lecture 16: Iterator and Command Design Patterns](./documents/lecture-16.md)
+- [Lecture 16: Iterator and Command Design Patterns](./documents/lecture-16)
 
 &nbsp;
