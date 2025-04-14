@@ -144,7 +144,7 @@
 
 ---
 
-## Final Exam Relevance
+## Exam Topics
 
 - Expect problems related to:
   - **Datapath diagrams**
@@ -152,11 +152,10 @@
   - **Pipelining vs. single-cycle comparisons**
   - **Hazard detection and resolution**
   - **Instruction dependencies**
-- Memory and cache topics will also be introduced in the next lecture, and some **specific problems** from that area will appear in the final exam.
 
 ---
 
-## Tips for Exam Preparation
+## Exam Preparation Notes
 
 - Practice drawing and annotating datapaths and pipeline stages.
 - Understand how each instruction flows through the pipeline.
