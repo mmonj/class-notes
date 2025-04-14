@@ -39,10 +39,13 @@ Any example documents posted below will use the methods that you are expected to
 - [Notes April 1](./notes/Notes%20April%201.pdf) - Instruction Execution, and Clock Cycle Timing [(Summary)](./notes/Notes%20April%201%20Summary)
 - [Summary of April 3 Lecture](./notes/Notes%20April%203) - MIPS Pipelining, Parallelism, and Hazards
 - [Summary of April 8 Lecture](./notes/Notes%20April%208%20Summary) - Midterm 2 Review
-- [Notes April 10](./notes/Notes%20April%2010.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion [(Summary)](./notes/Notes%20April%2010%20Summary)
 - **External Review Material**:
   - [Gaurish Telang: Midterm Review](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
   - [Fluture: 343 Midterm 2 Review #2](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
   - [Fluture: 343 Midterm 2 Review #3](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
+
+### Memory Organization & Cache
+
+- [Notes April 10](./notes/Notes%20April%2010.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion [(Summary)](./notes/Notes%20April%2010%20Summary)
 
 &nbsp;
