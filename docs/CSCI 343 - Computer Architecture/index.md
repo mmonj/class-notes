@@ -32,7 +32,7 @@ Any example documents posted below will use the methods that you are expected to
 - [Intro to MIPS](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
 - [Notes March 11 & 13](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf) - Addressing Modes
 
-### Datapath
+### Datapath & Pipelining
 
 - [Notes Datapath (March 20, 25)](./notes/Notes%20Mar%2020,%2025%20-%20Datapath.pdf)
 - [Notes March 27](./notes/Notes%20Mar%2027%20-%20Full%20Datapath.pdf) - Full Datapath with control lines [(Summary)](./notes/Notes%20Feb%2027%20Summary)
@@ -43,6 +43,7 @@ Any example documents posted below will use the methods that you are expected to
   - [Gaurish Telang: Midterm Review](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
   - [Fluture: 343 Midterm 2 Review #2](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
   - [Fluture: 343 Midterm 2 Review #3](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
+  - [Datapath Tutorial](https://www.youtube.com/watch?v=oETOwVBzu1s)
 
 ### Memory Organization & Cache
 
