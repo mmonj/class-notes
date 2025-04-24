@@ -45,6 +45,7 @@ Any example documents posted below will use the methods that you are expected to
   - [Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
   - [Comp Arch Playlist](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
   - [Datapath Tutorial](https://www.youtube.com/watch?v=oETOwVBzu1s)
+  - [Datapath Visualization](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html)
 
 ### Memory Organization & Cache
 
