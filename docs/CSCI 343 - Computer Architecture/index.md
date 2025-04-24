@@ -43,6 +43,7 @@ Any example documents posted below will use the methods that you are expected to
   - [Midterm 2 Review #2 (Fluture)](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
   - [Midterm 2 Review #3 (Fluture)](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
   - [Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
+  - [Comp Arch Playlist](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
   - [Datapath Tutorial](https://www.youtube.com/watch?v=oETOwVBzu1s)
 
 ### Memory Organization & Cache
