@@ -29,21 +29,25 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Pre-req Review 2 (MIPS, as a precursor to Datapath)
 
-- [Intro to MIPS](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
-- [Notes March 11 & 13](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf) - Addressing Modes
+- [Intro to MIPS Video](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
+- [Class Notes on Addressing Modes](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf) - March 11 & 13
 
 ### Datapath & Pipelining
 
-- [Notes - Datapath](./notes/Datapath-Notes.pdf) - March 20 - April 1
+#### Class Notes
+
+- [Class Notes on Datapath](./notes/Datapath-Notes.pdf) - March 20 - April 1
 - [Summary of April 3 Lecture](./notes/Notes%20April%203) - MIPS Pipelining, Parallelism, and Hazards
 - [Summary of April 8 Lecture](./notes/Notes%20April%208%20Summary) - Midterm 2 Review
-- **External Review Material**:
-  - [Midterm 2 Review #2 (Fluture)](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
-  - [Midterm 2 Review #3 (Fluture)](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
-  - [Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
-  - [Comp Arch Playlist](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
-  - [Datapath Tutorial](https://www.youtube.com/watch?v=oETOwVBzu1s)
-  - [Datapath Visualization](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html)
+
+##### Supplementary Review Material
+
+- [Midterm 2 Review #2 (Fluture)](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
+- [Midterm 2 Review #3 (Fluture)](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
+- [Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
+- [Datapath QuickStart Video](https://www.youtube.com/watch?v=oETOwVBzu1s)
+- [Comp Arch Playlist](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
+- [Datapath Visualization](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html)
 
 ### Memory Organization & Cache
 
