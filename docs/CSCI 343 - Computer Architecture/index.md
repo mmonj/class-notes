@@ -40,7 +40,7 @@ Any example documents posted below will use the methods that you are expected to
 - [Summary of April 3 Lecture](./notes/Notes%20April%203) - MIPS Pipelining, Parallelism, and Hazards
 - [Summary of April 8 Lecture](./notes/Notes%20April%208%20Summary) - Midterm 2 Review
 
-##### Supplementary Review Material
+#### Supplementary Review Material
 
 - [Midterm 2 Review #2 (Fluture)](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
 - [Midterm 2 Review #3 (Fluture)](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
