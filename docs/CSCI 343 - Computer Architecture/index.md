@@ -51,6 +51,6 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Memory Organization & Cache
 
-- [Notes April 10](./notes/Notes%20April%2010.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion [(Summary)](./notes/Notes%20April%2010%20Summary)
+- [Notes April 10](./notes/Notes%20April%2010%20-%20Introduce%20Memory.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion [(Summary)](./notes/Notes%20April%2010%20Summary)
 
 &nbsp;
