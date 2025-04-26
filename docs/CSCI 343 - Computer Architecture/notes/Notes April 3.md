@@ -122,12 +122,17 @@ Pipeline hazards are issues that prevent the next instruction from executing dur
 
 - **Cause**: Dependency between instructions (e.g., one instruction needs a result from another still in progress)
 - **Types**:
-  - **RAW (Read-After-Write)**: Most common (e.g., `add $t1, $t2, $t3` followed by `sub $t4, $t1, $t5`)
 
-```asm
-add $t1, $s1, $s2
-sub $s0, $t1, $t2  # Depends on result of add
-```
+  - **RAW (Read-After-Write)**: Most common
+
+    **e.g.**
+
+    ```asm
+    add $t1, $s1, $s2
+    sub $s0, $t1, $t2  # Depends on result of add
+    ```
+
+![alt text](image-1.png)
 
 #### Solutions:
 
@@ -145,11 +150,11 @@ sub $s0, $t1, $t2  # Depends on result of add
 - **Special Case**: Load data isn’t available until MEM stage, requiring a stall + forward combo.
 
 ```asm
-lw $s0, 0($t1)
+lw $s0, 20($t1)
 sub $t2, $s0, $t3  # Requires stall before forwarding
 ```
 
-![alt text](image-1.png)
+![alt text](image-2.png)
 
 ### 3. Control Hazards (Branch Hazards)
 
@@ -245,5 +250,3 @@ add $t1, $s0, $t2  # Requires 1 stall cycle + forwarding
 - Practice interpreting pipeline diagrams like the one above
 
 ---
-
-![alt text](image-2.png)
