@@ -36,7 +36,7 @@ Any example documents posted below will use the methods that you are expected to
 
 #### Class Notes
 
-- [Class Notes on Datapath](./notes/Datapath-Notes.pdf) - March 20 - April 1
+- [Class Notes on Datapath](./notes/Notes%20Datapath%20Merged.with_toc.pdf) - March 20 - April 1
 - [Summary of April 3 Lecture](./notes/Notes%20April%203) - MIPS Pipelining, Parallelism, and Hazards
 - [Summary of April 8 Lecture](./notes/Notes%20April%208%20Summary) - Midterm 2 Review
 
