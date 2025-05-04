@@ -8,7 +8,7 @@ If any listed supplemental video below uses different notation or methods than t
 
 <small>Week 1 & 2</small>
 
-- [Notes: Create a MUX from a Boolean function](./examples/Example%201%20%2D%20Create%20a%20MUX%20from%20a%20Boolean%20function.pdf) - Explains the example given during lecture. [Supplemental video](https://www.youtube.com/watch?v=M_cnctZqk-s) that gives a general idea for how the example's approach works, though it doesn't exactly follow the example's method 1:1
+- [Notes](./examples/Example%201%20%2D%20Create%20a%20MUX%20from%20a%20Boolean%20function.pdf) - Create a MUX from a Boolean function. [Supplemental video](https://www.youtube.com/watch?v=M_cnctZqk-s) that gives a general idea for how the example's approach works, though it doesn't exactly follow the example's method 1:1
 - [Video: ROM Basics](https://www.youtube.com/watch?v=yX0F5Xz_f9o)
 - [Video: Binary Adder & Subtractor](https://www.youtube.com/watch?v=o87GH5U1zUY)
 - [Video: Binary Adder & Subtractor (alternate)](https://www.youtube.com/watch?v=J7gPUP0aRug) - Has accurate subtitles
@@ -18,7 +18,7 @@ If any listed supplemental video below uses different notation or methods than t
 - [Video 32-bit ALU - Comparison Operations (equality, less than)](https://www.youtube.com/watch?v=ajESmB0qJjc)
 - [Video 32-bit ALU - Detecting overflow](https://www.youtube.com/watch?v=p4yVpZGZ9tA)
 - [Video: Karnaugh Map with Don't Cares](https://www.youtube.com/watch?v=SaKVzgiekrA)
-- [Notes: Digital Clock & K-Map with Don't Cares](./examples/Example%202%20-%20Digital%20Clock.pdf) - Uses in-class example. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
+- [Notes](./examples/Example%202%20-%20Digital%20Clock.pdf) - Digital Clock & K-Map with Don't Cares. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
 
 ### Master-Slave Flip Flop & Counters
 
