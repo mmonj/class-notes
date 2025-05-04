@@ -47,7 +47,7 @@ If any listed supplemental video below uses different notation or methods than t
 - [Video: Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
 - [Video: Datapath QuickStart](https://www.youtube.com/watch?v=oETOwVBzu1s)
 - [Video Playlist: Computer Architecture](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
-- [Interactive Website](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html) - Datapath Visualization
+- [Website](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html) - Interactive Datapath Visualization
 
 ### Memory Organization & Cache
 
