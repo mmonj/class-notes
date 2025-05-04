@@ -51,7 +51,7 @@ Any example documents posted below will use the methods that you are expected to
 
 ### Memory Organization & Cache
 
-- [Notes April 10](./notes/Notes%20April%2010%20-%20Introduce%20Memory.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion [(Summary)](./notes/Notes%20April%2010%20Summary)
+- [Notes April 10](./notes/Notes%20April%2010%20-%20Introduce%20Memory.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion
 - [Notes April 22](./notes/Notes%20April%2022%20-%20Memory%20and%20Cache%20Read.pdf) - Memory Read and Write operations
 - [Notes April 29](./notes/Notes%20April%2029%20-%20Cache%20Direct%20Mapping.pdf) - Cache: Direct Mapping Address Structure
 - [Notes May 1](./notes/Notes%20May%201%20-%20Cache%20Mapping%20Strategies.pdf) - Cache Mapping Strategies (Associative, Direct, Set Associative)
