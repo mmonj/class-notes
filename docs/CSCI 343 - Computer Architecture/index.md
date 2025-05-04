@@ -29,7 +29,7 @@ If any listed supplemental video below uses different notation or methods than t
 
 ### Pre-req Review 2 (MIPS, as a precursor to Datapath)
 
-- [Intro to MIPS Video](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
+- [Video: Intro to MIPS](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
 - [Notes March 11 & 13](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf) - Addressing Modes
 
 ### Datapath & Pipelining
@@ -42,12 +42,12 @@ If any listed supplemental video below uses different notation or methods than t
 
 #### Supplemental Review Material
 
-- [Midterm 2 Review #2 (Fluture)](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
-- [Midterm 2 Review #3 (Fluture)](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
-- [Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
-- [Datapath QuickStart Video](https://www.youtube.com/watch?v=oETOwVBzu1s)
-- [Comp Arch Playlist](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
-- [Datapath Visualization](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html)
+- [Video: Midterm 2 Review #2 (Fluture)](https://youtu.be/qKq5aAfFreE) - Everything but Pipeline
+- [Video: Midterm 2 Review #3 (Fluture)](https://www.youtube.com/watch?v=TmOCzD6n6dU) - Pipeline etc.
+- [Video: Midterm Review (Gaurish Telang)](https://www.youtube.com/watch?v=NPogexpvctM) - Datapath & Pipelining Review (52:44)
+- [Video: Datapath QuickStart](https://www.youtube.com/watch?v=oETOwVBzu1s)
+- [Video Playlist: Computer Architecture](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
+- [Interactive Website](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html) - Datapath Visualization
 
 ### Memory Organization & Cache
 
