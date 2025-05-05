@@ -1,10 +1,8 @@
-# CSCI 370 Lecture 17: Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
-
-<small>Tuesday, April 22</small>
+# CSCI 370 – April 22: Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
 
 ---
 
-## Functional vs Non-Functional Requirements
+## 🤩 Functional vs Non-Functional Requirements
 
 ### Functional Requirements
 
@@ -117,6 +115,8 @@ Use Case Tables formally describe interactions between actors (users or systems)
 
 **Comment**: Loan rules follow library policy (CRQ-0003, CRQ-0014)
 
+![library-loan-usecase](library-loan-use-case.png)
+
 ---
 
 ## 🔸 Use Case Diagram
@@ -131,7 +131,7 @@ Use case diagrams summarize high-level user-system interactions visually.
 - **Relationships**: Lines or arrows (solid for interactions, dashed for <<include>> or <<extend>>)
 
 **Example: Online Shopping System**
-![Use Case Diagram](use-case-diagram-1.png)
+![use-case-diagram](use-case-diagram-1.png)
 
 - Customer uses: View Items, Log In, Make Purchase, Complete Checkout
 - System includes external authentication, credit card validation, PayPal support
@@ -153,7 +153,7 @@ Context diagrams offer a top-level view of a system and how it interfaces with e
 
 ### Example: Online Community System
 
-![Context Diagram](context-diagram.png)
+![context-diagram](context-diagram.png)
 
 - System: Online Community
 - Actors: Users, Content Creators, Advertisers, Community Manager
@@ -172,36 +172,85 @@ This provides a single-page summary of all major data relationships.
 
 Activity diagrams model workflows and decision points within a process. They are useful for understanding parallelism, synchronization, and conditional paths.
 
-### Symbols:
+![activity-symbols-reference](activity-symbols.jpg)
 
-- **Solid circle**: Start point
-- **Rounded rectangles**: Actions or activities
-- **Diamonds**: Decision points
-- **Bars**: Forks/Joins for parallel actions
-- **Encircled dot**: End point
+### Common Symbols:
 
-### Example: Mental Health Admission Process
+- **Start Symbol**: Solid black circle
+- **Activity**: Rounded rectangle with a verb-phrase label
+- **Decision**: Diamond with conditional branches
+- **Fork**: One action splits into multiple parallel ones
+- **Join**: Multiple actions synchronize to one
+- **End Symbol**: Circle with dot inside
+- **Connector Arrows**: Indicate control flow
 
-![Activity Diagram](activity-diagram.png)
+![activity-example](activity-example.png)
 
-1. Start: Confirm Detention
-2. Parallel: Record decision + Inform patient
-3. Decision: Dangerous?
+### Example: Document Workflow
 
-   - If Yes: Find secure place
+- Actors: Author, Reviewer, Approver, Owner
+- Flow:
 
-     - If not available: Transfer to police station
-     - If available: Transfer to secure hospital
+  - Author creates & updates
+  - Reviewer marks as reviewed
+  - Approver decides approval
+  - Owner archives
 
-   - If No: Admit to standard hospital
+Minimum path involves all actors; max paths involve indefinite revision loops.
 
-4. End with parallel actions:
+### Example: Detension Admission Process
 
-   - Inform next of kin
-   - Inform social care
-   - Update register
+![detention-decision-activity](detention-decision-activity.png)
 
-Activity diagrams are vital in modeling dynamic flows and identifying race conditions or process bottlenecks.
+- Start: Confirm Detention
+- Parallel: Record decision + Inform patient
+- Decision: Dangerous?
+
+  - If Yes: Find secure place → Police station or Secure hospital
+  - If No: Admit to standard hospital
+
+- End: Notify kin, social care, update register
+
+---
+
+## ▶️ Sequence Diagrams
+
+Sequence diagrams show how objects interact over time. They are useful for modeling scenarios such as user actions triggering background operations.
+
+![sequence-diagram](sequence-diagram.jpg)
+
+### Key Elements:
+
+- **Actors and Objects**: Lifelines drawn as vertical lines
+- **Activation**: Highlighted rectangles
+- **Messages**: Horizontal arrows for requests; dashed for returns
+- **Order**: Time flows from top to bottom
+
+Example:
+
+- Medical Receptionist requests patient info
+- DB replies with report
+- Authorization module approves access
+
+Another Example:
+
+- ATM receives a request for money
+- Responds with success or rejection
+
+---
+
+## 📊 State Diagrams
+
+State diagrams model the lifecycle of a single object, representing its various states and transitions due to events.
+
+### Example: Car Gear System
+
+![state-diagram](state-diagram-1.png)
+
+- States: EngineOff, Park, Neutral, Drive, Reverse
+- Transitions: Engine toggling, gear shifting
+
+Useful for modeling UI states, file lifecycle, or connection statuses.
 
 ---
 
@@ -214,5 +263,7 @@ This session emphasized a foundational understanding of software system modeling
 - **Context Diagrams**: Mapping external system relationships
 - **Ethnographic Research**: Designing software with real user environments in mind
 - **Activity Diagrams**: Modeling workflows with branching and concurrency
+- **Sequence Diagrams**: Tracing object interactions over time
+- **State Diagrams**: Describing how a single object changes behaviorally
 
-These techniques are essential for communicating design decisions, identifying ambiguities, and ensuring completeness in software specifications.
+These tools offer a rich visual and formal framework to clarify system behavior and structure before implementation.
