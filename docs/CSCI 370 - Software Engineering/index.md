@@ -27,6 +27,7 @@
 - [Lecture 14](./documents/lecture-14) - Builder Pattern, State Pattern, Decorator Pattern
 - [Lecture 15](./documents/lecture-15) - Object-Oriented Principles in ADTs, Project Guidelines, and the Memento Pattern
 - [Lecture 16](./documents/lecture-16) - Iterator and Command Design Patterns
-- [Lecture 17: ](./documents/lecture-17.md)
+- [Lecture 17](./documents/lecture-17.md) - Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
+- [Lecture 18](./documents/lecture-18.md) - Use Case, Sequence, and State Diagrams in UML
 
 &nbsp;
