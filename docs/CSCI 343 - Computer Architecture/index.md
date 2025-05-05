@@ -8,7 +8,7 @@ If any listed supplemental video below uses different notation or methods than t
 
 <small>Week 1 & 2</small>
 
-- [Notes](./examples/Example%201%20%2D%20Create%20a%20MUX%20from%20a%20Boolean%20function.pdf) - Create a MUX from a Boolean function. [Supplemental video](https://www.youtube.com/watch?v=M_cnctZqk-s) that gives a general idea for how the example's approach works, though it doesn't exactly follow the example's method 1:1
+- [Notes](./examples/Example%201%20%2D%20Create%20a%20MUX%20from%20a%20Boolean%20function.pdf) - Create a MUX from a Boolean function. [Supplemental video](https://www.youtube.com/watch?v=M_cnctZqk-s) that gives a general idea for how the approach in the notes works, though it doesn't exactly follow the notes's method 1:1
 - [Video: ROM Basics](https://www.youtube.com/watch?v=yX0F5Xz_f9o)
 - [Video: Binary Adder & Subtractor](https://www.youtube.com/watch?v=o87GH5U1zUY)
 - [Video: Binary Adder & Subtractor (alternate)](https://www.youtube.com/watch?v=J7gPUP0aRug) - Has accurate subtitles
@@ -25,7 +25,7 @@ If any listed supplemental video below uses different notation or methods than t
 - [Notes Feb 25](./notes/Notes%20Feb%2025%20sequential%20circuits%20&%20master%20slave%20flip%20flop.pdf) - Sequential Circuits & Master-Slave Flip Flop
 - [Notes Feb 27](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter.pdf) - Synchronous Counter
 - [Notes March 4](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Non-Binary Counter (counter with unused states). [Supplemental video](https://www.youtube.com/watch?v=8EVD-Mnywhk)
-- [Example: Non-Binary Counter with T flip flops](./examples/Example%203-%20Non-Binary%20Counter%20with%20T%20Flip%20Flops.pdf)
+- [Notes: Non-Binary Counter with T flip flops](./examples/Example%203-%20Non-Binary%20Counter%20with%20T%20Flip%20Flops.pdf)
 
 ### Pre-req Review 2 (MIPS, as a precursor to Datapath)
 
