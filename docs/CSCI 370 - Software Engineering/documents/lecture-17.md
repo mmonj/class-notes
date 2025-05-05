@@ -8,217 +8,211 @@
 
 ### Functional Requirements
 
-Functional requirements are specific declarations of behaviors, functions, or services that the system must perform. These are generally defined as "what" the system should do. They can be derived from user needs, system goals, or business requirements.
+Functional requirements define the specific behavior or functions of a system, essentially detailing what the system should do. These are based directly on user goals and tasks. They are concrete, measurable, and easy to verify during testing.
 
-**Examples include:**
+#### Key Characteristics:
 
-- Allowing users to register with an email address.
-- Authenticating login credentials.
-- Generating monthly reports.
-- Supporting CRUD operations (Create, Read, Update, Delete).
+- Specific to individual system functions
+- Directly map to user interactions
+- Expressed in the form "The system shall..."
 
-Functional requirements are easy to test due to their specificity. You can directly verify whether a feature such as "create a new user account" works as expected.
+#### Examples:
+
+- "The system shall allow a user to log in with a valid email and password."
+- "The system shall generate a printable monthly report for administrators."
+- "The system shall send a confirmation email after successful registration."
+
+These types of requirements often correspond directly to features in the UI or system API.
 
 ### Non-Functional Requirements
 
-Non-functional requirements describe the quality attributes of a system and how the system performs certain operations. These are often referred to as "constraints" or "-ilities" (e.g., scalability, usability).
+Non-functional requirements (NFRs) define constraints on how the system operates rather than what it does. These requirements affect the performance, usability, reliability, and maintainability of a system.
 
-**Examples include:**
+#### Examples:
 
-- Performance (response time, throughput)
-- Reliability (uptime, failure rates)
-- Portability (ability to run on different platforms)
-- Usability (ease of learning/use)
-- Maintainability (ease of bug fixes or updates)
-- Security (access control, encryption)
+- Performance: "System should support up to 500 concurrent users."
+- Reliability: "System uptime should be at least 99.9% per month."
+- Usability: "New users should be able to complete registration in under 5 minutes."
+- Security: "User data must be encrypted at rest and in transit."
+- Portability: "Application should run on Windows, macOS, and Linux without modification."
 
-Non-functional requirements are harder to define and test. Unlike functional ones that describe direct user interaction, these qualities affect user satisfaction, long-term robustness, and performance.
+Quantifying NFRs is essential for testability. Vague goals like "fast" or "user-friendly" must be made concrete.
 
-#### Why Measuring Non-Functional Requirements Is Hard
+#### Sample Table:
 
-Because qualities like "easy to use" or "fast" are subjective, it's critical to make them measurable:
-
-- Instead of "fast": specify "system must respond within 2 seconds under 100 concurrent users"
-- Instead of "portable": define "the application must run unmodified on Windows 10, macOS 12, and Ubuntu 22.04"
-
-**Example Table of Non-Functional Requirements:**
-
-| **Property** | **Measure**                                                              |
-| ------------ | ------------------------------------------------------------------------ |
-| Speed        | Transactions/sec, Page load time, Screen refresh time                    |
-| Size         | Memory footprint (RAM usage during peak), Installation size              |
-| Ease of Use  | Average user training time (hours), Number of clicks for primary task    |
-| Reliability  | Mean time between failures, System uptime                                |
-| Robustness   | Percentage of successful recovery after crash, Handling of invalid input |
-| Portability  | # of platforms supported, % of shared codebase across OSes               |
+| Property    | Metric Example                                 |
+| ----------- | ---------------------------------------------- |
+| Speed       | < 2s response time for 90% of requests         |
+| Size        | Under 50MB installation footprint              |
+| Ease of Use | Max 15 min training time for basic usage       |
+| Reliability | Mean time between failures (MTBF) > 1000 hours |
+| Robustness  | System resumes within 10s of failure           |
+| Portability | Runs on 3 major OSs with same codebase         |
 
 ---
 
 ## 🛍️ Ethnography in Software Engineering
 
-Ethnography involves observing users in their natural work environments to understand how systems are used in practice. It's a method for gathering insights into human behaviors, workflows, and constraints that might not be captured through interviews or written requirements.
+Ethnography is a qualitative research method that involves observing real users in their working context to understand needs, habits, limitations, and environmental factors that affect software use.
 
-### Why It's Important
+### Key Goals:
 
-1. **Real-World Constraints:** Users may be in loud, poorly lit environments, or might rely on touch interfaces.
-2. **Tool Usage:** Users might use calculators, phones, or other tools alongside the application.
-3. **Accessibility Needs:** Children, elderly, or users with disabilities might require specialized interface elements.
-4. **System Integration:** Understanding if users switch between applications or depend on specific workflows.
+- Understand hidden workflows and user behavior
+- Capture edge cases or tools in use outside the designed system
+- Support inclusive design for varied user demographics
 
-### Boeing 737 MAX Example
+### Examples:
 
-A real-world example of misjudged usability is the Boeing 737 MAX crashes, where Boeing asserted that no pilot retraining was required for the new system—despite critical changes. Ethnographic insights might have identified that assumption as dangerous, especially when training time was used as a selling point.
+1. In an airport traffic control tower, software may be used by multiple people glancing at shared screens. Accessibility, font size, and multitasking are critical.
+2. Children using educational software may be unfamiliar with keyboard shortcuts or abstract icons, affecting UI decisions.
+3. Users might rely on external tools like calculators or phone apps concurrently with your software.
+
+### Design Implication:
+
+These observations affect decisions such as:
+
+- Screen layout
+- Visual clarity
+- Workflow alignment
+- Help and documentation accessibility
 
 ---
 
 ## 📋 Use Case Table
 
-Use Case Tables describe system functionality from the end user's perspective and are typically used by business analysts. Each table documents a single interaction scenario.
+Use Case Tables formally describe interactions between actors (users or systems) and the system. They help identify and validate system requirements through structured scenarios.
 
-### Components of a Use Case Table
+### Use Case Components:
 
-- **Actors**: External entities (users or other systems) that interact with the system
+- **Actors**: Initiators or participants in the interaction
 - **Goal**: What the actor intends to achieve
-- **Preconditions**: Conditions that must be true before the scenario begins
-- **Basic Flow**: Step-by-step list of interactions
-- **Alternative Flow**: Exceptions or alternate scenarios
-- **Postconditions (Success Scenario)**: State of the system if all steps complete successfully
+- **Preconditions**: What must be true before the scenario begins
+- **Main (Basic) Flow**: Step-by-step normal scenario
+- **Alternative Flows**: Deviations or exceptions
+- **Postconditions**: Outcome if flow completes successfully
 
-### Example 1: Washing Machine
+### Example: Library Book Loan Use Case
 
-- **Actor**: Laundry customer
-- **Goal**: Clean clothes
-- **Preconditions**: Clothes are placed in the machine, detergent is loaded
-- **Basic Flow**:
+**Description**: User borrows one or more books
 
-  1. User selects wash settings
-  2. User starts machine
-  3. Machine completes wash cycle
+**Precondition**: User has library card, picked up books, has no penalties, has not exceeded limit
 
-- **Alternative Flow**: Machine fails to start due to door left open
-- **Success**: Clothes are clean and user removes them
+#### Ordinary Sequence:
 
-### Example 2: Website Login
+| Step | Action                                                   |
+| ---- | -------------------------------------------------------- |
+| 1    | Librarian starts loan registration process               |
+| 2    | System requests user ID                                  |
+| 3    | Librarian inputs user ID                                 |
+| 4    | System requests book IDs                                 |
+| 5    | Librarian inputs book info                               |
+| 6    | System calculates return dates and asks for confirmation |
+| 7    | User confirms selected books and dates                   |
+| 8    | Librarian re-confirms selections                         |
+| 9    | System registers the loans and confirms                  |
 
-- **Actor**: Website visitor
-- **Goal**: Access account
-- **Preconditions**: User has valid credentials
-- **Basic Flow**:
+**Postcondition**: Books are registered as loaned; user can take them
 
-  1. Enter username
-  2. Enter password
-  3. Submit login form
+**Exception at Step 3**: If user has reached loan limit or has penalty, system cancels request and informs librarian
 
-- **Alternative Flow**: Password is incorrect
-- **Success**: User is redirected to dashboard
-
-Use Case Tables are formal and can run multiple pages for complex systems. They are often used in agile or waterfall development cycles to ensure requirements coverage.
+**Comment**: Loan rules follow library policy (CRQ-0003, CRQ-0014)
 
 ---
 
 ## 🔸 Use Case Diagram
 
-### Purpose
+Use case diagrams summarize high-level user-system interactions visually.
 
-A Use Case Diagram is a visual summary of the high-level functionality of a system and its external interactions.
+**Elements:**
 
-### Diagram Components
+- **Actors**: Represented as stick figures (e.g., users, external systems)
+- **System Boundary**: Rectangular box containing all use cases
+- **Use Cases**: Ovals indicating actions/functions
+- **Relationships**: Lines or arrows (solid for interactions, dashed for <<include>> or <<extend>>)
 
-- **Actors**: Represented by stick figures outside the system boundary
-- **System Boundary**: A rectangle containing the system's use cases
-- **Use Cases (Activities)**: Ovals representing system features from the user's perspective
-- **Associations**: Lines connecting actors to the use cases they interact with
+**Example: Online Shopping System**
+![Use Case Diagram](use-case-diagram-1.png)
 
-### Sample Use Case Diagram (Online Shopping System)
+- Customer uses: View Items, Log In, Make Purchase, Complete Checkout
+- System includes external authentication, credit card validation, PayPal support
+- <<include>> is used to show reused logic like "Log In" being part of all main features
 
-- See ![Use Case Diagram](image-3.png) for visual reference
-- **Actors**: Customer, Authentication Server, Identity Provider, Payment Gateway
-- **Use Cases**:
-
-  - View Items
-  - Log In
-  - Make Purchase
-  - Complete Checkout
-
-Each line between an actor and a use case represents a direct interaction. Diagrams are meant to be quick, informal sketches to understand system scope.
+Use case diagrams are ideal for early-stage communication with stakeholders.
 
 ---
 
 ## 🔎 Context Diagram
 
-### Purpose
+Context diagrams offer a top-level view of a system and how it interfaces with external entities. They are often used during requirement analysis to understand data exchanges.
 
-A Context Diagram presents a system as a single process and shows how it interfaces with external entities. It's used to identify all actors and systems that communicate with the main system.
+### Components:
 
-### Diagram Elements
+- **System**: Shown as a circle in the center
+- **External Entities**: Rectangles surrounding the system
+- **Data Flows**: Arrows indicating input/output of data
 
-- **System**: Represented as a circle or box
-- **External Entities**: Labeled boxes surrounding the system
-- **Data Flows**: Arrows showing the direction of data or control
+### Example: Online Community System
 
-### Example:
+![Context Diagram](context-diagram.png)
 
-![Context Diagram](image-4.png)
+- System: Online Community
+- Actors: Users, Content Creators, Advertisers, Community Manager
+- Interactions:
 
-- System: Community Management Portal
-- External Systems: Admin, Commentators, Content Reviewers, Members
-- Data Flows:
+  - Community Users: Registration, Info & Tools
+  - Content Creators: Provide Content → Receive Compensation
+  - Advertisers: Buy Ad Slots → Provide Revenue
+  - Manager: Views Financial Reports
 
-  - Comments submitted by Members
-  - Approvals by Moderators
-  - Feedback from Commentators
-
-These diagrams are intentionally simple and focus only on data exchange, not internal logic.
+This provides a single-page summary of all major data relationships.
 
 ---
 
-## ⚖️ UML Process (Activity) Diagrams
+## ⚖️ UML Activity Diagrams
 
-### Purpose
+Activity diagrams model workflows and decision points within a process. They are useful for understanding parallelism, synchronization, and conditional paths.
 
-Process models (also known as Activity Diagrams) describe the flow of control or data in a system. They model dynamic behavior and can illustrate workflows, use case scenarios, and business processes.
+### Symbols:
 
-### Common Elements
+- **Solid circle**: Start point
+- **Rounded rectangles**: Actions or activities
+- **Diamonds**: Decision points
+- **Bars**: Forks/Joins for parallel actions
+- **Encircled dot**: End point
 
-- **Initial Node**: Solid circle (entry point)
-- **Activity Node**: Rounded rectangle
-- **Decision Node**: Diamond (for branching logic)
-- **Fork Node**: Thick horizontal/vertical bar (start of parallel processes)
-- **Join Node**: Thick horizontal/vertical bar (end of parallel processes)
-- **Final Node**: Solid circle within a ring (exit point)
+### Example: Mental Health Admission Process
 
-### Sample Workflow (Mental Health Admission)
+![Activity Diagram](activity-diagram.png)
 
-- **Start**: Confirm Detention Decision
-- **Parallel Activities**:
+1. Start: Confirm Detention
+2. Parallel: Record decision + Inform patient
+3. Decision: Dangerous?
 
-  - Inform Patient of Rights
-  - Record Detention Decision
+   - If Yes: Find secure place
 
-- **Decision Node**: Is patient dangerous?
+     - If not available: Transfer to police station
+     - If available: Transfer to secure hospital
 
-  - Yes → Find Secure Place
+   - If No: Admit to standard hospital
 
-    - If none available → Temporarily hold in police station
-    - If available → Transfer to secure facility
+4. End with parallel actions:
 
-  - No → Admit to regular hospital
+   - Inform next of kin
+   - Inform social care
+   - Update register
 
-- **Join**: Finalize Admission
-- **End**: Close case
-
-This shows how decisions, concurrent operations, and outcomes are captured visually.
+Activity diagrams are vital in modeling dynamic flows and identifying race conditions or process bottlenecks.
 
 ---
 
 ## Summary
 
-This lecture emphasized modeling system requirements through diagrams and descriptive tables:
+This session emphasized a foundational understanding of software system modeling using:
 
-- **Functional vs Non-Functional Requirements**: Identifying "what" vs "how" a system performs
-- **Use Case Tables and Diagrams**: Capturing user interactions and activities
-- **Context Diagrams**: Clarifying system boundaries and external data flows
-- **Activity Diagrams**: Mapping process logic and control flow
-- **Ethnography**: Highlighting the value of understanding user context
+- **Functional vs Non-Functional Requirements**: Understanding what the system does vs. how it performs
+- **Use Case Tables and Diagrams**: Structuring and visualizing user-system interactions
+- **Context Diagrams**: Mapping external system relationships
+- **Ethnographic Research**: Designing software with real user environments in mind
+- **Activity Diagrams**: Modeling workflows with branching and concurrency
 
-Grasping these foundational diagrams equips students with tools to model real-world systems more accurately and communicate technical needs effectively in both academic and professional settings.
+These techniques are essential for communicating design decisions, identifying ambiguities, and ensuring completeness in software specifications.
