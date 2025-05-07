@@ -55,5 +55,6 @@ If any listed supplemental video below uses different notation or methods than t
 - [Notes April 22](./notes/Notes%20April%2022%20-%20Memory%20and%20Cache%20Read.pdf) - Memory Read and Write operations
 - [Notes April 29](./notes/Notes%20April%2029%20-%20Cache%20Direct%20Mapping.pdf) - Cache: Direct Mapping Address Structure
 - [Notes May 1](./notes/Notes%20May%201%20-%20Cache%20Mapping%20Strategies.pdf) - Cache Mapping Strategies (Associative, Direct, Set Associative)
+- [Summary of May 6](./notes/Notes%20May%206%20Summary) - Cache Misses, Associativity, Replacement Policies, and Snooping Protocols
 
 &nbsp;
