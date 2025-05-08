@@ -331,8 +331,10 @@ This pattern enables users to toggle between dark and light visual themes on a w
 The HTML provides the interface element users interact with to switch themes. In this case, we use a simple button.
 
 ```html
-<button id="theme-toggle">Toggle Theme</button>
-<p>This is some content to demonstrate the theme effect.</p>
+<body class="light-mode">
+  <button id="theme-toggle">Toggle Theme</button>
+  <p>This is some content to demonstrate the theme effect.</p>
+</body>
 ```
 
 You can expand this setup by placing the button in a header or navigation bar for broader usability.
@@ -392,29 +394,6 @@ toggleButton.addEventListener("click", () => {
 ```
 
 This snippet ensures a consistent starting point and toggles classes based on current state. For large applications, consider using a utility function for toggling.
-
-#### Optional: Remember User Preference with localStorage
-
-To retain the selected theme across sessions, use `localStorage` to store and retrieve the user's choice.
-
-```js
-const storedTheme = localStorage.getItem("theme");
-if (storedTheme) {
-  body.classList.add(storedTheme);
-} else {
-  body.classList.add("light-mode");
-}
-
-toggleButton.addEventListener("click", () => {
-  if (body.classList.contains("light-mode")) {
-    body.classList.replace("light-mode", "dark-mode");
-    localStorage.setItem("theme", "dark-mode");
-  } else {
-    body.classList.replace("dark-mode", "light-mode");
-    localStorage.setItem("theme", "light-mode");
-  }
-});
-```
 
 This code initializes the theme based on previous user preference and keeps the selection persistent. You can further enhance this by syncing theme preference with system-level settings (e.g., prefers-color-scheme media query).
 
