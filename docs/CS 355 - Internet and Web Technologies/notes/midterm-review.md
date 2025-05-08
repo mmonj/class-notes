@@ -1,4 +1,4 @@
-# Web Development Review Sheet
+# CSCI 355 Midterm Review Sheet
 
 ## HTML Features
 
@@ -144,6 +144,31 @@ html {
 - **`:root` pseudo-class** also refers to the root element, but is specifically useful for defining CSS variables (`--custom-var`). It has higher specificity than `html`, making it more suitable for global custom properties.
 
 Use `html` when affecting layout or sizing, and `:root` when organizing and centralizing theme variables or constants.
+
+#### CSS Variables
+
+CSS variables (also known as custom properties) allow you to define reusable values in your stylesheet. They are especially helpful for maintaining consistency in themes and simplifying future updates.
+
+```css
+:root {
+  --primary-color: #007bff;
+  --padding-size: 1rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  padding: var(--padding-size);
+}
+```
+
+- **Overview and usage**: Variables are defined inside a selector (commonly `:root`) using `--variable-name` syntax. Access them with `var(--variable-name)`.
+- **Use Cases**:
+  - Theming (light/dark modes)
+  - Centralized control over color palettes, spacing, font sizes, etc.
+  - Reducing repetition in stylesheets
+  - Easier maintenance and scalability
+
+Variables defined in `:root` apply globally across the document. They can also be overridden in more specific scopes.
 
 #### Box Model
 
