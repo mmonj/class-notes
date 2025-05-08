@@ -129,7 +129,21 @@ h3 {
 * {
   box-sizing: border-box;
 }
+
+/* HTML vs :root */
+html {
+  font-size: 16px;
+}
+
+:root {
+  --main-color: teal;
+}
 ```
+
+- **`html` selector** targets the root `<html>` element directly. Use it for setting base properties like `font-size`, scroll behavior, or general styles that affect the whole document.
+- **`:root` pseudo-class** also refers to the root element, but is specifically useful for defining CSS variables (`--custom-var`). It has higher specificity than `html`, making it more suitable for global custom properties.
+
+Use `html` when affecting layout or sizing, and `:root` when organizing and centralizing theme variables or constants.
 
 #### Box Model
 
@@ -199,16 +213,6 @@ h3 {
 }
 ```
 
-#### Responsive Design with Media Queries
-
-```css
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-}
-```
-
 ## JavaScript Features
 
 #### DOM Manipulation
@@ -218,6 +222,9 @@ const heading = document.querySelector("h1");
 heading.textContent = "New Title";
 ```
 
+- Use `querySelector()` or `getElementById()` to access DOM elements.
+- Modify properties such as `textContent`, `innerHTML`, or `value`.
+
 #### Event Handling
 
 ```js
@@ -225,6 +232,9 @@ document.querySelector("button").addEventListener("click", () => {
   alert("Button clicked!");
 });
 ```
+
+- Use `addEventListener` to bind custom logic to events like `click`, `input`, `submit`, `mouseover`, etc.
+- You can define event handlers as arrow functions or named functions.
 
 #### Class Manipulation
 
@@ -234,11 +244,16 @@ function changeColor() {
 }
 ```
 
+- Use `classList.add()`, `remove()`, `toggle()`, and `contains()` to dynamically manage CSS classes.
+
 #### Dynamic Styling
 
 ```js
 document.querySelector("h1").style.color = "blue";
 ```
+
+- Style individual properties directly through the `.style` object.
+- Use this sparingly (for maintainability), prefer toggling classes instead.
 
 #### Loops and Arrays
 
@@ -246,6 +261,9 @@ document.querySelector("h1").style.color = "blue";
 const items = ["Apple", "Banana", "Cherry"];
 items.forEach((item) => console.log(item));
 ```
+
+- Common loop types: `for`, `while`, `for...of`, and higher-order functions like `forEach()` and `map()`.
+- Arrays in JavaScript are dynamic (non-fixed size) and can hold different types of elements.
 
 #### Functions in JavaScript
 
@@ -255,6 +273,54 @@ function greet(name) {
 }
 console.log(greet("Alice"));
 ```
+
+- Functions can be declared using `function` keyword, arrow syntax (`=>`), or as function expressions.
+- Use parameters and return values to make code reusable and modular.
+
+#### Variables and Scope
+
+```js
+let x = 10;
+const y = 20;
+var z = 30;
+```
+
+- `let` and `const` are block-scoped (preferred). `var` is function-scoped and often avoided.
+- Use `const` by default, and `let` when reassignment is needed.
+
+#### Conditional Logic
+
+```js
+if (x > 10) {
+  console.log("Large");
+} else {
+  console.log("Small");
+}
+```
+
+- JavaScript supports `if`, `else if`, `else`, and ternary operators.
+- Use `===` for strict equality comparisons to avoid type coercion issues.
+
+```js
+console.log(5 == "5"); // true - loose equality with type coercion
+console.log(5 === "5"); // false - strict equality, types must match
+```
+
+- Use `==` only when you intentionally want JavaScript to convert types for comparison.
+- Prefer `===` to avoid unexpected results due to implicit type conversion.
+
+#### Working with Objects
+
+```js
+const person = {
+  name: "Alice",
+  age: 30,
+};
+console.log(person.name);
+```
+
+- Objects are key-value pairs used to structure data.
+- Access properties using dot or bracket notation.
 
 ## Dark/Light Mode Style Switch Pattern
 
