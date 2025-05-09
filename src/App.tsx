@@ -42,8 +42,8 @@ export default function App() {
     <>
       <h1>CSCI 320 Obrenic Calculator</h1>
       <p class="text-xl py-4">Input your normalized grades below</p>
-      <div class="p-6">
-        <table class="w-full table-auto border-collapse text-lg">
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[600px] table-auto border-collapse text-lg">
           <thead>
             <tr class="border-b">
               <th class="px-4 py-2 text-left">Attempt</th>
