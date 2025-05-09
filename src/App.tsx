@@ -1,35 +1,91 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createEffect, For, onMount } from "solid-js";
+import { createStore } from "solid-js/store";
+import "./App.css";
+import { calculateScore, getDefaultGradeRows, NUM_GRADE_ROWS } from "./utils";
+import type { TGradeRow } from "./utils/types";
 
-function App() {
-  const [count, setCount] = createSignal(0)
+const LOCAL_STORAGE_KEY = "gradeInputs";
+
+export default function App() {
+  const [rows, setRows] = createStore<TGradeRow[]>(getDefaultGradeRows());
+
+  onMount(() => {
+    const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved) as number[][];
+        const limited = parsed.slice(0, NUM_GRADE_ROWS);
+        const restored: TGradeRow[] = limited.map(([e1, e2, e3]) => ({
+          e1: e1 ?? 0,
+          e2: e2 ?? 0,
+          e3: e3 ?? 0,
+        }));
+        while (restored.length < NUM_GRADE_ROWS) {
+          restored.push({ e1: 0, e2: 0, e3: 0 });
+        }
+        setRows(restored);
+      } catch {
+        console.warn("invalid local storage data, resetting");
+      }
+    }
+  });
+
+  createEffect(() => {
+    const data = rows.map(({ e1, e2, e3 }) => [e1, e2, e3]);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
+  });
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://solidjs.com" target="_blank">
-          <img src={solidLogo} class="logo solid" alt="Solid logo" />
-        </a>
+      <h1>CSCI 320 Obrenic Calculator</h1>
+      <p class="text-xl py-4">Input your normalized grades below</p>
+      <div class="p-6">
+        <table class="w-full table-auto border-collapse text-lg">
+          <thead>
+            <tr class="border-b">
+              <th class="px-4 py-2 text-left">Attempt</th>
+              <th class="px-4 py-2 text-left">Exam 1</th>
+              <th class="px-4 py-2 text-left">Exam 2</th>
+              <th class="px-4 py-2 text-left">Exam 3</th>
+              <th class="px-4 py-2 text-left">Final Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <For each={rows}>
+              {(row, i) => (
+                <tr class="border-b">
+                  <td class="px-4 py-2">{i() + 1}</td>
+                  <td class="px-4 py-2">
+                    <input
+                      type="number"
+                      class="w-24 px-2 py-1 border rounded"
+                      value={row.e1}
+                      onInput={(e) => setRows(i(), "e1", +e.currentTarget.value)}
+                    />
+                  </td>
+                  <td class="px-4 py-2">
+                    <input
+                      type="number"
+                      class="w-24 px-2 py-1 border rounded"
+                      value={row.e2}
+                      onInput={(e) => setRows(i(), "e2", +e.currentTarget.value)}
+                    />
+                  </td>
+                  <td class="px-4 py-2">
+                    <input
+                      type="number"
+                      class="w-24 px-2 py-1 border rounded"
+                      value={row.e3}
+                      onInput={(e) => setRows(i(), "e3", +e.currentTarget.value)}
+                    />
+                  </td>
+                  <td class="px-4 py-2">{calculateScore(row.e1, row.e2, row.e3)}</td>
+                </tr>
+              )}
+            </For>
+          </tbody>
+        </table>
       </div>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count()}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
     </>
-  )
+  );
 }
-
-export default App
