@@ -6,6 +6,6 @@ export default defineConfig({
   base: "./",
   plugins: [solid(), tailwindcss()],
   build: {
-    outDir: "docs/CSCI 320/grade-calculator",
+    outDir: "docs/CSCI-320/grade-calculator",
   },
 });

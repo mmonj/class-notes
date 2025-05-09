@@ -8,4 +8,4 @@
 
 ## [CSCI 370 Software Engineering (Greenberg, SP25)](./CSCI%20370%20-%20Software%20Engineering/index)
 
-## [CSCI 320 Obrenic Grade Calculator](./CSCI%20320/grade-calculator/)
+## [CSCI 320 Obrenic Grade Calculator](./CSCI-320/grade-calculator/)
