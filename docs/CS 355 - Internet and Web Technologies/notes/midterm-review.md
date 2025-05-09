@@ -354,14 +354,13 @@ This pattern enables users to toggle between dark and light visual themes on a w
 #### HTML Structure
 
 ```html
-<!-- Dark-mode class is not present, therefore we can consider the page to be in a light mode state -->
 <body>
   <button id="theme-toggle">Toggle Theme</button>
   <p>This is some content to demonstrate the theme effect.</p>
 </body>
 ```
 
-> The presence of `dark-mode` class activates dark mode. If `dark-mode` is not present, the page is considered to be in light mode.
+> This implementation makes it so presence of `dark-mode` class activates dark mode. If `dark-mode` is not present, the page is considered to be in light mode.
 
 #### CSS Styles
 
