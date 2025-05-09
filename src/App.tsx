@@ -6,6 +6,9 @@ import type { TGradeRow } from "./utils/types";
 
 const LOCAL_STORAGE_KEY = "gradeInputs";
 
+const MIN_SCORE = 0;
+const MAX_SCORE = 200;
+
 export default function App() {
   const [rows, setRows] = createStore<TGradeRow[]>(getDefaultGradeRows());
 
@@ -52,36 +55,49 @@ export default function App() {
           </thead>
           <tbody>
             <For each={rows}>
-              {(row, i) => (
-                <tr class="border-b">
-                  <td class="px-4 py-2">{i() + 1}</td>
-                  <td class="px-4 py-2">
-                    <input
-                      type="number"
-                      class="w-24 px-2 py-1 border rounded"
-                      value={row.e1}
-                      onInput={(e) => setRows(i(), "e1", +e.currentTarget.value)}
-                    />
-                  </td>
-                  <td class="px-4 py-2">
-                    <input
-                      type="number"
-                      class="w-24 px-2 py-1 border rounded"
-                      value={row.e2}
-                      onInput={(e) => setRows(i(), "e2", +e.currentTarget.value)}
-                    />
-                  </td>
-                  <td class="px-4 py-2">
-                    <input
-                      type="number"
-                      class="w-24 px-2 py-1 border rounded"
-                      value={row.e3}
-                      onInput={(e) => setRows(i(), "e3", +e.currentTarget.value)}
-                    />
-                  </td>
-                  <td class="px-4 py-2">{calculateScore(row.e1, row.e2, row.e3)}</td>
-                </tr>
-              )}
+              {(row, idx) => {
+                const handleScoreInput = (field: keyof TGradeRow, value: number) => {
+                  if (MIN_SCORE < value || value > MAX_SCORE || isNaN(value)) return;
+                  setRows(idx(), field, value);
+                };
+
+                return (
+                  <tr class="border-b">
+                    <td class="px-4 py-2">{idx() + 1}</td>
+                    <td class="px-4 py-2">
+                      <input
+                        type="number"
+                        class="w-24 px-2 py-1 border rounded"
+                        min={MIN_SCORE}
+                        max={MAX_SCORE}
+                        value={row.e1}
+                        onInput={(e) => handleScoreInput("e1", +e.currentTarget.value)}
+                      />
+                    </td>
+                    <td class="px-4 py-2">
+                      <input
+                        type="number"
+                        class="w-24 px-2 py-1 border rounded"
+                        min={MIN_SCORE}
+                        max={MAX_SCORE}
+                        value={row.e2}
+                        onInput={(e) => handleScoreInput("e2", +e.currentTarget.value)}
+                      />
+                    </td>
+                    <td class="px-4 py-2">
+                      <input
+                        type="number"
+                        class="w-24 px-2 py-1 border rounded"
+                        min={MIN_SCORE}
+                        max={MAX_SCORE}
+                        value={row.e3}
+                        onInput={(e) => handleScoreInput("e3", +e.currentTarget.value)}
+                      />
+                    </td>
+                    <td class="px-4 py-2">{calculateScore(row.e1, row.e2, row.e3)}</td>
+                  </tr>
+                );
+              }}
             </For>
           </tbody>
         </table>
