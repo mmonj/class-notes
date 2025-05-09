@@ -40,8 +40,8 @@ export default function App() {
 
   return (
     <>
-      <h1>CSCI 320 Obrenic Calculator</h1>
-      <p class="text-xl py-4">Input your normalized grades below</p>
+      <h1>CSCI 320 Obrenic Grade Calculator</h1>
+      <p class="text-xl py-4">Input your normalized exam scores below</p>
       <div class="overflow-x-auto">
         <table class="w-full min-w-[600px] table-auto border-collapse text-lg">
           <thead>
