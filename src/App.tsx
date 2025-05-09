@@ -57,7 +57,7 @@ export default function App() {
             <For each={rows}>
               {(row, idx) => {
                 const handleScoreInput = (field: keyof TGradeRow, value: number) => {
-                  if (MIN_SCORE < value || value > MAX_SCORE || isNaN(value)) return;
+                  if (value < MIN_SCORE || value > MAX_SCORE || isNaN(value)) return;
                   setRows(idx(), field, value);
                 };
 
