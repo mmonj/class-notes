@@ -46,11 +46,11 @@ export default function App() {
         <table class="w-full min-w-[600px] table-auto border-collapse text-lg">
           <thead>
             <tr class="border-b">
-              <th class="px-4 py-2 text-left">Attempt</th>
-              <th class="px-4 py-2 text-left">Exam 1</th>
-              <th class="px-4 py-2 text-left">Exam 2</th>
-              <th class="px-4 py-2 text-left">Exam 3</th>
-              <th class="px-4 py-2 text-left">Final Grade</th>
+              <th class="px-4 py-2">Attempt</th>
+              <th class="px-4 py-2">Exam 1</th>
+              <th class="px-4 py-2">Exam 2</th>
+              <th class="px-4 py-2">Exam 3</th>
+              <th class="px-4 py-2">Final Grade</th>
             </tr>
           </thead>
           <tbody>
