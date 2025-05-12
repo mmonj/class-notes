@@ -33,7 +33,11 @@ export default function App() {
           setPlayBtnText(() => "Wait, why do I hear boss music??");
         }, 1000);
         setTimeout(() => {
-          setPlayBtnText(() => "Pause Music");
+          if (showOverlay()) {
+            setPlayBtnText(() => "Pause Music");
+          } else {
+            setPlayBtnText(() => "Play Study Music");
+          }
         }, 6000);
       } else {
         setPlayBtnText(() => "Pause Music");
