@@ -30,8 +30,8 @@ export default function App() {
       if (currentPlayCount === 0) {
         setPlayBtnText(() => "Pause Music");
         setTimeout(() => {
-          setPlayBtnText(() => "Wait, why is there boss music playing?");
-        }, 1500);
+          setPlayBtnText(() => "Wait, why do I hear boss music??");
+        }, 1000);
         setTimeout(() => {
           setPlayBtnText(() => "Pause Music");
         }, 6000);
