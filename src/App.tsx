@@ -5,6 +5,9 @@ import { calculateScore, getDefaultGradeRows, NUM_GRADE_ROWS } from "./utils";
 import { setupAudioBeatEffect } from "./utils/audioVisualizer";
 import type { TGradeRow } from "./utils/types";
 
+import beaterOfStudents from "./assets/beater-of-students-circle.png";
+import bossMusic from "./assets/beater-of-students.mp3";
+
 const LOCAL_STORAGE_KEY = "gradeInputs";
 
 const MIN_SCORE = 0;
@@ -90,7 +93,7 @@ export default function App() {
         </button>
         <audio
           id="beat-audio"
-          src="/class-notes/CSCI-320/grade-calculator/assets/beater-of-students.mp3"
+          src={bossMusic}
           preload="auto"
           // controls
           class="hidden"
@@ -130,7 +133,7 @@ export default function App() {
                         />
                         {showOverlay() && (
                           <img
-                            src="/class-notes/CSCI-320/grade-calculator/assets/beater-of-students-circle.png"
+                            src={beaterOfStudents}
                             alt="overlay"
                             class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
                           />
@@ -149,7 +152,7 @@ export default function App() {
                         />
                         {showOverlay() && (
                           <img
-                            src="/class-notes/CSCI-320/grade-calculator/assets/beater-of-students-circle.png"
+                            src={beaterOfStudents}
                             alt="overlay"
                             class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
                           />
@@ -168,7 +171,7 @@ export default function App() {
                         />
                         {showOverlay() && (
                           <img
-                            src="/class-notes/CSCI-320/grade-calculator/assets/beater-of-students-circle.png"
+                            src={beaterOfStudents}
                             alt="overlay"
                             class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
                           />

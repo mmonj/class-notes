@@ -7,5 +7,12 @@ export default defineConfig({
   plugins: [solid(), tailwindcss()],
   build: {
     outDir: "docs/CSCI-320/grade-calculator",
+    rollupOptions: {
+      output: {
+        entryFileNames: "[name].js",
+        chunkFileNames: "[name].js",
+        assetFileNames: "[name][extname]",
+      },
+    },
   },
 });
