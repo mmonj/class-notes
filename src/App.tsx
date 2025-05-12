@@ -140,7 +140,7 @@ export default function App() {
                           class="w-24 px-2 py-1 border rounded"
                           min={MIN_SCORE}
                           max={MAX_SCORE}
-                          value={row.e1}
+                          value={row.e2}
                           onInput={(e) => handleScoreInput("e2", +e.currentTarget.value)}
                         />
                         {showOverlay() && (
@@ -159,7 +159,7 @@ export default function App() {
                           class="w-24 px-2 py-1 border rounded"
                           min={MIN_SCORE}
                           max={MAX_SCORE}
-                          value={row.e1}
+                          value={row.e3}
                           onInput={(e) => handleScoreInput("e3", +e.currentTarget.value)}
                         />
                         {showOverlay() && (
