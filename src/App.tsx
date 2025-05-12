@@ -1,7 +1,8 @@
-import { createEffect, For, onMount } from "solid-js";
+import { createEffect, createSignal, For, onMount } from "solid-js";
 import { createStore } from "solid-js/store";
 import "./App.css";
 import { calculateScore, getDefaultGradeRows, NUM_GRADE_ROWS } from "./utils";
+import { setupAudioBeatEffect } from "./utils/audioVisualizer";
 import type { TGradeRow } from "./utils/types";
 
 const LOCAL_STORAGE_KEY = "gradeInputs";
@@ -11,6 +12,38 @@ const MAX_SCORE = 200;
 
 export default function App() {
   const [rows, setRows] = createStore<TGradeRow[]>(getDefaultGradeRows());
+  const [showOverlay, setShowOverlay] = createSignal(false);
+  const [playBtnText, setPlayBtnText] = createSignal("Play Study Music");
+
+  let currentPlayCount = 0;
+
+  function handleToggleAudioOverlay(): void {
+    const audio = document.getElementById("beat-audio") as HTMLAudioElement | null;
+    if (!audio) return;
+
+    if (showOverlay()) {
+      audio.pause();
+      setPlayBtnText(() => "Play Study Music");
+    } else {
+      audio.play();
+
+      if (currentPlayCount === 0) {
+        setPlayBtnText(() => "Pause Music");
+        setTimeout(() => {
+          setPlayBtnText(() => "Wait, why is there boss music playing?");
+        }, 1500);
+        setTimeout(() => {
+          setPlayBtnText(() => "Pause Music");
+        }, 6000);
+      } else {
+        setPlayBtnText(() => "Pause Music");
+      }
+
+      currentPlayCount += 1;
+    }
+
+    setShowOverlay((prev) => !prev);
+  }
 
   onMount(() => {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -31,6 +64,8 @@ export default function App() {
         console.warn("invalid local storage data, resetting");
       }
     }
+
+    setupAudioBeatEffect("#beat-audio", ".beater1");
   });
 
   createEffect(() => {
@@ -42,6 +77,21 @@ export default function App() {
     <>
       <h1>CSCI 320 Obrenic Grade Calculator</h1>
       <p class="text-xl py-4">Input your normalized exam scores below</p>
+      <div class="text-center p-4">
+        <button
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          onClick={handleToggleAudioOverlay}
+        >
+          {playBtnText()}
+        </button>
+        <audio
+          id="beat-audio"
+          src="./public/beater-of-students.mp3"
+          preload="auto"
+          // controls
+          class="hidden"
+        />
+      </div>
       <div class="overflow-x-auto">
         <table class="w-full min-w-[600px] table-auto border-collapse text-lg">
           <thead>
@@ -65,34 +115,61 @@ export default function App() {
                   <tr class="border-b">
                     <td class="px-4 py-2">{idx() + 1}</td>
                     <td class="px-4 py-2">
-                      <input
-                        type="number"
-                        class="w-24 px-2 py-1 border rounded"
-                        min={MIN_SCORE}
-                        max={MAX_SCORE}
-                        value={row.e1}
-                        onInput={(e) => handleScoreInput("e1", +e.currentTarget.value)}
-                      />
+                      <div class="relative">
+                        <input
+                          type="number"
+                          class="w-24 px-2 py-1 border rounded"
+                          min={MIN_SCORE}
+                          max={MAX_SCORE}
+                          value={row.e1}
+                          onInput={(e) => handleScoreInput("e1", +e.currentTarget.value)}
+                        />
+                        {showOverlay() && (
+                          <img
+                            src="./public/beater-of-students-circle.png"
+                            alt="overlay"
+                            class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
+                          />
+                        )}
+                      </div>
                     </td>
                     <td class="px-4 py-2">
-                      <input
-                        type="number"
-                        class="w-24 px-2 py-1 border rounded"
-                        min={MIN_SCORE}
-                        max={MAX_SCORE}
-                        value={row.e2}
-                        onInput={(e) => handleScoreInput("e2", +e.currentTarget.value)}
-                      />
+                      <div class="relative">
+                        <input
+                          type="number"
+                          class="w-24 px-2 py-1 border rounded"
+                          min={MIN_SCORE}
+                          max={MAX_SCORE}
+                          value={row.e1}
+                          onInput={(e) => handleScoreInput("e2", +e.currentTarget.value)}
+                        />
+                        {showOverlay() && (
+                          <img
+                            src="./public/beater-of-students-circle.png"
+                            alt="overlay"
+                            class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
+                          />
+                        )}
+                      </div>
                     </td>
                     <td class="px-4 py-2">
-                      <input
-                        type="number"
-                        class="w-24 px-2 py-1 border rounded"
-                        min={MIN_SCORE}
-                        max={MAX_SCORE}
-                        value={row.e3}
-                        onInput={(e) => handleScoreInput("e3", +e.currentTarget.value)}
-                      />
+                      <div class="relative">
+                        <input
+                          type="number"
+                          class="w-24 px-2 py-1 border rounded"
+                          min={MIN_SCORE}
+                          max={MAX_SCORE}
+                          value={row.e1}
+                          onInput={(e) => handleScoreInput("e3", +e.currentTarget.value)}
+                        />
+                        {showOverlay() && (
+                          <img
+                            src="./public/beater-of-students-circle.png"
+                            alt="overlay"
+                            class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
+                          />
+                        )}
+                      </div>
                     </td>
                     <td class="px-4 py-2">{calculateScore(row.e1, row.e2, row.e3)}</td>
                   </tr>
