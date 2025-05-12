@@ -86,7 +86,7 @@ export default function App() {
         </button>
         <audio
           id="beat-audio"
-          src="./public/beater-of-students.mp3"
+          src="/class-notes/public/beater-of-students.mp3"
           preload="auto"
           // controls
           class="hidden"
@@ -126,7 +126,7 @@ export default function App() {
                         />
                         {showOverlay() && (
                           <img
-                            src="./public/beater-of-students-circle.png"
+                            src="/class-notes/public/beater-of-students-circle.png"
                             alt="overlay"
                             class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
                           />
@@ -145,7 +145,7 @@ export default function App() {
                         />
                         {showOverlay() && (
                           <img
-                            src="./public/beater-of-students-circle.png"
+                            src="/class-notes/public/beater-of-students-circle.png"
                             alt="overlay"
                             class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
                           />
@@ -164,7 +164,7 @@ export default function App() {
                         />
                         {showOverlay() && (
                           <img
-                            src="./public/beater-of-students-circle.png"
+                            src="/class-notes/public/beater-of-students-circle.png"
                             alt="overlay"
                             class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
                           />
