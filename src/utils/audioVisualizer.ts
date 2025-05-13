@@ -7,8 +7,7 @@ type BeatState = {
   animationId: number | null;
 };
 
-export function setupAudioBeatEffect(audioSelector: string, imageSelector: string) {
-  const audioElement = document.querySelector<HTMLAudioElement>(audioSelector);
+export function setupAudioBeatEffect(audioElement: HTMLAudioElement, imageSelector: string) {
   const images = document.querySelectorAll<HTMLImageElement>(imageSelector);
 
   if (!audioElement) throw new Error("Audio element not found");

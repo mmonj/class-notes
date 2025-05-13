@@ -18,6 +18,8 @@ export default function App() {
   const [showOverlay, setShowOverlay] = createSignal(false);
   const [playBtnText, setPlayBtnText] = createSignal("Play Study Music");
 
+  let audioElement: HTMLAudioElement;
+
   let currentPlayCount = 0;
 
   function handleToggleAudioOverlay(): void {
@@ -72,7 +74,12 @@ export default function App() {
       }
     }
 
-    setupAudioBeatEffect("#beat-audio", ".beater1");
+    setupAudioBeatEffect(audioElement!, ".beater1");
+
+    audioElement!.addEventListener("ended", () => {
+      setShowOverlay(() => false);
+      setPlayBtnText(() => "Play Music");
+    });
   });
 
   createEffect(() => {
@@ -97,6 +104,7 @@ export default function App() {
           preload="auto"
           // controls
           class="hidden"
+          ref={audioElement!}
         />
       </div>
       <div class="overflow-x-auto">
