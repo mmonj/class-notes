@@ -1,10 +1,10 @@
-## CSCI 343 Computer Architecture (Fluture)
+# CSCI 343 Computer Architecture (Fluture)
 
 <small>Spring 2025 Lecture Notes</small>
 
 If any listed supplemental video below uses different notation or methods than those used in class, I will try to make a note of it, since not using the professor's method 1:1 will result in you not being granted any points for your solutions on quizzes/exams. Best to adhere to the methods outlined in the provided class notes.
 
-### Pre-req Review 1 (Basic Combinational Circuits, K-maps, etc)
+## Pre-req Review 1 (Basic Combinational Circuits, K-maps, etc)
 
 <small>Week 1 & 2</small>
 
@@ -20,19 +20,19 @@ If any listed supplemental video below uses different notation or methods than t
 - [Video: Karnaugh Map with Don't Cares](https://www.youtube.com/watch?v=SaKVzgiekrA)
 - [Notes](./examples/Example%202%20-%20Digital%20Clock.pdf) - Digital Clock & K-Map with Don't Cares. [Supplemental video](https://www.youtube.com/watch?v=akMqyi-0RsY) that uses WXYZ as inputs instead of the expected I<sub>3</sub> I<sub>2</sub> I<sub>1</sub> I<sub>0</sub>
 
-### Master-Slave Flip Flop & Counters
+## Master-Slave Flip Flop & Counters
 
 - [Notes Feb 25](./notes/Notes%20Feb%2025%20sequential%20circuits%20&%20master%20slave%20flip%20flop.pdf) - Sequential Circuits & Master-Slave Flip Flop
 - [Notes Feb 27](./notes/Notes%20Feb%2027%20-%20State%20table;%20Synchronous%20Counter.pdf) - Synchronous Counter
 - [Notes March 4](./notes/Notes%20Mar%204%20-%20Non-Binary%20counter.pdf) - Non-Binary Counter (counter with unused states). [Supplemental video](https://www.youtube.com/watch?v=8EVD-Mnywhk)
 - [Notes: Non-Binary Counter with T flip flops](./examples/Example%203-%20Non-Binary%20Counter%20with%20T%20Flip%20Flops.pdf)
 
-### Pre-req Review 2 (MIPS, as a precursor to Datapath)
+## Pre-req Review 2 (MIPS, as a precursor to Datapath)
 
 - [Video: Intro to MIPS](https://www.youtube.com/watch?v=U4gzpd03Cac&list=PL3i6InCQ0J38YBWJmbrJOpOUJF7OT9pxO&index=18) - From CSCI 240 Jackson Yeh playlist
 - [Notes March 11 & 13](./notes/Notes%20Mar%2011%20&%2013%20-%20Addressing%20Modes.pdf) - Addressing Modes
 
-### Datapath & Pipelining
+## Datapath & Pipelining
 
 #### Class Notes
 
@@ -49,7 +49,7 @@ If any listed supplemental video below uses different notation or methods than t
 - [Video Playlist: Computer Architecture](https://www.youtube.com/playlist?list=PLZrjSW9GrEZG6BgscDFfKJPNZB1q88dB-) - Videos 22-27 contain relevant data (Datapath and Pipelining)
 - [Website](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/beqinstruction.html) - Interactive Datapath Visualization
 
-### Memory Organization & Cache
+## Memory Organization & Cache
 
 - [Notes April 10](./notes/Notes%20April%2010%20-%20Introduce%20Memory.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion
 - [Notes April 22](./notes/Notes%20April%2022%20-%20Memory%20and%20Cache%20Read.pdf) - Basic Intro to Cache: Memory Read and Write operations
