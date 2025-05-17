@@ -307,10 +307,10 @@ Based on the diagram above:
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
   <div>
-    <p>Waterfall Process</p>
-    <p>Incremental Process</p>
-    <p>Software Re-Use</p>
-    <p>Client Server</p>
+    <p>Waterfall Process ________</p>
+    <p>Incremental Process ________</p>
+    <p>Software Re-Use ________</p>
+    <p>Client Server ________</p>
   </div>
   <div>
     <p>4) Airplane Flying Software</p>
