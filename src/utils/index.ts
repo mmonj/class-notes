@@ -1,4 +1,4 @@
-export const NUM_GRADE_ROWS = 7;
+export const NUM_GRADE_ROWS = 4;
 
 export function calculateScore(e1: number, e2: number, e3: number): number {
   const part1 = 24 * Math.max(e1, e2);
