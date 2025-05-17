@@ -660,8 +660,6 @@ test 3 - what is expected
 4\) Persistence Layer  
 5\) Logic Layer
 
-![Diagram](data:image/png;base64...)
-
 <details>
 <summary>Show Answer</summary>
 
