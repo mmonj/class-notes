@@ -314,23 +314,19 @@ Based on the diagram above:
   </div>
   <div>
     <p>4) Airplane Flying Software</p>
-    <br/>
     <p>3) Allows many changes</p>
-    <br/>
     <p>2) Using Open-Source Software</p>
-    <br/>
     <p>1) Email Program</p>
-    <br/>
   </div>
 </div>
 
 <details>
 <summary>Show Answer</summary>
 
-Waterfall Process - 4) Airplane Flying Software  
-Incremental Process - 3) Allows many changes  
-Software Re-Use - 2) Using Open-Source Software  
-Client Server - 1) Email Program
+<p>Waterfall Process - 4) Airplane Flying Software</p>
+<p>Incremental Process - 3) Allows many changes</p>
+<p>Software Re-Use - 2) Using Open-Source Software</p>
+<p>Client Server - 1) Email Program</p>
 
 </details>
 
