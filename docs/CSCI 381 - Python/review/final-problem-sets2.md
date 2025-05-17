@@ -37,7 +37,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-4. Write a lambda function filter_and_transform that takes a list of integers and returns a new list where:
+4. Write a lambda function `filter_and_transform` that takes a list of integers and returns a new list where:
 
    - All odd numbers are squared.
    - All even numbers are doubled.
@@ -50,7 +50,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-5. Write a lambda function count_vowels that takes a string and returns the count of vowels (a, e, i, o, u) in the string.
+5. Write a lambda function `count_vowels` that takes a string and returns the count of vowels (a, e, i, o, u) in the string.
 
    ```python
    print(count_vowels("Hello, World!"))
