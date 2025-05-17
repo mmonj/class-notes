@@ -422,7 +422,7 @@ class SqlServer {
 
 &nbsp;
 
-### Q24) The following tests are valid Unit Tests:
+### Q24) Which of the following tests are valid Unit Tests:
 
 ```java
 public class MathTest {
