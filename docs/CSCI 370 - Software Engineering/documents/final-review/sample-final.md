@@ -46,6 +46,8 @@ Note, if you wish, you can write an explanation next to your answer.
 4\) Complete Checkout interacts with the most Actors.  
 5\) Is a Context diagram (it's a Use Case diagram)
 
+![alt text](image.png)
+
 <details>
 <summary>Show Answer</summary>
 
@@ -54,6 +56,10 @@ Note, if you wish, you can write an explanation next to your answer.
 </details>
 
 &nbsp;
+
+### In the following diagram:
+
+![alt text](image-1.png)
 
 ### Q4) Which Object is activated the most?
 
@@ -250,7 +256,7 @@ public class Calculator implements MathFunctions {
 
 ### Q15) The diagram below is a:
 
-![State diagram - Wikipedia](data:image/png;base64...)
+![alt text](image-2.png)
 
 1\) Activity Diagram  
 2\) Use Case Diagram  
@@ -269,7 +275,7 @@ public class Calculator implements MathFunctions {
 
 ### Q16 and Q17)
 
-![Diagram](data:image/png;base64...)
+![alt text](image-3.png)
 
 Based on the diagram above:
 
@@ -334,6 +340,10 @@ A) Acceptability and Usability (easy to use)
 </details>
 
 &nbsp;
+
+### Q20)
+
+![alt text](image-4.png)
 
 ### Q20) The diagram above shows:
 
@@ -518,6 +528,10 @@ Software Requirements \_\_\_\_\_\_\_ 4) TDD- Unit testing
 
 &nbsp;
 
+### Q29)
+
+![alt text](image-5.png)
+
 ### Q29) Regarding the diagram above:
 
 The object that takes the least time is the Actor.  
@@ -622,7 +636,11 @@ test 3 - what is expected
 
 &nbsp;
 
-### Q33) In the diagram below, A represents:
+### Q33)
+
+![alt text](image-6.png)
+
+### Q33) In the diagram above, A represents:
 
 1\) Presentation Layer  
 2\) Business Layer  
@@ -686,31 +704,31 @@ public class Math {
 
 ### Things to know:
 
-1\) Ethnography  
-2\) Software evolution - new versions/maintenance  
-3\) The diagrams  
-4\) Difference between state and activity - state is for only one object water/vapor/ice  
-5\) Multiplicity  
-6\) Pipe filter  
-7\) Static = global  
-8\) Review process diagram  
-9\) Web browser - always client/server  
-10\) Remember which non-functional specs require which architecture
+- Ethnography
+- Software evolution - new versions/maintenance
+- The diagrams
+- Difference between state and activity - state is for only one object water/vapor/ice
+- Multiplicity
+- Pipe filter
+- Static = global
+- Review process diagram
+- Web browser - always client/server
+- Remember which non-functional specs require which architecture
 
-- Performance - immediate response code should be together (same platform)
-- Safety - code together easier to review for flaws
-- Security - security layer on top
-- Maintainability - code that is easy to change - usually small methods are safest to modify w/out creating bugs
+  - Performance - immediate response code should be together (same platform)
+  - Safety - code together easier to review for flaws
+  - Security - security layer on top
+  - Maintainability - code that is easy to change - usually small methods are safest to modify w/out creating bugs
 
-1\) Scrum - product backlog - wish list  
- Scrum backlog - for each sprint  
- Potential release candidate  
- Daily standup  
- Testing
+- Scrum - product backlog - wish list  
+  Scrum backlog - for each sprint  
+  Potential release candidate  
+  Daily standup  
+  Testing
 
-1\) All the terms are the same.. i.e. incremental, agile, xp, scrum…  
-2\) Remember OOP principles
+- All the terms are the same.. i.e. incremental, agile, xp, scrum…
+- Remember OOP principles
 
 SOLID/YAGNI/DRY/prefer composition instead of inheritance/
 
-1\) Difference between abstract and interface
+- Difference between abstract and interface
