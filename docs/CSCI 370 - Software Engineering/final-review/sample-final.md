@@ -305,15 +305,25 @@ Based on the diagram above:
 
 ### Q18) Match the terms on the left with terms on the right. (All choices must be correct to get credit for this)
 
-Waterfall Process \_\_4\_\_\_ 1) Email Program  
-Incremental Process \_\_3\_\_\_ 2) Using Open-Source Software  
-Software Re-Use \_\_2\_\_\_ 3) Allows many changes  
-Client Server \_\_1\_\_\_ 4) Airplane Flying Software
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+  <div>
+    <p>Waterfall Process</p>
+    <p>Incremental Process</p>
+    <p>Software Re-Use</p>
+    <p>Client Server</p>
+  </div>
+  <div>
+    <p>4) Airplane Flying Software</p>
+    <p>3) Allows many changes</p>
+    <p>2) Using Open-Source Software</p>
+    <p>1) Email Program</p>
+  </div>
+</div>
 
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> Waterfall Process - 4) Airplane Flying Software  
+Waterfall Process - 4) Airplane Flying Software  
 Incremental Process - 3) Allows many changes  
 Software Re-Use - 2) Using Open-Source Software  
 Client Server - 1) Email Program
