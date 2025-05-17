@@ -453,10 +453,16 @@ public class MathTest {
 }
 ```
 
+- 1\) test1()
+- 2\) test2()
+- 3\) test2(), test3(), test4()
+- 4\) test1(), test2(), test3(), test4()
+- 5\) test4()
+
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> test2(), test3(), test4()
+<b>Correct Answer:</b> 3) test2(), test3(), test4()
 
 </details>
 
