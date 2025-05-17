@@ -59,11 +59,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 &nbsp;
 
-### In the following diagram:
+### Q4)
 
 ![alt text](image-1.png)
 
-### Q4) Which Object is activated the most?
+### Q4) In the above diagram, which Object is activated the most?
 
 <details>
 <summary>Show Answer</summary>
