@@ -17,9 +17,9 @@
 
 ## Midterm Review
 
-- [Practice Exam](./documents/example-exam)
-- [Midterm Review](./documents/midterm-review)
-- [Midterm Extended Review](./documents/midterm-review-extended)
+- [Practice Exam](./documents/midterm-review/sample-midterm)
+- [Midterm Review](./documents/midterm-review/midterm-review)
+- [Midterm Extended Review](./documents/midterm-review/midterm-review-extended)
 
 ## Lecture Notes (Post-Midterm)
 
@@ -29,5 +29,9 @@
 - [Lecture 16](./documents/lecture-16) - Iterator and Command Design Patterns
 - [Lecture 17](./documents/lecture-17) - Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
 - [Lecture 18](./documents/lecture-18) - Use Case, Sequence, and State Diagrams in UML
+
+## Final Review
+
+- [Practice Exam](./documents/final-review/sample-final)
 
 &nbsp;
