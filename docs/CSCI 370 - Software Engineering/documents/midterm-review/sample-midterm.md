@@ -1,4 +1,4 @@
-# Practice Exam
+# Sample Midterm
 
 ### Q2) Functional vs Non-Functional refers to
 
