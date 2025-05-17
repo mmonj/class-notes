@@ -727,3 +727,31 @@ public class Math {
 - Remember OOP principles
   - SOLID/YAGNI/DRY/prefer composition instead of inheritance/
 - Difference between abstract and interface
+
+<style>
+  details {
+    margin: 10px 0;
+  }
+
+  details {
+    background-color:rgb(81, 161, 247);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+
+  details:hover {
+    background-color: #0056b3;
+  }
+
+  details[open] {
+    background-color: #28a745;
+  }
+
+</style>
