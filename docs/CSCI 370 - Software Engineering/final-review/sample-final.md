@@ -314,9 +314,13 @@ Based on the diagram above:
   </div>
   <div>
     <p>4) Airplane Flying Software</p>
+    <br/>
     <p>3) Allows many changes</p>
+    <br/>
     <p>2) Using Open-Source Software</p>
+    <br/>
     <p>1) Email Program</p>
+    <br/>
   </div>
 </div>
 
