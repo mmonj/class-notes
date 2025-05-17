@@ -17,9 +17,9 @@
 
 ## Midterm Review
 
-- [Practice Exam](./documents/midterm-review/sample-midterm)
-- [Midterm Review](./documents/midterm-review/midterm-review)
-- [Midterm Extended Review](./documents/midterm-review/midterm-review-extended)
+- [Practice Exam](./midterm-review/sample-midterm)
+- [Midterm Review](./midterm-review/midterm-review)
+- [Midterm Extended Review](./midterm-review/midterm-review-extended)
 
 ## Lecture Notes (Post-Midterm)
 
@@ -32,6 +32,6 @@
 
 ## Final Review
 
-- [Practice Exam](./documents/final-review/sample-final)
+- [Practice Exam](./final-review/sample-final)
 
 &nbsp;
