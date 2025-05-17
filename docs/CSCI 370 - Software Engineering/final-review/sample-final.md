@@ -68,7 +68,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -79,7 +79,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -198,7 +198,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -209,7 +209,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -416,7 +416,7 @@ class SqlServer {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -540,7 +540,7 @@ Software Requirements \_\_\_\_\_\_\_ 4) TDD- Unit testing
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -561,7 +561,7 @@ ATM and Database have a “IS-A” relationship
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -597,7 +597,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -614,7 +614,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided. Poke @Mauri for an answer]
+<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
