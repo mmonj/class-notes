@@ -714,21 +714,16 @@ public class Math {
 - Review process diagram
 - Web browser - always client/server
 - Remember which non-functional specs require which architecture
-
   - Performance - immediate response code should be together (same platform)
   - Safety - code together easier to review for flaws
   - Security - security layer on top
   - Maintainability - code that is easy to change - usually small methods are safest to modify w/out creating bugs
-
-- Scrum - product backlog - wish list  
-  Scrum backlog - for each sprint  
-  Potential release candidate  
-  Daily standup  
-  Testing
-
+- Scrum - product backlog - wish list
+  - Scrum backlog - for each sprint
+  - Potential release candidate
+  - Daily standup
+  - Testing
 - All the terms are the same.. i.e. incremental, agile, xp, scrum…
 - Remember OOP principles
-
-SOLID/YAGNI/DRY/prefer composition instead of inheritance/
-
+  - SOLID/YAGNI/DRY/prefer composition instead of inheritance/
 - Difference between abstract and interface
