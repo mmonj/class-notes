@@ -308,10 +308,10 @@ Based on the diagram above:
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
   <div>
-    <p>Waterfall Process ________</p>
-    <p>Incremental Process ________</p>
-    <p>Software Re-Use ________</p>
-    <p>Client Server ________</p>
+    <p>Waterfall Process ___</p>
+    <p>Incremental Process ___</p>
+    <p>Software Re-Use ___</p>
+    <p>Client Server ___</p>
   </div>
   <div>
     <p>4) Airplane Flying Software</p>
@@ -535,10 +535,10 @@ public class CustomerId {
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
   <div>
-    <p>Presentation Layer ________</p>
-    <p>Controller Layer ________</p>
-    <p>Software validation ________</p>
-    <p>Software Requirements ________</p>
+    <p>Presentation Layer ___</p>
+    <p>Controller Layer ___</p>
+    <p>Software validation ___</p>
+    <p>Software Requirements ___</p>
   </div>
   <div>
     <p>3) 3 tier architecture (presentation/business/database)</p>
