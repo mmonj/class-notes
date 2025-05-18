@@ -17,7 +17,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 2) Makes frequent deliveries of software
+2. Makes frequent deliveries of software
 
 </details>
 
@@ -34,7 +34,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 1) Is usually implied from a Functional one.
+1. Is usually implied from a Functional one.
 
 </details>
 
@@ -53,7 +53,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 4) Complete Checkout interacts with the most Actors.
+4. Complete Checkout interacts with the most Actors.
 
 </details>
 
@@ -68,7 +68,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -79,7 +79,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -87,22 +87,23 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q8) The following pattern is typically used for undoing user actions.
 
-1\) Observer Pattern - adding observers w/out modifying existing code  
-2\) Strategy Pattern - Separate the code that changes into a separate object which is then passed to code that does not change. Placing algorithms in a separate object that is passed into another class. encapsulating behavior into separate classes.  
-3\) Factory Pattern - Controls which class gets created. Does not allow programmers to create a specific class.  
-4\) Command Pattern - placed commands into objects and has two commands execute and unexecute. These commands can be saved for reuse.  
-5\) Iterator Pattern - e.g. List of Students in a school. The School hides the internal storage of the student list from other objects. Therefore other objects traversal through the Students without knowing how the Student list is being stored.  
-6\) State Pattern - Have separate pre-defined states for different conditions  
-7\) Decorator - chain together multiple objects and treat them as one object. i.e. getPrice can get the price of many types of condiments.  
-8\) Memento - placing a snapshot of an object in another object  
-9\) Builder - 1) protects an object from bad values  
- 2) also it breaks parameters into smaller understandable parts  
-10\) Singleton - protects a global variable (i.e static) from bad values
+1. Observer Pattern - adding observers w/out modifying existing code
+2. Strategy Pattern - Separate the code that changes into a separate object which is then passed to code that does not change. Placing algorithms in a separate object that is passed into another class. encapsulating behavior into separate classes.
+3. Factory Pattern - Controls which class gets created. Does not allow programmers to create a specific class.
+4. Command Pattern - placed commands into objects and has two commands execute and unexecute. These commands can be saved for reuse.
+5. Iterator Pattern - e.g. List of Students in a school. The School hides the internal storage of the student list from other objects. Therefore other objects traversal through the Students without knowing how the Student list is being stored.
+6. State Pattern - Have separate pre-defined states for different conditions
+7. Decorator - chain together multiple objects and treat them as one object. i.e. getPrice can get the price of many types of condiments.
+8. Memento - placing a snapshot of an object in another object
+9. Builder:
+   1. Protects an object from bad values
+   2. Breaks parameters into smaller understandable parts
+10. Singleton - protects a global variable (i.e static) from bad values
 
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 4) Command Pattern
+4. Command Pattern
 
 </details>
 
@@ -119,7 +120,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 2) Using inheritance to handle different behaviors
+2. Using inheritance to handle different behaviors
 
 </details>
 
@@ -136,7 +137,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 1) Focuses on changes to a system/object during program execution
+1. Focuses on changes to a system/object during program execution
 
 </details>
 
@@ -153,7 +154,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 1) Scalability - ability of software to grow (or shrink)
+1. Scalability - ability of software to grow (or shrink)
 
 </details>
 
@@ -170,7 +171,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 2) A missing non-functional requirement usually causes the software unusable by the user
+2. A missing non-functional requirement usually causes the software unusable by the user
 
 </details>
 
@@ -187,7 +188,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 1) Sequence Diagram
+1. Sequence Diagram
 
 </details>
 
@@ -198,7 +199,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -209,7 +210,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -250,7 +251,7 @@ public class Calculator implements MathFunctions {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> Calculator is not implementing the divide method
+Calculator is not implementing the divide method
 
 </details>
 
@@ -269,7 +270,7 @@ public class Calculator implements MathFunctions {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 5) State Diagram
+5. State Diagram
 
 </details>
 
@@ -286,7 +287,7 @@ Based on the diagram above:
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 30
+30
 
 </details>
 
@@ -297,7 +298,7 @@ Based on the diagram above:
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 1000
+1000
 
 </details>
 
@@ -347,7 +348,7 @@ A) Acceptability and Usability (easy to use)
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 7) A, B, C, D
+7. A, B, C, D
 
 </details>
 
@@ -368,7 +369,7 @@ A) Acceptability and Usability (easy to use)
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 3) Composition vs Aggregation
+3. Composition vs Aggregation
 
 </details>
 
@@ -385,7 +386,7 @@ A) Acceptability and Usability (easy to use)
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 5) 1, 2, 3
+5. 1, 2, 3
 
 </details>
 
@@ -416,7 +417,7 @@ class SqlServer {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -462,7 +463,7 @@ public class MathTest {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 3) test2(), test3(), test4()
+3. test2(), test3(), test4()
 
 </details>
 
@@ -490,7 +491,7 @@ public class CustomerId {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 3) Singleton Pattern
+3. Singleton Pattern
 
 </details>
 
@@ -507,7 +508,7 @@ public class CustomerId {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 2) Observer Pattern
+2. Observer Pattern
 
 </details>
 
@@ -524,7 +525,7 @@ public class CustomerId {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 3) User Culture
+3. User Culture
 
 </details>
 
@@ -540,7 +541,7 @@ Software Requirements \_\_\_\_\_\_\_ 4) TDD- Unit testing
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -561,7 +562,7 @@ ATM and Database have a “IS-A” relationship
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -578,7 +579,7 @@ ATM and Database have a “IS-A” relationship
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 4) All of the above
+4. All of the above
 
 </details>
 
@@ -597,7 +598,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -614,7 +615,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> [No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
+[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have an answer]
 
 </details>
 
@@ -631,7 +632,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 4) Model-view-controller pattern
+4. Model-view-controller pattern
 
 </details>
 
@@ -648,7 +649,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 2) Client-server pattern
+2. Client-server pattern
 
 </details>
 
@@ -669,7 +670,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 1) Presentation Layer
+1. Presentation Layer
 
 </details>
 
@@ -686,7 +687,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 2) White box - developer knows the code
+2. White box - developer knows the code
 
 </details>
 
@@ -712,7 +713,7 @@ public class Math {
 <details>
 <summary>Show Answer</summary>
 
-<b>Correct Answer:</b> 3) 0
+3. 0
 
 </details>
 
