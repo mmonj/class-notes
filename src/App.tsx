@@ -91,11 +91,36 @@ export default function App() {
     <>
       <h1>CSCI 320 Obrenic Grade Calculator</h1>
       <p class="text-xl py-4">Input your normalized exam scores below</p>
-      <div class="text-center p-4">
+      <div class="text-center p-4 flex items-center justify-center gap-2">
         <button
-          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center justify-center gap-2"
           onClick={handleToggleAudioOverlay}
         >
+          <span>
+            {showOverlay() ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 4a1 1 0 011 1v10a1 1 0 01-2 0V5a1 1 0 011-1zm8 0a1 1 0 011 1v10a1 1 0 01-2 0V5a1 1 0 011-1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M6.5 4.5l7 5-7 5v-10z" />
+              </svg>
+            )}
+          </span>
           {playBtnText()}
         </button>
         <audio
