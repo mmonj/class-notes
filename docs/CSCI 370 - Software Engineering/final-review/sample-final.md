@@ -533,10 +533,20 @@ public class CustomerId {
 
 ### Q28) Match the term on the left with the description on the right
 
-Presentation Layer \_\_\_\_\_\_\_ 1) Often includes a User Story (Who, What, Why, Acceptance Criteria)  
-Controller Layer \_\_\_\_\_\_\_ 2) Model View Controller architecture  
-Software validation \_\_\_\_\_\_\_ 3) 3 tier architecture(presentation/business/database)  
-Software Requirements \_\_\_\_\_\_\_ 4) TDD- Unit testing
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+  <div>
+    <p>Presentation Layer ________</p>
+    <p>Controller Layer ________</p>
+    <p>Software validation ________</p>
+    <p>Software Requirements ________</p>
+  </div>
+  <div>
+    <p>3) 3 tier architecture (presentation/business/database)</p>
+    <p>2) Model View Controller architecture</p>
+    <p>4) TDD - Unit testing</p>
+    <p>1) Often includes a User Story (Who, What, Why, Acceptance Criteria)</p>
+  </div>
+</div>
 
 <details>
 <summary>Show Answer</summary>
