@@ -350,22 +350,23 @@ Based on the diagram above:
 
 &nbsp;
 
-### Q19) Which are attributes of Good Software
+### Q19) Which of the following are attributes of Good Software?
 
 A) Acceptability and Usability (easy to use)  
-1\) Dependability and security (won't crash and will protect data)  
-2\) Efficiency (won’t waste resources)  
-3\) Maintainability (easy to fix)  
-4\) C  
-5\) A, B  
-6\) A, C, D  
-7\) A, B, C, D  
-8\) None of the above
+B) Dependability and security (won't crash and will protect data)  
+C) Efficiency (won’t waste resources)  
+D) Maintainability (easy to fix)
+
+1\) C  
+2\) A, B  
+3\) A, C, D  
+4\) A, B, C, D  
+5\) None of the above
 
 <details>
 <summary>Show Answer</summary>
 
-7. A, B, C, D
+4\) A, B, C, D
 
 </details>
 
