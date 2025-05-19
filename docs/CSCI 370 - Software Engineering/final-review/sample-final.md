@@ -109,6 +109,23 @@ Note, if you wish, you can write an explanation next to your answer.
 
 &nbsp;
 
+### Q8) The following is NOT part of a Software development life cycle:
+
+1. Daily Meeting
+2. Targeting Rule
+3. Analyze Current System
+4. Feasibility Study
+5. Scrum
+
+<details>
+<summary>Show Answer</summary>
+
+2. Targeting Rule
+
+</details>
+
+&nbsp;
+
 ### Q9) The following is not good software practice:
 
 1\) De-Coupled Code  
@@ -417,7 +434,7 @@ class SqlServer {
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+1\) Violates the Open Closed Principle
 
 </details>
 
@@ -551,7 +568,10 @@ public class CustomerId {
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+<p>Presentation Layer: 3) 3 tier architecture (presentation/business/database)</p>  
+<p>Controller Layer: 2) Model View Controller architecture</p>  
+<p>Software validation: 4) TDD - Unit testing</p>  
+<p>Software Requirements: 1) Often includes a User Story (Who, What, Why, Acceptance Criteria)</p>
 
 </details>
 
@@ -563,16 +583,16 @@ public class CustomerId {
 
 ### Q29) Regarding the diagram above:
 
-The object that takes the least time is the Actor.  
-The database is needed to withdraw money.  
-There are no return messages.  
-Withdrawal request is stored in the database.  
-ATM and Database have a “IS-A” relationship
+1. The object that takes the least time is the Actor.
+2. The database is needed to withdraw money.
+3. There are no return messages.
+4. Withdrawal request is stored in the database.
+5. ATM and Database have a “IS-A” relationship
 
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+2. The database is needed to withdraw money.
 
 </details>
 
@@ -625,7 +645,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+5. Allows for testing interactions between various parts of the code.
 
 </details>
 
