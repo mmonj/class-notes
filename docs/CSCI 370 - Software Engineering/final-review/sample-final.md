@@ -68,7 +68,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-[Register: RegisterOffice]
+Register: RegisterOffice
 
 </details>
 
