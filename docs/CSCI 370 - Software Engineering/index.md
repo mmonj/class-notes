@@ -29,6 +29,9 @@
 - [Lecture 16](./documents/lecture-16) - Iterator and Command Design Patterns
 - [Lecture 17](./documents/lecture-17) - Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
 - [Lecture 18](./documents/lecture-18) - Use Case, Sequence, and State Diagrams in UML
+- [Lecture 19](./documents/lecture-19) - Software Architecture Patterns
+- [Lecture 20](./documents/lecture-20) - Software Testing and Testable Software
+- [Lecture 21](./documents/lecture-21) - Writing Testable Code
 
 ## Final Review
 
