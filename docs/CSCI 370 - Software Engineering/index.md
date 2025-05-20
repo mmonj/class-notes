@@ -1,4 +1,4 @@
-# CSCI 370 (Greenberg)
+# CSCI 370 Lecture Notes (Greenberg)
 
 <small>Spring 2025 Lecture Notes</small>
 
