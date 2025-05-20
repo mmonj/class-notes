@@ -8,11 +8,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q1) CD/CI (pipeline):
 
-1\) CD stands for Configuration Development  
-2\) Makes frequent deliveries of software  
-3\) CI stands for Configuration Integration  
-4\) Is used together with the Waterfall process  
-5\) Should occur once every month
+- 1\) CD stands for Configuration Development
+- 2\) Makes frequent deliveries of software
+- 3\) CI stands for Configuration Integration
+- 4\) Is used together with the Waterfall process
+- 5\) Should occur once every month
 
 <details>
 <summary>Show Answer</summary>
@@ -25,11 +25,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q2) A Non-Functional Requirement
 
-1\) Is usually implied from a Functional one.  
-2\) Is an unnecessary requirement.  
-3\) Is a requirement that cannot be made to work.  
-4\) Usually has a smaller scope than a functional one  
-5\) Is not related to customer satisfaction.
+- 1\) Is usually implied from a Functional one.
+- 2\) Is an unnecessary requirement.
+- 3\) Is a requirement that cannot be made to work.
+- 4\) Usually has a smaller scope than a functional one
+- 5\) Is not related to customer satisfaction.
 
 <details>
 <summary>Show Answer</summary>
@@ -42,11 +42,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q3) RE: the diagram below:
 
-1\) “Credit Payment Service” must log in.  
-2\) Customer can only perform two activities.  
-3\) Paypal is a service not an Actor.  
-4\) Complete Checkout interacts with the most Actors.  
-5\) Is a Context diagram (it's a Use Case diagram)
+- 1\) “Credit Payment Service” must log in.
+- 2\) Customer can only perform two activities.
+- 3\) Paypal is a service not an Actor.
+- 4\) Complete Checkout interacts with the most Actors.
+- 5\) Is a Context diagram (it's a Use Case diagram)
 
 ![alt text](image.png)
 
@@ -128,11 +128,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q9) The following is not good software practice:
 
-1\) De-Coupled Code  
-2\) Using inheritance to handle different behaviors  
-3\) Strategy Pattern  
-4\) Using composition to handle different behaviors  
-5\) Using interface types for method parameters
+- 1\) De-Coupled Code
+- 2\) Using inheritance to handle different behaviors
+- 3\) Strategy Pattern
+- 4\) Using composition to handle different behaviors
+- 5\) Using interface types for method parameters
 
 <details>
 <summary>Show Answer</summary>
@@ -145,11 +145,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q10) A state diagram:
 
-1\) Focuses on changes to a system/object during program execution  
-2\) Sequence of messages between objects in an interaction (sequence diagram)  
-3\) Represents the goals of systems and users (requirements/checklist/use case table)  
-4\) The interactions between a system and other actors with which the system is designed to interface (context diagram)  
-5\) An informal, general explanation of a software feature written from the perspective of the end user or customer (user story)
+- 1\) Focuses on changes to a system/object during program execution
+- 2\) Sequence of messages between objects in an interaction (sequence diagram)
+- 3\) Represents the goals of systems and users (requirements/checklist/use case table)
+- 4\) The interactions between a system and other actors with which the system is designed to interface (context diagram)
+- 5\) An informal, general explanation of a software feature written from the perspective of the end user or customer (user story)
 
 <details>
 <summary>Show Answer</summary>
@@ -162,11 +162,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q11) The following is a non-functional requirement:
 
-1\) Scalability - ability of software to grow (or shrink)  
-2\) Page Color  
-3\) Business Rule  
-4\) Report  
-5\) Search Feature
+- 1\) Scalability - ability of software to grow (or shrink)
+- 2\) Page Color
+- 3\) Business Rule
+- 4\) Report
+- 5\) Search Feature
 
 <details>
 <summary>Show Answer</summary>
@@ -179,11 +179,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q12) Non-functional vs functional requirement:
 
-1\) A missing functional requirement usually causes the software to be unusable by the user  
-2\) A missing non-functional requirement usually causes the software unusable by the user  
-3\) Software performance is a functional requirement  
-4\) Web page background color is a non-functional requirement  
-5\) Non-Functional requirements are easy to test
+- 1\) A missing functional requirement usually causes the software to be unusable by the user
+- 2\) A missing non-functional requirement usually causes the software unusable by the user
+- 3\) Software performance is a functional requirement
+- 4\) Web page background color is a non-functional requirement
+- 5\) Non-Functional requirements are easy to test
 
 <details>
 <summary>Show Answer</summary>
@@ -196,11 +196,11 @@ Note, if you wish, you can write an explanation next to your answer.
 
 ### Q13) A lifeline is found in the following diagram:
 
-1\) Sequence Diagram  
-2\) Interactive Diagram  
-3\) Class Diagram  
-4\) Object Oriented Diagram  
-5\) Context Diagram
+- 1\) Sequence Diagram
+- 2\) Interactive Diagram
+- 3\) Class Diagram
+- 4\) Object Oriented Diagram
+- 5\) Context Diagram
 
 <details>
 <summary>Show Answer</summary>
@@ -278,11 +278,11 @@ Calculator is not implementing the divide method
 
 ![alt text](image-2.png)
 
-1\) Activity Diagram  
-2\) Use Case Diagram  
-3\) Door Diagram  
-4\) Timing Diagram  
-5\) State Diagram
+- 1\) Activity Diagram
+- 2\) Use Case Diagram
+- 3\) Door Diagram
+- 4\) Timing Diagram
+- 5\) State Diagram
 
 <details>
 <summary>Show Answer</summary>
@@ -357,11 +357,11 @@ B) Dependability and security (won't crash and will protect data)
 C) Efficiency (won’t waste resources)  
 D) Maintainability (easy to fix)
 
-1\) C  
-2\) A, B  
-3\) A, C, D  
-4\) A, B, C, D  
-5\) None of the above
+- 1\) C
+- 2\) A, B
+- 3\) A, C, D
+- 4\) A, B, C, D
+- 5\) None of the above
 
 <details>
 <summary>Show Answer</summary>
@@ -378,11 +378,11 @@ D) Maintainability (easy to fix)
 
 ### Q20) The diagram above shows:
 
-1\) Inheritance vs Aggregation  
-2\) Aggregation vs Abstraction  
-3\) Composition vs Aggregation  
-4\) Engine does not require a vehicle  
-5\) Vehicle requires an Engine.
+- 1\) Inheritance vs Aggregation
+- 2\) Aggregation vs Abstraction
+- 3\) Composition vs Aggregation
+- 4\) Engine does not require a vehicle
+- 5\) Vehicle requires an Engine.
 
 <details>
 <summary>Show Answer</summary>
@@ -395,11 +395,11 @@ D) Maintainability (easy to fix)
 
 ### Q21) Dependency Inversion Principle
 
-1\) Encourages using interfaces as opposed to concrete classes  
-2\) Encourages code decoupling  
-3\) Specifies that high level modules should not depend on low level modules.  
-4\) 1, 3 above  
-5\) 1, 2, 3
+- 1\) Encourages using interfaces as opposed to concrete classes
+- 2\) Encourages code decoupling
+- 3\) Specifies that high level modules should not depend on low level modules.
+- 4\) 1, 3 above
+- 5\) 1, 2, 3
 
 <details>
 <summary>Show Answer</summary>
@@ -426,11 +426,11 @@ class SqlServer {
 
 ### Q23) The code above:
 
-1\) Violates the Open Closed Principle  
-2\) Violates the Abstraction Principle.  
-3\) Violates the Encapsulation Principle.  
-4\) Uses the Singleton pattern  
-5\) Uses the Factory Pattern
+- 1\) Violates the Open Closed Principle
+- 2\) Violates the Abstraction Principle.
+- 3\) Violates the Encapsulation Principle.
+- 4\) Uses the Singleton pattern
+- 5\) Uses the Factory Pattern
 
 <details>
 <summary>Show Answer</summary>
@@ -472,11 +472,11 @@ public class MathTest {
 }
 ```
 
-- 1\) test1()
-- 2\) test2()
-- 3\) test2(), test3(), test4()
-- 4\) test1(), test2(), test3(), test4()
-- 5\) test4()
+- - 1\) test1()
+- - 2\) test2()
+- - 3\) test2(), test3(), test4()
+- - 4\) test1(), test2(), test3(), test4()
+- - 5\) test4()
 
 <details>
 <summary>Show Answer</summary>
@@ -500,11 +500,11 @@ public class CustomerId {
 }
 ```
 
-1\) Factory Pattern  
-2\) Observer Pattern  
-3\) Singleton Pattern  
-4\) State Pattern  
-5\) None Of The Above
+- 1\) Factory Pattern
+- 2\) Observer Pattern
+- 3\) Singleton Pattern
+- 4\) State Pattern
+- 5\) None Of The Above
 
 <details>
 <summary>Show Answer</summary>
@@ -517,11 +517,11 @@ public class CustomerId {
 
 ### Q26) YouTube allows many people to subscribe to multiple channels. This is like which design pattern.
 
-1\) Factory Pattern  
-2\) Observer Pattern  
-3\) Singleton Pattern  
-4\) State Pattern  
-5\) Builder Pattern
+- 1\) Factory Pattern
+- 2\) Observer Pattern
+- 3\) Singleton Pattern
+- 4\) State Pattern
+- 5\) Builder Pattern
 
 <details>
 <summary>Show Answer</summary>
@@ -534,11 +534,11 @@ public class CustomerId {
 
 ### Q27) Ethnography in Software Engineering refers to:
 
-1\) Customer Age  
-2\) User Politics  
-3\) User Culture  
-4\) Customer Ethics  
-5\) Customer Location
+- 1\) Customer Age
+- 2\) User Politics
+- 3\) User Culture
+- 4\) Customer Ethics
+- 5\) Customer Location
 
 <details>
 <summary>Show Answer</summary>
@@ -601,11 +601,11 @@ public class CustomerId {
 
 ### Q30) The following will usually cause code to be refactored: (changing code leads to code refactoring)
 
-1\) Changing Requirements  
-2\) Incremental Development Process  
-3\) New Features  
-4\) All of the above  
-5\) None of the above
+- 1\) Changing Requirements
+- 2\) Incremental Development Process
+- 3\) New Features
+- 4\) All of the above
+- 5\) None of the above
 
 <details>
 <summary>Show Answer</summary>
@@ -637,11 +637,11 @@ test 3 - what is expected
 
 ### Q31) What is not true about Unit Testing:
 
-1\) Allows testing of individual parts of the software.  
-2\) Team can execute unit testing before the culmination of the development process.  
-3\) Reduces the cost of testing, as defects are identified and fixed in the early stages of development.  
-4\) Increases the reliability of the code.  
-5\) Allows for testing interactions between various parts of the code.
+- 1\) Allows testing of individual parts of the software.
+- 2\) Team can execute unit testing before the culmination of the development process.
+- 3\) Reduces the cost of testing, as defects are identified and fixed in the early stages of development.
+- 4\) Increases the reliability of the code.
+- 5\) Allows for testing interactions between various parts of the code.
 
 <details>
 <summary>Show Answer</summary>
@@ -654,11 +654,11 @@ test 3 - what is expected
 
 ### Q32) Which architecture pattern is associated with a Web page?
 
-1\) Layered pattern  
-2\) Client-server pattern  
-3\) Pipe-filter pattern  
-4\) Model-view-controller pattern  
-5\) NTier pattern
+- 1\) Layered pattern
+- 2\) Client-server pattern
+- 3\) Pipe-filter pattern
+- 4\) Model-view-controller pattern
+- 5\) NTier pattern
 
 <details>
 <summary>Show Answer</summary>
@@ -671,11 +671,11 @@ test 3 - what is expected
 
 ### Q32) Which architecture pattern is associated with an E-Mail program?
 
-1\) Layered  
-2\) Client-server pattern  
-3\) Pipe-filter pattern  
-4\) Model-view-controller pattern  
-5\) NTier pattern
+- 1\) Layered
+- 2\) Client-server pattern
+- 3\) Pipe-filter pattern
+- 4\) Model-view-controller pattern
+- 5\) NTier pattern
 
 <details>
 <summary>Show Answer</summary>
@@ -692,11 +692,11 @@ test 3 - what is expected
 
 ### Q33) In the diagram above, A represents:
 
-1\) Presentation Layer  
-2\) Business Layer  
-3\) Database Layer  
-4\) Persistence Layer  
-5\) Logic Layer
+- 1\) Presentation Layer
+- 2\) Business Layer
+- 3\) Database Layer
+- 4\) Persistence Layer
+- 5\) Logic Layer
 
 <details>
 <summary>Show Answer</summary>
@@ -709,11 +709,11 @@ test 3 - what is expected
 
 ### Which type of testing would a developer probably do?
 
-1\) Black box - hidden from developer  
-2\) White box - developer knows the code  
-3\) Acceptance - client  
-4\) Release - not developer  
-5\) Graphical User Interface - customer/GUI expert/graphical artist
+- 1\) Black box - hidden from developer
+- 2\) White box - developer knows the code
+- 3\) Acceptance - client
+- 4\) Release - not developer
+- 5\) Graphical User Interface - customer/GUI expert/graphical artist
 
 <details>
 <summary>Show Answer</summary>
@@ -735,11 +735,11 @@ public class Math {
 }
 ```
 
-1\) 3  
-2\) 4  
-3\) 0  
-4\) 5  
-5\) 6
+- 1\) 3
+- 2\) 4
+- 3\) 0
+- 4\) 5
+- 5\) 6
 
 <details>
 <summary>Show Answer</summary>
