@@ -1,4 +1,4 @@
-# Lec 21: Writing Testable Code
+# CSCI 370 Lec 21: Writing Testable Code
 
 ## Key Concepts
 

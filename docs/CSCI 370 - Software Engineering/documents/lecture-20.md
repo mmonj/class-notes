@@ -1,4 +1,4 @@
-# Lec 20: Software Testing and Testable Software
+# CSCI 370 Lec 20: Software Testing and Testable Software
 
 ## Regression Testing
 
