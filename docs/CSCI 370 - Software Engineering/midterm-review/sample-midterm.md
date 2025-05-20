@@ -1,4 +1,4 @@
-# Sample Midterm
+# CSCI 370: Sample Midterm
 
 ### Q2) Functional vs Non-Functional refers to
 

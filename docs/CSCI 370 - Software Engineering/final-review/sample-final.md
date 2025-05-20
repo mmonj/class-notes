@@ -1,4 +1,4 @@
-# Sample Final
+# CSCI 370: Sample Final
 
 CS 370 Software Engineering Sample Final (Summer 2022)
 

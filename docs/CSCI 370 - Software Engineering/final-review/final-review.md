@@ -1,4 +1,4 @@
-# CSCI 370: Software Engineering - Final Review
+# CSCI 370: Final Review
 
 ## 1. Testing Types and Concepts
 
