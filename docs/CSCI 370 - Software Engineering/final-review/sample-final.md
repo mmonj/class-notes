@@ -68,7 +68,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+[Register: RegisterOffice]
 
 </details>
 
@@ -79,7 +79,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+3
 
 </details>
 
@@ -216,7 +216,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+Singleton
 
 </details>
 
@@ -227,7 +227,7 @@ Note, if you wish, you can write an explanation next to your answer.
 <details>
 <summary>Show Answer</summary>
 
-[No answer Provided in the prof's sample final. Poke @Mauri on discord if you have the answer]
+[Insert Explanation Here]
 
 </details>
 
