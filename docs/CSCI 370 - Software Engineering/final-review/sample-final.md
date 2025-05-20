@@ -663,7 +663,7 @@ test 3 - what is expected
 <details>
 <summary>Show Answer</summary>
 
-4. Model-view-controller pattern
+2\) Client-server pattern
 
 </details>
 
