@@ -1,4 +1,4 @@
-# CSCI 370 Lecture 15: Object-Oriented Principles in ADTs, Project Guidelines, and the Memento Pattern
+# CSCI 370 Lec 15: Object-Oriented Principles in ADTs, Project Guidelines, and the Memento Pattern
 
 <small>Tuesday, April 8</small>
 

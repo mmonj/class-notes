@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 8 Review: SOLID Principles Continued, Low-Code/No-Code Platforms, and Dependency Inversion
+# CSCI 370 - Lecture 8: SOLID Principles Continued, Low-Code/No-Code Platforms, and Dependency Inversion
 
 ---
 

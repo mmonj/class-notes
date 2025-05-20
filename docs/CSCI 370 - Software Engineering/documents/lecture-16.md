@@ -1,4 +1,4 @@
-# CSCI 370 Lecture 16: Iterator and Command Design Patterns
+# CSCI 370 Lec 16: Iterator and Command Design Patterns
 
 <small>Thursday, April 10</small>
 

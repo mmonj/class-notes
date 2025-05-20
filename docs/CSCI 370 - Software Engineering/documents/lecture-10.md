@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 10 - Agile Practices, Testing Strategies, and Software Development Principles
+# CSCI 370 - Lec 10 : Agile Practices, Testing Strategies, and Software Development Principles
 
 ### **Agile Development Principles and Practices**
 

@@ -1,4 +1,4 @@
-# Lecture 21: Writing Testable Code
+# Lec 21: Writing Testable Code
 
 ## Key Concepts
 

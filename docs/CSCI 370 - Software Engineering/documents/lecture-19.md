@@ -1,4 +1,4 @@
-# CSCI 370 Lecture 19: Software Architecture Patterns
+# CSCI 370 Lec 19: Software Architecture Patterns
 
 ## Three-Tier Architecture and N-Layer Architecture
 

@@ -1,4 +1,4 @@
-# CSCI 370 Lecture 18: Use Case, Sequence, and State Diagrams in UML
+# CSCI 370 Lec 18: Use Case, Sequence, and State Diagrams in UML
 
 <small>Thursday, April 24</small>
 

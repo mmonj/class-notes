@@ -1,4 +1,4 @@
-# CSCI 370 Lecture 12 Review Sheet: Design Principles, Software Process Models, and the Singleton & Factory Patterns
+# CSCI 370 Lecture 12: Design Principles, Software Process Models, and the Singleton & Factory Patterns
 
 ---
 

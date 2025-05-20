@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 3: The Problem with Inheritance and the Case for Composition
+# CSCI 370 - Lec 3: The Problem with Inheritance and the Case for Composition
 
 ---
 

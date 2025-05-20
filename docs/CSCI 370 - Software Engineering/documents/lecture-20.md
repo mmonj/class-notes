@@ -1,4 +1,4 @@
-# Lecture 20: Software Testing and Testable Software
+# Lec 20: Software Testing and Testable Software
 
 ## Regression Testing
 

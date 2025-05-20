@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 13: Decorator Pattern, Builder Pattern
+# CSCI 370 - Lec 13: Decorator Pattern, Builder Pattern
 
 <small>Tuesday, April 1</small>
 

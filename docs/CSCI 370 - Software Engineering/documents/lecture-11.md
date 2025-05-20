@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 11 Review Sheet - Software Requirements, Design Principles, Development Models, UML Diagrams, and Design Patterns
+# CSCI 370 - Lecture 11: Software Requirements, Design Principles, Development Models, UML Diagrams, and Design Patterns
 
 This lecture primarily focused on reviewing a midterm exam and elaborating on important concepts in software engineering. Below is a detailed breakdown of the key points discussed, with elaborations where necessary.
 

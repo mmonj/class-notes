@@ -1,4 +1,4 @@
-# CSCI 370 - Lecture 7: UML Class Diagrams and SOLID Principles
+# CSCI 370 - Lec 7: UML Class Diagrams and SOLID Principles
 
 ---
 

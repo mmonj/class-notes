@@ -1,4 +1,4 @@
-# CSCI 370 – April 22: Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
+# CSCI 370 – Lec 17: Functional vs Non-Functional Requirements, Use Case Modeling, and UML Diagrams
 
 ---
 
