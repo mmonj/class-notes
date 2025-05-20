@@ -211,7 +211,22 @@ Register: RegisterOffice
 
 &nbsp;
 
-### DP3) Which Design Pattern is shown in the code below?
+```java
+public class Session {
+
+    private static Session _session = null;
+
+    public Session getSession() {
+
+        if (_session == null)
+            _session = new Session();
+
+        return (_session);
+    }
+}
+```
+
+### DP3) Which Design Pattern is shown in the code above?
 
 <details>
 <summary>Show Answer</summary>
@@ -234,19 +249,6 @@ Singleton
 &nbsp;
 
 ```java
-public class Session {
-
-    private static Session _session = null;
-
-    public Session getSession() {
-
-        if (_session == null)
-            _session = new Session();
-
-        return (_session);
-    }
-}
-
 public interface MathFunctions {
 
     double multiply(double a, double b);
