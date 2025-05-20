@@ -33,5 +33,6 @@
 ## Final Review
 
 - [Practice Exam](./final-review/sample-final)
+- [Final Exam Review](./final-review/final-review)
 
 &nbsp;
