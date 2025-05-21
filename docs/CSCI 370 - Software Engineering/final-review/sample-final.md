@@ -335,10 +335,10 @@ Based on the diagram above:
     <p>Client Server ___</p>
   </div>
   <div>
-    <p>4) Airplane Flying Software</p>
-    <p>3) Allows many changes</p>
-    <p>2) Using Open-Source Software</p>
     <p>1) Email Program</p>
+    <p>2) Using Open-Source Software</p>
+    <p>3) Allows many changes</p>
+    <p>4) Airplane Flying Software</p>
   </div>
 </div>
 
@@ -563,10 +563,10 @@ public class CustomerId {
     <p>Software Requirements ___</p>
   </div>
   <div>
-    <p>3) 3 tier architecture (presentation/business/database)</p>
-    <p>2) Model View Controller architecture</p>
-    <p>4) TDD - Unit testing</p>
     <p>1) Often includes a User Story (Who, What, Why, Acceptance Criteria)</p>
+    <p>2) Model View Controller architecture</p>
+    <p>3) 3 tier architecture (presentation/business/database)</p>
+    <p>4) TDD - Unit testing</p>
   </div>
 </div>
 
