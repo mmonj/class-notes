@@ -52,7 +52,7 @@ If any listed supplemental video below uses different notation or methods than t
 ## Memory Organization & Cache
 
 - [Notes April 10](./notes/Notes%20April%2010%20-%20Introduce%20Memory.pdf) - Memory Hierarchy, Address Decoding, and RAM Expansion
-- [Notes April 22](./notes/Notes%20April%2022%20&%2029%20-%20Introduce%20Cache%20&%20Direct%20Mapping.pdf) - Intro to Cache & Direct Mapping
+- [Notes April 22 & 29](./notes/Notes%20April%2022%20&%2029%20-%20Introduce%20Cache%20&%20Direct%20Mapping.pdf) - Intro to Cache & Direct Mapping
 - [Notes May 1](./notes/Notes%20May%201%20-%20Cache%20Mapping%20Strategies.pdf) - Cache Mapping Strategies (Associative, Direct, Set Associative)
 - [Summary of May 6](./notes/Notes%20May%206%20Summary) - Cache Misses, Associativity, Replacement Policies, and Snooping Protocols
 
