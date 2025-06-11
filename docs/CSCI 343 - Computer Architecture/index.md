@@ -55,5 +55,6 @@ If any listed supplemental video below uses different notation or methods than t
 - [Notes April 22 & 29](./notes/Notes%20April%2022%20&%2029%20-%20Introduce%20Cache%20&%20Direct%20Mapping.pdf) - Intro to Cache & Direct Mapping
 - [Notes May 1](./notes/Notes%20May%201%20-%20Cache%20Mapping%20Strategies.pdf) - Cache Mapping Strategies (Associative, Direct, Set Associative)
 - [Summary of May 6](./notes/Notes%20May%206%20Summary) - Cache Misses, Associativity, Replacement Policies, and Snooping Protocols
+- [Notes may 8](./notes/Notes%20May%208%20-%20Cache%20Performance.md) - Cache Performance
 
 &nbsp;
