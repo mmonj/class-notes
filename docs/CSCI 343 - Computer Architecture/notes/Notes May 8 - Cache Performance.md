@@ -97,19 +97,21 @@ The value of **miss penalty** depends on the memory hierarchy:
 
 #### Slide 38 - Chapter 5
 
-**Hit time**: 1 cycle (takes 1 cycle to get the data from cache 1)
+Hit time: **1 cycle** (takes 1 cycle to get the data from cache 1)
 
-**Miss penalty**: 20 cycles (it takes 20 cycles to get data from main memory)
+Miss penalty: **20 cycles** (it takes 20 cycles to get data from main memory)
 
-**Instruction cache (I-Cache)** miss rate: 5% (5 instructions out of 100 are not found in the cache)
+Instruction cache (I-Cache) miss rate: **5%** (5 instructions out of 100 are not found in the cache)
 
-1 clock cycle = 1ns → hit time = 1ns
+1 clock cycle = **1ns** &nbsp; → &nbsp; hit time = **1ns**
+
+AMAT:
 
 ```
-AMAT = hit time + miss rate × miss penalty
-     = 1ns + 0.05 × 20ns
-     = 1ns + 1ns
-     = 2ns
+AMAT    = hit time + miss rate × miss penalty
+        = 1ns + 0.05 × 20ns
+        = 1ns + 1ns
+        = 2ns
 ```
 
 ## Problem Statement
@@ -120,44 +122,56 @@ Assume that main memory accesses take 70 ns and that memory accesses are 36% of 
 | --------- | ------------ | ----------- |
 | P1        | 8.0%         | 0.66 ns     |
 
+&nbsp;
+
 - a\) Assume that the L1 hit time determines the cycle time for the processor. What is the clock
   rate?
 
-  > L1 hit time = 1 cycle = .66ns
-  > clock rate = 1/clock cycle
+  ```
+  L1 hit time = 1 cycle = .66ns
+  clock rate = 1/clock cycle
+  ```
 
 - b\) What is the Average Memory Access Time for the processor (in ns)?
 
-  > AMAT = L1 hit time + L1 miss rate × L1 miss penalty
+  ```
+  AMAT = L1 hit time + L1 miss rate × L1 miss penalty
+  ```
 
 - c\) Use the AMAT from above to find the average number of cycles for a memory access. (CPI)
 
-  > average number of cycles for a memory access = AMAT/clock cycle time
+  ```
+  average number of cycles for a memory access = AMAT/clock cycle time
+  ```
 
 - d\) Assuming a base CPI of 1.0 without any memory stalls (for the rest of the instruction types in
   the program), what is the total average CPI
 
-  > Memory access: 36% (average number of cycles for a memory access CPI)
-  > Other instructions: 64% (1 CPI)
-  > Average CPI = (.64 × 1) + (0.36 × average number of cycles for a memory access CPI)
+  ```
+  Memory access: 36% (average number of cycles for a memory access CPI)
+  Other instructions: 64% (1 CPI)
+  Average CPI = (.64 × 1) + (0.36 × average number of cycles for a memory access CPI)
+  ```
 
 - e\) We will consider the addition of an L2 cache to try to reduce the average CPI; on a miss, P1
   will now first check L2 cache, and only if that is a miss, will then need a main memory access.
   The L2 miss rate is 50%, and L2 hit time is 5.62ns
 
-  > The first-level (L1) cache is small enough to provide a one- or two-cycle access time.
-  >
-  > The second-level (L2) cache is also built from SRAM but is larger, and therefore slower, than the L1 cache.
-  >
-  > The processor first looks for the data in the L1 cache. If the L1 cache misses, the processor looks in the L2 cache. If the L2 cache misses, the processor fetches the data from main memory.
-  >
-  > Many modern systems add even more levels of cache to the memory hierarchy, because accessing main memory is so slow.
+  ```
+  The first-level (L1) cache is small enough to provide a one- or two-cycle access time.
 
-  &nbsp;
+  The second-level (L2) cache is also built from SRAM but is larger, and therefore slower, than the L1 cache.
 
-  > AMAT = L1 hit time + L1 miss rate × L1 miss penalty
-  > L1 miss penalty = L2 hit time + L2 miss rate × main memory access time
-  >
-  > AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × main memory access time)
+  The processor first looks for the data in the L1 cache. If the L1 cache misses, the processor looks in the L2 cache. If the L2 cache misses, the processor fetches the data from main memory.
+
+  Many modern systems add even more levels of cache to the memory hierarchy, because accessing main memory is so slow.
+  ```
+
+  ```
+  AMAT = L1 hit time + L1 miss rate × L1 miss penalty
+  L1 miss penalty = L2 hit time + L2 miss rate × main memory access time
+
+  AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × main memory access time)
+  ```
 
   ![Cache Structure](image-3.png)
