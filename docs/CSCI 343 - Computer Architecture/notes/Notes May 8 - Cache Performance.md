@@ -69,31 +69,41 @@ Note: sometimes Base CPI (ideal cache) = 2
 #### Memory stall cycles
 
 ```
-Memory stall cycles     = Memory accesses / Program × Miss Rate × Miss Penalty
-                        = Instructions / Program × Misses / Instruction × Miss Penalty
+Memory stall cycles = Memory accesses / Program × Miss Rate × Miss Penalty
+                    = Instructions / Program × Misses / Instruction × Miss Penalty
 ```
 
 #### Average Memory Access Time (AMAT)
 
-The value of **miss penalty** depends on the memory hierarchy:
+The **Average Memory Access Time (AMAT)** is a fundamental metric for evaluating the performance of a memory hierarchy. It quantifies the average time required to access a memory location, accounting for both cache hits and misses.
 
-- **With only one level of cache (L1):**
+```
+AMAT = L1 hit time + (L1 miss rate × L1 miss penalty)
+```
 
-  ```
-  AMAT = L1 hit time + L1 miss rate × L1 miss penalty
-  ```
+Where:
 
-  Here, the L1 miss penalty is the time to access main memory.
+- **L1 hit time** is the time to access data from the L1 cache.
+- **L1 miss rate** is the fraction of memory accesses that are not found in the L1 cache.
+- **L1 miss penalty** is the additional time required to retrieve data from the next level of the memory hierarchy (e.g., L2 cache or main memory) after a miss.
 
-- **With two levels of cache (L1 and L2):**
+If there is only a single level of cache, the **L1 miss penalty** is simply the time to access main memory:
 
-  ```
-  L1 miss penalty = L2 hit time + L2 miss rate × main memory access time
+```
+L1 miss penalty = main memory access time
+```
 
-  AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × main memory access time)
-  ```
+If a second-level cache (L2) is present, the **L1 miss penalty** becomes the average time to access L2, which itself accounts for possible L2 misses:
 
-  In this case, the L1 miss penalty is the average time to access L2 and, if missed, falls back to main memory.
+```
+L1 miss penalty = L2 hit time + (L2 miss rate × main memory access time)
+```
+
+Substituting this into the original AMAT equation yields:
+
+```
+AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × main memory access time)
+```
 
 #### Slide 38 - Chapter 5
 
@@ -108,10 +118,10 @@ Instruction cache (I-Cache) miss rate: **5%** (5 instructions out of 100 are not
 AMAT:
 
 ```
-AMAT    = hit time + miss rate × miss penalty
-        = 1ns + 0.05 × 20ns
-        = 1ns + 1ns
-        = 2ns
+AMAT = hit time + miss rate × miss penalty
+     = 1ns + 0.05 × 20ns
+     = 1ns + 1ns
+     = 2ns
 ```
 
 ## Problem Statement
