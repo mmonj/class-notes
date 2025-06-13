@@ -70,7 +70,7 @@ Note: sometimes Base CPI (ideal cache) = 2
 
 ```
 Memory stall cycles = Memory accesses / Program × Miss Rate × Miss Penalty
-                    = Instructions / Program × Misses / Instruction × Miss Penalty
+                    = Instructions/Program × Misses/Instruction × Miss Penalty
 ```
 
 #### Average Memory Access Time (AMAT)
