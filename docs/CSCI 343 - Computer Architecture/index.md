@@ -36,7 +36,7 @@ If any listed supplemental video below uses different notation or methods than t
 
 #### Class Notes
 
-- [Notes March 20 - April 1](./notes/Notes%20Datapath%20Merged.with_toc.pdf) - Datapath
+- [Notes March 20 - April 1](./notes/Notes%20Datapath%20Merged.with_toc.pdf) - Datapath (has table of contents).
 - [Summary of April 3 Lecture](./notes/Notes%20April%203) - MIPS Pipelining, Parallelism, and Hazards
 - [Summary of April 8 Lecture](./notes/Notes%20April%208%20Summary) - Midterm 2 Review
 
