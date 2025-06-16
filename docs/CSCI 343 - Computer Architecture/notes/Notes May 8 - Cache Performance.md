@@ -126,7 +126,7 @@ AMAT = hit time + miss rate × miss penalty
 
 ## Problem Statement
 
-Assume that main memory accesses take 70 ns and that memory accesses are 36% of all instructions. The following table shows data for the L1 cache attached to processor P1.
+Assume that main memory accesses take **70ns** and that memory accesses are **36%** of all instructions. The following table shows data for the L1 cache attached to processor P1:
 
 | Processor | L1 Miss Rate | L1 Hit Time |
 | --------- | ------------ | ----------- |
