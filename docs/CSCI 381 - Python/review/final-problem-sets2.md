@@ -2,19 +2,7 @@
 
 For each of the following questions, you will define a lambda function that returns the stated desired result. You are not allowed to create and use helper functions.
 
-1. Write a lambda function `longest_word` that accepts a string and returns the longest word.
-
-   **Example Usage:**
-
-   ```python
-   longest_word = # define your lambda here
-   print(longest_word("The pickle parade danced on a trampoline under a disco ball"))
-   # Expected Output: "trampoline"
-   ```
-
-   &nbsp;
-
-2. Write a lambda function `transform_strings` that accepts a list of strings and returns a new list where each string is reversed if its length is even, otherwise it should be converted to uppercase.
+1. Write a lambda function `transform_strings` that accepts a list of strings and returns a new list where each string is reversed if its length is even, otherwise it should be converted to uppercase.
 
    **Example Usage:**
 
@@ -26,18 +14,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-3. Write a lambda function `sum_digits` that accepts a string and returns the sum of all digits found in the string.
-
-   **Example Usage:**
-
-   ```python
-   print(sum_digits("a1b2c3"))
-   # Expected Output: 6
-   ```
-
-   &nbsp;
-
-4. Write a lambda function `filter_and_transform` that accepts a list of integers and returns a new list where:
+2. Write a lambda function `filter_and_transform` that accepts a list of integers and returns a new list where:
 
    - All odd numbers are squared.
    - All even numbers are doubled.
@@ -50,7 +27,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-5. Write a lambda function `count_vowels` that accepts a string and returns the count of vowels (a, e, i, o, u) in the string.
+3. Write a lambda function `count_vowels` that accepts a string and returns the count of vowels (a, e, i, o, u) in the string.
 
    ```python
    print(count_vowels("Hello, World!"))
@@ -59,7 +36,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-6. Write a lambda function `filter_dict` that accepts a dictionary and returns a new dictionary containing only key-value pairs where the key's paired value is greater than a given threshold.
+4. Write a lambda function `filter_dict` that accepts a dictionary and returns a new dictionary containing only key-value pairs where the key's paired value is greater than a given threshold.
 
    **Example Usage:**
 
@@ -70,7 +47,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-7. Write a lambda function `common_elements` that accepts two lists and returns the sorted intersection of the two lists.
+5. Write a lambda function `common_elements` that accepts two lists and returns the sorted intersection of the two lists.
 
    **Example Usage:**
 
@@ -81,7 +58,7 @@ For each of the following questions, you will define a lambda function that retu
 
    &nbsp;
 
-8. Write a lambda function `alternate_case` that accepts a string and returns a new string where characters at even indices are uppercase and odd indices are lowercase.
+6. Write a lambda function `alternate_case` that accepts a string and returns a new string where characters at even indices are uppercase and odd indices are lowercase.
 
    **Example Usage:**
 
@@ -91,28 +68,3 @@ For each of the following questions, you will define a lambda function that retu
    ```
 
    &nbsp;
-
-9. Write a lambda function `sum_squared_diff` that accepts two lists of numbers of the same length and returns the sum of the squared differences between corresponding elements.
-
-   **Example Usage:**
-
-   ```python
-   print(sum_squared_diff([1, 2, 3], [3, 2, 1]))
-   # Expected Output: 8
-   # (3 - 1)**2 + (2 - 2)**2 + (1 - 3)**2 = 8
-   ```
-
-   &nbsp;
-
-10. Write a lambda function `filter_primes` that accepts a list of numbers and returns a list of primes.
-
-    Hint: The `all()` builtin may be useful here.
-
-    **Example Usage:**
-
-    ```python
-    print(filter_primes([2, 3, 4, 5, 6, 7, 8, 9, 10]))
-    # Expected Output: [2, 3, 5, 7]
-    ```
-
-    &nbsp;
