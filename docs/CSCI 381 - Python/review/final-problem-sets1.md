@@ -190,3 +190,19 @@
     print(calc(5))  # Output: 25 (cached)
     print(calc(7))  # Output: 49 (cached)
     ```
+
+    &nbsp;
+
+11. The file `poem.txt` contains several lines of text. Write a function that opens the file, reads all lines, and prints only the lines that contain more than 30 characters.
+
+    **a.** Modify your function to return a list of all words (separated by whitespace) that appear more than once in the file.
+
+    **b.** Write a function that counts the number of lines that start with a vowel (a, e, i, o, u, case-insensitive).
+
+    &nbsp;
+
+12. Write a function that takes a filename and returns the number of unique words in the file (case-insensitive, ignore punctuation).
+
+    **a.** Modify your function to also return the 5 most common words and their counts.
+
+    **b.** Write a generator function that yields each sentence (ending with a period, exclamation mark, or question mark) from the file, one at a time.
