@@ -64,18 +64,7 @@
 
    &nbsp;
 
-7. What are the results of rounding these numbers? Why?
-
-   ```python
-   >>> round(1.7)
-   >>> round(2.5)
-   >>> round(1.5)
-   >>> round(2.6)
-   ```
-
-   &nbsp;
-
-8. Explain the output of these expressions:
+7. Explain the output of these expressions:
 
    ```python
    print(bool('False'))
@@ -86,7 +75,7 @@
 
    &nbsp;
 
-9. What will the output be?
+8. What will the output be?
 
    ```python
    print("{} {} {}".format("seven", "eight", "nine"))
@@ -94,15 +83,15 @@
 
    &nbsp;
 
+9. What will the output be?
+
+   ```python
+   print("{0} is the first, {1} is the second, and {0} is the first again".format("one", "two"))
+   ```
+
+   &nbsp;
+
 10. What will the output be?
-
-    ```python
-    print("{0} is the first, {1} is the second, and {0} is the first again".format("one", "two"))
-    ```
-
-    &nbsp;
-
-11. What will the output be?
 
     ```python
     print("{0}, {val1}, and {1}.".format("the penguin borrowed a ladder", "the kangaroo came by for a smoke", val1="the otter mugged me"))
@@ -110,7 +99,7 @@
 
     &nbsp;
 
-12. What will the output be?
+11. What will the output be?
 
     ```python
     print("{1} {0} {val1}".format("the penguin borrowed a ladder", "the kangaroo came by for a smoke", val1="the otter mugged me"))
