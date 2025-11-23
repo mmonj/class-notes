@@ -84,7 +84,7 @@
 
    &nbsp;
 
-5. Given a list of integers, write a function `remove_every_nth_element(lst: list[int], n: int)` that removes every n-th element from the list without creating a new list. Use the `del` keyword.
+5. Given a list of integers, write a function `remove_every_nth_element(elements: list[int], n: int)` that removes every n-th element from the list without creating a new list. Use the `del` keyword.
 
    **Example:**
 
@@ -147,16 +147,27 @@
 
    &nbsp;
 
-10. Write a function `min_coin_change(coins: list[int], amount: int) -> int` that returns the minimum number of coins needed to make up the given amount. If it's not possible, return `-1`.
-
-    The argument `coins` is a list of integers, where each integer represents the denomination of coin you have available.
+10. Write a function `merge_sorted_lists(list1: list[int], list2: list[int]) -> list[int]` that merges two sorted lists into a single sorted list without using the built-in `sorted()` function.
 
     **Example:**
 
     ```python
-    print(min_coin_change([5, 10, 25], 6))   # Output: -1
-    print(min_coin_change([1, 5, 10, 25], 7))  # Output: 3
-    print(min_coin_change([5, 1, 25, 10], 6))   # Output: 2
+    result = merge_sorted_lists([1, 3, 5], [2, 4, 6])
+    print(result)
+    # Expected Output: [1, 2, 3, 4, 5, 6]
+    ```
+
+    &nbsp;
+
+11. Write a function `rotate_list(items: list, k: int) -> list` that rotates the list `k` positions to the right, returning a new list without modifying the original.
+
+    **Example:**
+
+    ```python
+    elements = [1, 2, 3, 4, 5]
+    rotated = rotate_list(elements, 2)
+    print(rotated) # Expected Output: [4, 5, 1, 2, 3]
+    print(elements) # Expected Output: [1, 2, 3, 4, 5] (unchanged)
     ```
 
     &nbsp;
