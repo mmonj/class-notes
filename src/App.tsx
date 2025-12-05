@@ -1,7 +1,21 @@
-import { createEffect, createSignal, For, onMount } from "solid-js";
+import {
+  createEffect,
+  createMemo,
+  createSignal,
+  For,
+  onMount,
+  Show,
+  type Accessor,
+} from "solid-js";
 import { createStore } from "solid-js/store";
 import "./App.css";
-import { calculateScore, getDefaultGradeRows, NUM_GRADE_ROWS } from "./utils";
+import {
+  getAggregatedScore,
+  getDefaultGradeRows,
+  getLetterGrade,
+  GRADE_THRESHOLDS,
+  NUM_GRADE_ROWS,
+} from "./utils";
 import { setupAudioBeatEffect } from "./utils/audioVisualizer";
 import type { TGradeRow } from "./utils/types";
 
@@ -23,7 +37,7 @@ export default function App() {
   let currentPlayCount = 0;
 
   function handleToggleAudioOverlay(): void {
-    const audio = document.getElementById("beat-audio") as HTMLAudioElement | null;
+    const audio = document.querySelector<HTMLAudioElement>("#beat-audio");
     if (!audio) return;
 
     if (showOverlay()) {
@@ -58,17 +72,19 @@ export default function App() {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (saved) {
       try {
-        const parsed = JSON.parse(saved) as number[][];
-        const limited = parsed.slice(0, NUM_GRADE_ROWS);
-        const restored: TGradeRow[] = limited.map(([e1, e2, e3]) => ({
+        let storedGrades = JSON.parse(saved) as number[][];
+        storedGrades = storedGrades.slice(0, NUM_GRADE_ROWS);
+
+        const gradeDataList: TGradeRow[] = storedGrades.map(([e1, e2, e3]) => ({
           e1: e1 ?? 0,
           e2: e2 ?? 0,
           e3: e3 ?? 0,
         }));
-        while (restored.length < NUM_GRADE_ROWS) {
-          restored.push({ e1: 0, e2: 0, e3: 0 });
+
+        while (gradeDataList.length < NUM_GRADE_ROWS) {
+          gradeDataList.push({ e1: 0, e2: 0, e3: 0 });
         }
-        setRows(restored);
+        setRows(gradeDataList);
       } catch {
         console.warn("invalid local storage data, resetting");
       }
@@ -132,7 +148,7 @@ export default function App() {
           ref={audioElement!}
         />
       </div>
-      <div class="overflow-x-auto">
+      <div class="overflow-x-auto py-4">
         <table class="w-full min-w-[600px] table-auto border-collapse text-lg">
           <thead>
             <tr class="border-b">
@@ -145,80 +161,117 @@ export default function App() {
           </thead>
           <tbody>
             <For each={rows}>
-              {(row, idx) => {
-                const handleScoreInput = (field: keyof TGradeRow, value: number) => {
-                  if (value < MIN_SCORE || value > MAX_SCORE || isNaN(value)) return;
-                  setRows(idx(), field, value);
-                };
-
-                return (
-                  <tr class="border-b">
-                    <td class="px-4 py-2">{idx() + 1}</td>
-                    <td class="px-4 py-2">
-                      <div class="relative">
-                        <input
-                          type="number"
-                          class="w-24 px-2 py-1 border rounded"
-                          min={MIN_SCORE}
-                          max={MAX_SCORE}
-                          value={row.e1}
-                          onInput={(e) => handleScoreInput("e1", +e.currentTarget.value)}
-                        />
-                        {showOverlay() && (
-                          <img
-                            src={beaterOfStudents}
-                            alt="overlay"
-                            class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
-                          />
-                        )}
-                      </div>
-                    </td>
-                    <td class="px-4 py-2">
-                      <div class="relative">
-                        <input
-                          type="number"
-                          class="w-24 px-2 py-1 border rounded"
-                          min={MIN_SCORE}
-                          max={MAX_SCORE}
-                          value={row.e2}
-                          onInput={(e) => handleScoreInput("e2", +e.currentTarget.value)}
-                        />
-                        {showOverlay() && (
-                          <img
-                            src={beaterOfStudents}
-                            alt="overlay"
-                            class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
-                          />
-                        )}
-                      </div>
-                    </td>
-                    <td class="px-4 py-2">
-                      <div class="relative">
-                        <input
-                          type="number"
-                          class="w-24 px-2 py-1 border rounded"
-                          min={MIN_SCORE}
-                          max={MAX_SCORE}
-                          value={row.e3}
-                          onInput={(e) => handleScoreInput("e3", +e.currentTarget.value)}
-                        />
-                        {showOverlay() && (
-                          <img
-                            src={beaterOfStudents}
-                            alt="overlay"
-                            class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
-                          />
-                        )}
-                      </div>
-                    </td>
-                    <td class="px-4 py-2">{calculateScore(row.e1, row.e2, row.e3)}</td>
-                  </tr>
-                );
-              }}
+              {(row, idx) => (
+                <AttemptRow
+                  idx={idx()}
+                  row={row}
+                  showOverlay={showOverlay}
+                  onScoreChange={(field, value) => {
+                    if (value < MIN_SCORE || value > MAX_SCORE || isNaN(value))
+                      return;
+                    setRows(idx(), field, value);
+                  }}
+                />
+              )}
             </For>
           </tbody>
         </table>
       </div>
+      <div class="text-sm py-2">
+        <p class="font-semibold mb-2">Grading Thresholds Used:</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <For each={GRADE_THRESHOLDS}>
+            {(entry) => (
+              <span>
+                <span class="font-semibold">{entry.grade}:</span>{" "}
+                {entry.minScore}+
+              </span>
+            )}
+          </For>
+          <span>
+            <span class="font-semibold">F:</span> Below{" "}
+            {GRADE_THRESHOLDS[GRADE_THRESHOLDS.length - 1].minScore}
+          </span>
+        </div>
+      </div>
     </>
+  );
+}
+
+interface AttemptRowProps {
+  idx: number;
+  row: TGradeRow;
+  showOverlay: Accessor<boolean>;
+  onScoreChange: (field: keyof TGradeRow, value: number) => void;
+}
+
+function AttemptRow(props: AttemptRowProps) {
+  const aggregatedScore = createMemo(() =>
+    getAggregatedScore(props.row.e1, props.row.e2, props.row.e3)
+  );
+  const letterGrade = createMemo(() => getLetterGrade(aggregatedScore()));
+  const hasScores = createMemo(
+    () => props.row.e1 !== 0 || props.row.e2 !== 0 || props.row.e3 !== 0
+  );
+
+  const ScoreInput = (inputProps: {
+    field: keyof TGradeRow;
+    value: number;
+  }) => (
+    <div class="relative">
+      <input
+        type="number"
+        class="w-24 px-2 py-1 border rounded"
+        min={MIN_SCORE}
+        max={MAX_SCORE}
+        value={inputProps.value}
+        onInput={(e) =>
+          props.onScoreChange(inputProps.field, +e.currentTarget.value)
+        }
+      />
+      {props.showOverlay() && (
+        <img
+          src={beaterOfStudents}
+          alt="overlay"
+          class="beater1 absolute right-1 top-1 w-6 h-6 pointer-events-none opacity-80 transition-transform duration-100"
+        />
+      )}
+    </div>
+  );
+
+  return (
+    <tr class="border-b">
+      <td class="px-4 py-2">{props.idx + 1}</td>
+      <td class="px-4 py-2">
+        <ScoreInput field="e1" value={props.row.e1} />
+      </td>
+      <td class="px-4 py-2">
+        <ScoreInput field="e2" value={props.row.e2} />
+      </td>
+      <td class="px-4 py-2">
+        <ScoreInput field="e3" value={props.row.e3} />
+      </td>
+      <td class="px-4 py-2">
+        <div class="flex flex-col items-center gap-1">
+          <div>
+            {aggregatedScore()}
+            {"  "}
+            <Show when={hasScores()}>
+              <span
+                classList={{
+                  "font-bold": true,
+                  "text-success": aggregatedScore() >= 66,
+                  "text-warning":
+                    aggregatedScore() >= 40 && aggregatedScore() < 66,
+                  "text-danger": aggregatedScore() < 40,
+                }}
+              >
+                ({letterGrade()})
+              </span>
+            </Show>
+          </div>
+        </div>
+      </td>
+    </tr>
   );
 }
