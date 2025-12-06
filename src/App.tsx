@@ -105,8 +105,15 @@ export default function App() {
 
   return (
     <>
-      <h1>CSCI 320 Obrenic Grade Calculator</h1>
+      <h1>CSCI 320/331 Obrenic Grade Calculator</h1>
       <p class="text-xl py-4">Input your normalized exam scores below</p>
+      {/* <div class="text-sm text-muted py-2">
+        <p class="font-semibold">How to calculate normalized exam score:</p>
+        <p>
+          Divide your plain score (points earned) by the full credit value (f₁,
+          f₂, or f₃) for that exam.
+        </p>
+      </div> */}
       <div class="text-center p-4 flex items-center justify-center gap-2">
         <button
           class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center justify-center gap-2"

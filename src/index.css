@@ -66,6 +66,10 @@ button:focus-visible {
   color: #f75a68;
 }
 
+.text-muted {
+  color: #8a8a8a;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
