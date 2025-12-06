@@ -1,0 +1,57 @@
+:root {
+  --blue-color: rgb(81, 161, 247);
+  --blue-dark-color: rgb(50, 115, 178);
+  --success-color: rgb(40, 167, 69);
+}
+
+details {
+  margin: 10px 0;
+}
+
+details {
+  background-color: var(--blue-color);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+details:hover {
+  background-color: var(--blue-dark-color);
+}
+
+details[open] {
+  color: inherit;
+  border: 5px solid var(--success-color);
+  background-color: transparent;
+  padding-top: 0px;
+}
+
+details[open]:hover {
+  cursor: inherit;
+}
+
+details summary {
+  font-weight: bold;
+  color: white;
+}
+
+details[open] summary {
+  background-color: var(--success-color);
+  padding: 5px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 10px;
+}
+
+details[open] summary:hover {
+  cursor: pointer;
+}
+
+.main-content blockquote {
+  border-color: #94bfea;
+}

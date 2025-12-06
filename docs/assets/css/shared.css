@@ -1,0 +1,47 @@
+@media print {
+  li {
+    page-break-inside: avoid;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .page-header {
+    display: none;
+  }
+
+  .go-back-strip {
+    display: none;
+  }
+}
+
+.go-back-strip {
+  position: relative;
+  top: -2.5rem;
+  width: 100%;
+}
+
+.go-back-strip-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64rem;
+  padding: 0 1rem;
+}
+
+.go-back-strip a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.go-back-strip:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.go-back-strip a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
