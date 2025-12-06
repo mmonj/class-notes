@@ -55,3 +55,7 @@ details[open] summary:hover {
 .main-content blockquote {
   border-color: #94bfea;
 }
+
+li {
+  page-break-inside: avoid !important;
+}

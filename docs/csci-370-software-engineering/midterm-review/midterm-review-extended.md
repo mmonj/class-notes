@@ -230,11 +230,3 @@
 - **Multiplicity**: 1, 0..1, 0.._, 1.._
 
 ---
-
-<style>
-  @media print {
-    li {
-      page-break-inside: avoid !important;
-    }
-  }
-</style>
