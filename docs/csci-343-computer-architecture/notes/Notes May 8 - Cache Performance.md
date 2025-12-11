@@ -224,3 +224,13 @@ Assume that main memory accesses take **70ns** and that memory accesses are **36
   \]
 
   </details>
+
+The first-level (L1) cache is small enough to provide a one- or two-cycle access time.
+
+The second-level (L2) cache is also built from SRAM but is larger, and therefore slower, than the L1 cache.
+
+The processor first looks for the data in the L1 cache. If the L1 cache misses, the processor looks in the L2 cache. If the L2 cache misses, the processor fetches the data from main memory.
+
+Many modern systems add even more levels of cache to the memory hierarchy, because accessing main memory is so slow.
+
+![Cache Structure](image-3.png)
