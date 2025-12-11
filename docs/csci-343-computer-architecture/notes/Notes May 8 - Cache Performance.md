@@ -124,7 +124,7 @@ AMAT = hit time + miss rate × miss penalty
      = 2ns
 ```
 
-## Problem Statement
+## Problem Statements
 
 Assume that main memory accesses take **70ns** and that memory accesses are **36%** of all instructions. The following table shows data for the L1 cache attached to processor P1:
 
@@ -134,54 +134,93 @@ Assume that main memory accesses take **70ns** and that memory accesses are **36
 
 &nbsp;
 
-- a\) Assume that the L1 hit time determines the cycle time for the processor. What is the clock
-  rate?
+- a) Assume that the L1 hit time determines the cycle time for the processor. What is the clock rate?
 
-  ```
-  L1 hit time = 1 cycle = .66ns
-  clock rate = 1/clock cycle
-  ```
+  <details>
+  <summary>Show Answer</summary>
 
-- b\) What is the Average Memory Access Time for the processor (in ns)?
+  Given:
+  \( \text{L1 hit time} = 1 \text{ cycle} = 0.66 \text{ ns} \)
 
-  ```
-  AMAT = L1 hit time + L1 miss rate × L1 miss penalty
-  ```
+  <br/>
 
-- c\) Use the AMAT from above to find the average number of cycles for a memory access. (CPI)
+  The clock rate is the reciprocal of the clock cycle time:
+  \[
+  \text{Clock Rate} = \frac{1}{\text{Clock Cycle Time}} = \frac{1}{0.66 \times 10^{-9}} \approx 1.515 \text{ GHz}
+  \]
 
-  ```
-  average number of cycles for a memory access = AMAT/clock cycle time
-  ```
+  </details>
 
-- d\) Assuming a base CPI of 1.0 without any memory stalls (for the rest of the instruction types in
-  the program), what is the total average CPI
+- b) What is the Average Memory Access Time for the processor (in ns)?
 
-  ```
-  Memory access: 36% (average number of cycles for a memory access CPI)
-  Other instructions: 64% (1 CPI)
-  Average CPI = (.64 × 1) + (0.36 × average number of cycles for a memory access CPI)
-  ```
+  <details>
+  <summary>Show Answer</summary>
 
-- e\) We will consider the addition of an L2 cache to try to reduce the average CPI; on a miss, P1
-  will now first check L2 cache, and only if that is a miss, will then need a main memory access.
-  The L2 miss rate is 50%, and L2 hit time is 5.62ns
+  Formula:
+  \[
+  \text{AMAT} = \text{L1 hit time} + \text{L1 miss rate} \times \text{L1 miss penalty}
+  \]
 
-  ```
-  The first-level (L1) cache is small enough to provide a one- or two-cycle access time.
+  Substituting values:
+  \[
+  \text{AMAT} = 0.66 \text{ ns} + 0.08 \times 70 \text{ ns} = 0.66 \text{ ns} + 5.6 \text{ ns} = 6.26 \text{ ns}
+  \]
 
-  The second-level (L2) cache is also built from SRAM but is larger, and therefore slower, than the L1 cache.
+  </details>
 
-  The processor first looks for the data in the L1 cache. If the L1 cache misses, the processor looks in the L2 cache. If the L2 cache misses, the processor fetches the data from main memory.
+- c) Use the AMAT from above to find the average number of cycles for a memory access. (CPI)
 
-  Many modern systems add even more levels of cache to the memory hierarchy, because accessing main memory is so slow.
-  ```
+  <details>
+  <summary>Show Answer</summary>
 
-  ```
-  AMAT = L1 hit time + L1 miss rate × L1 miss penalty
-  L1 miss penalty = L2 hit time + L2 miss rate × main memory access time
+  Formula:
+  \[
+  \text{Average Cycles per Memory Access} = \frac{\text{AMAT}}{\text{Clock Cycle Time}}
+  \]
 
-  AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × main memory access time)
-  ```
+  Substituting values:
+  \[
+  \text{Average Cycles per Memory Access} = \frac{6.26 \text{ ns}}{0.66 \text{ ns}} \approx 9.48 \text{ cycles}
+  \]
 
-  ![Cache Structure](image-3.png)
+  </details>
+
+- d) Assuming a base CPI of 1.0 without any memory stalls (for the rest of the instruction types in the program), what is the total average CPI?
+
+  <details>
+  <summary>Show Answer</summary>
+
+  Formula:
+  \[
+  \text{Average CPI} = (0.64 \times 1) + (0.36 \times \text{Average Cycles per Memory Access})
+  \]
+
+  Substituting values:
+  \[
+  \text{Average CPI} = (0.64 \times 1) + (0.36 \times 9.48) = 0.64 + 3.41 = 4.05
+  \]
+
+  </details>
+
+- e) We will consider the addition of an L2 cache to try to reduce the average CPI; on a miss, P1 will now first check L2 cache, and only if that is a miss, will then need a main memory access. The L2 miss rate is 50%, and L2 hit time is 5.62ns.
+
+  <details>
+  <summary>Show Answer</summary>
+
+  Formula:
+  \[
+  \text{AMAT} = \text{L1 hit time} + \text{L1 miss rate} \times (\text{L2 hit time} + \text{L2 miss rate} \times \text{Main Memory Access Time})
+  \]
+
+  Substituting values:
+  \[
+  \text{AMAT} = 0.66 \text{ ns} + 0.08 \times (5.62 \text{ ns} + 0.5 \times 70 \text{ ns})
+  \]
+  \[
+  \text{AMAT} = 0.66 \text{ ns} + 0.08 \times (5.62 \text{ ns} + 35 \text{ ns})
+  \]
+  \[
+  \text{AMAT} = 0.66 \text{ ns} + 0.08 \times 40.62 \text{ ns} = 0.66 \text{ ns} + 3.25 \text{ ns} = 3.91 \text{ ns}
+  \]
+
+  </details>

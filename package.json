@@ -7,7 +7,7 @@
     "vite:dev": "vite",
     "vite:build": "tsc -b && vite build",
     "vite:preview": "vite preview",
-    "jekyll:serve": "bundle exec jekyll serve --source docs --incremental"
+    "jekyll:serve": "bundle exec jekyll serve --source docs --incremental --livereload --port 4555"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.5",
