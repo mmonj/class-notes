@@ -178,7 +178,7 @@ Assume that main memory accesses take **70ns** and that memory accesses are **36
   \text{Average Cycles per Memory Access} = \frac{\text{AMAT}}{\text{Clock Cycle Time}}
   \]
 
-  Substituting values:
+  Substituting values (using \( \text{AMAT} \) from part b and \( \text{Clock Cycle Time} \) from part a):
   \[
   \text{Average Cycles per Memory Access} = \frac{6.26 \text{ ns}}{0.66 \text{ ns}} \approx 9.48 \text{ cycles}
   \]
@@ -195,7 +195,7 @@ Assume that main memory accesses take **70ns** and that memory accesses are **36
   \text{Average CPI} = (0.64 \times 1) + (0.36 \times \text{Average Cycles per Memory Access})
   \]
 
-  Substituting values:
+  Substituting values (using \( \text{Average Cycles per Memory Access} \) from part c):
   \[
   \text{Average CPI} = (0.64 \times 1) + (0.36 \times 9.48) = 0.64 + 3.41 = 4.05
   \]
