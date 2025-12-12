@@ -136,18 +136,22 @@ Assume that main memory accesses take **70ns** and that memory accesses are **36
 
 - a) Assume that the L1 hit time determines the cycle time for the processor. What is the clock rate?
 
-  <details>
+  <details markdown="1">
   <summary>Show Answer</summary>
 
-  Given:
-  \( \text{L1 hit time} = 1 \text{ cycle} = 0.66 \text{ ns} \)
+  **Given:**
 
-  <br/>
+  $\text{L1 hit time} = 0.66\,\text{ns}$
 
-  The clock rate is the reciprocal of the clock cycle time:
-  \[
-  \text{Clock Rate} = \frac{1}{\text{Clock Cycle Time}} = \frac{1}{0.66 \times 10^{-9}} \approx 1.515 \text{ GHz}
-  \]
+  $\text{The L1 hit time determines the processor cycle time}$
+
+  **Clock Period:**
+
+  $T = 0.66\,\text{ns} = 0.66 \times 10^{-9}\,\text{s}$
+
+  **Clock Rate:**
+
+  $\text{Clock rate} = \frac{1}{T} = \frac{1}{0.66 \times 10^{-9} \text{ s}} \approx 1.52 \times 10^{9}\,\text{Hz} \approx \boxed{1.52\,\text{GHz}}$
 
   </details>
 
