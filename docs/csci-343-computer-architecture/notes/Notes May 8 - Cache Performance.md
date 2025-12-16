@@ -151,7 +151,11 @@ Assume that main memory accesses take **70ns** and that memory accesses are **36
 
   **Clock Rate:**
 
-  $\text{Clock rate} = \frac{1}{T} = \frac{1}{0.66 \times 10^{-9} \text{ s}} \approx 1.52 \times 10^{9}\,\text{Hz} \approx \boxed{1.52\,\text{GHz}}$
+  $\text{Clock rate} = \frac{1}{T} = \frac{1}{0.66 \times 10^{-9} \text{ s}}$
+
+  $\approx 1.52 \times 10^{9}\,\text{cycles/second} = 1.52 \times 10^{9}\,\text{Hz}$
+
+  $\approx \boxed{1.52\,\text{GHz}}$
 
   </details>
 
