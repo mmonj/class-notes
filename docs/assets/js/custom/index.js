@@ -2,18 +2,39 @@ function main() {
   redirectToNewDocsSite();
 }
 
+function getNewUrl(currentUrl, newHost) {
+  const url = new URL(currentUrl);
+  url.host = newHost;
+  return url.toString();
+}
+
+// Return a cleaned pathname for redirecting to the projected URL.
+// Accepts projectedUrl (string) and removeSegment (string) and returns the cleaned pathname (string).
+function getCleanedPathname(projectedUrl, removeSegment) {
+  const url = new URL(projectedUrl);
+
+  const cleanedSegments = url.pathname
+    .split("/")
+    .filter(Boolean)
+    .filter((segment) => segment !== removeSegment);
+
+  url.pathname = "/" + cleanedSegments.join("/");
+
+  return url.toString();
+}
+
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function redirectToNewDocsSite() {
-  const currentHost = window.location.host;
-  const newDocsHost = "qccs.pages.dev";
+  const { host, href } = window.location;
+  const newHost = "qccs.pages.dev";
 
-  if (currentHost === newDocsHost) return;
+  if (host === newHost) return;
 
-  const { protocol, pathname, search, hash } = window.location;
-  const newUrl = `${protocol}//${newDocsHost}${pathname}${search}${hash}`;
+  const newUrl = getNewUrl(getCleanedPathname(href, "class-notes"), newHost);
+  console.log(`Redirecting to new docs site: ${newUrl}`);
 
   // If the path is /404.html then redirect immediately (no banner)
   if (document.getElementById("404---page-not-found")) {
